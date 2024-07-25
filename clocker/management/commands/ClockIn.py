@@ -14,13 +14,12 @@ class Command(BaseCommand):
         existing_clocker = Clocker.objects.filter(user=user, time_in__isnull=False, time_out__isnull=True).first()
 
         if existing_clocker:
-            # User has a time_in recorded but no time_out yet
-            existing_clocker.time_out = timezone.now()
-            existing_clocker.save()
-            self.stdout.write(self.style.SUCCESS(f'Clock out time recorded for {user.username}'))
+            self.stdout.write(self.style.SUCCESS(f'{user.username} have already clocked in for today, please proceed to clock out or contact your system administrator'))
         else:
             # User does not have a time_in recorded, record new clock in
             time_in = timezone.now()
             clocker = Clocker(user=user, time_in=time_in)
             clocker.save()
             self.stdout.write(self.style.SUCCESS(f'Clock in time recorded for {user.username}'))
+
+

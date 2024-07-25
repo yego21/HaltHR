@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>User List</title>
-</head>
-<body>
-    <h1>Users</h1>
-    <ul>
-        {% for user in users %}
-            <li>{{ user.username }} - {{ user.email }}</li>
-        {% endfor %}
-    </ul>
-</body>
+    
+    <h1>Welcome, {{ user.username }}</h1>
+  
+  
+    <p>Status: Clocked In</p>
+    <form id="clock-out-form" action="{% url 'clock-out' %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Clock Out">
+    </form>
+ 
+    <p>Status: Not Clocked In</p>
+    <form id="clock-in-form" action="{% url 'clock-in' %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Clock In">
+    </form>
+  
+      <script>
+        // JavaScript to handle form submission and execution of management command
+        document.getElementById('clock-in-form').addEventListener('submit', function(event) {
+          event.preventDefault();  // Prevent default form submission
+    
+          // Optional: Add confirmation logic if needed
+          if (confirm('Are you sure you want to clock in?')) {
+            // Submit the form
+            this.submit();
+            
+            // Execute management command via AJAX after form submission (example)
+            executeClockinCommand();
+          }
+        });
+    
+        
+      </script>
 </html>

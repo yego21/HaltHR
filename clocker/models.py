@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Clocker(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    time_in = models.DateTimeField()
+    time_in = models.DateTimeField(null=True)
     time_out = models.DateTimeField(null=True, blank=True)
 
 
@@ -14,21 +14,15 @@ class Clocker(models.Model):
 
 # models.py
 
-class Shift(models.Model):
-    name = models.CharField(max_length=100)
-    start_time = models.TimeField()
-    end_time = models.TimeField()
-
-    def __str__(self):
-        return self.name
 
 
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    shift = models.ForeignKey(Shift, on_delete=models.SET_NULL, null=True, blank=True)
 
-    def __str__(self):
-        return self.user.username
+# class UserProfile(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     shift = models.ForeignKey(Shift, on_delete=models.SET_NULL, null=True, blank=True)
+#
+#     def __str__(self):
+#         return self.user.username
 
 
 
