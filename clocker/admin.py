@@ -3,10 +3,15 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, UserAdmin
 from django.contrib.auth.models import User
 from .models import Clocker
 
-admin.site.register(Clocker)
+class ClockerAdmin(admin.ModelAdmin):
+    list_display = ('user', 'time_in', 'time_out', 'calculate_time_difference')
+    # readonly_fields = ('get_shift_name',)
 
 
-# Re-register UserAdmin
-# admin.site.unregister(User)
-# admin.site.unregister(UserAdmin)
-# admin.site.register(User, UserAdmin)
+admin.site.register(Clocker, ClockerAdmin)
+
+
+
+
+
+

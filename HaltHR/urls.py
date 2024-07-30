@@ -21,6 +21,6 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path("", include("clocker.urls")),
-    path('accounts/', include('accounts.urls')),  # Include Django authentication URLs
+    path('employee/', include('employee.urls')),  # Include Django authentication URLs
 
 ]

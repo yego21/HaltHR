@@ -26,14 +26,14 @@ SECRET_KEY = 'django-insecure-#3&q@eyd4qt2wk_8n2whd3e=w@n!kt7qp2ko-1fsaefm^k)q6y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'clocker.apps.ClockerConfig',
-    'accounts.apps.AccountsConfig',
+    'clocker',
+    'employee',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -111,6 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = 'employee/login/'
 
 
 # Internationalization

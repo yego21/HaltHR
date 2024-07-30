@@ -1,11 +1,12 @@
 from django.apps import AppConfig
 
 
-class AccountsConfig(AppConfig):
+class EmployeeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'accounts'
-    verbose_name = 'Accounts Management'
+    name = 'employee'
+    verbose_name = 'Employee Management'
 
 
     def ready(self):
         from . import signals
+

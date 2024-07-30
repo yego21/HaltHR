@@ -1,36 +1,112 @@
 <!DOCTYPE html>
 <html>
     
-    <h1>Welcome, {{ user.username }}</h1>
-  
-  
-    <p>Status: Clocked In</p>
-    <form id="clock-out-form" action="{% url 'clock-out' %}" method="post">
-      {% csrf_token %}
-      <input type="submit" value="Clock Out">
-    </form>
- 
-    <p>Status: Not Clocked In</p>
-    <form id="clock-in-form" action="{% url 'clock-in' %}" method="post">
-      {% csrf_token %}
-      <input type="submit" value="Clock In">
-    </form>
-  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <form id="logout-form" action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Logout">
+      </form>
+    
+      <!-- JavaScript for Logout Form Submission (optional) -->
       <script>
-        // JavaScript to handle form submission and execution of management command
-        document.getElementById('clock-in-form').addEventListener('submit', function(event) {
+        document.getElementById('logout-form').addEventListener('submit', function(event) {
           event.preventDefault();  // Prevent default form submission
     
-          // Optional: Add confirmation logic if needed
-          if (confirm('Are you sure you want to clock in?')) {
-            // Submit the form
-            this.submit();
-            
-            // Execute management command via AJAX after form submission (example)
-            executeClockinCommand();
-          }
+          // Submit the form
+          this.submit();
         });
-    
-        
       </script>
+
+    <h1>Welcome, {{ user.username }}</h1>
+  
+    <!-- <script>
+        $(document).ready(function() {
+            // Function to show messages as popups
+            {% if messages %}
+                {% for message in messages %}
+                    var messageType = "{{ message.tags }}";  // Fetch message type (success, warning, etc.)
+                    var messageContent = "{{ message }}";   // Fetch message content
+                    var popupClass = messageType === 'error' ? 'error-popup' : 'success-popup';  // Adjust class based on message type
+
+                    // Display message in a popup (you can use a library like SweetAlert for better UI)
+                    alert(messageContent);
+                    alert(messageType);
+                {% endfor %}
+            {% endif %}
+        });
+    </script> -->
+
+
+    
+<button id="clockInButton">Clock In</button>
+   
+<button id="clockOutButton">Clock Out</button>
+
+<script>
+       $(document).ready(function() {
+        function handleClockAction(buttonId, url, redirectUrl) {
+            $(buttonId).click(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    success: function(response) {
+                        if (response.status === 'confirm') {
+                            if (confirm(response.message)) {
+                                $.ajax({
+                                    url: url,
+                                    type: "POST",
+                                    data: { confirm: 'yes' },
+                                    headers: {
+                                        'X-CSRFToken': '{{ csrf_token }}'
+                                    },
+                                    success: function(response) {
+                                        if (response.status === 'success') {
+                                            alert(response.message);
+                                            window.location.href = redirectUrl;
+                                        } else if (response.status === 'failure') {
+                                            alert(response.message);
+                                        } else if (response.status === 'warning') {
+                                            alert(response.message);    
+                                        } 
+                                    }
+                                });
+                            } else {
+                                window.location.href = redirectUrl;
+                            }
+                        } else if (response.status === 'success') {
+                            alert(response.message);
+                            window.location.href = redirectUrl;
+                        } else if (response.status === 'failure') {
+                            alert(response.message);
+                        } else if (response.status === 'warning') {
+                            alert(response.message);   
+                        }
+                    }
+                });
+            });
+        }
+
+        handleClockAction('#clockOutButton', "{% url 'clock-out' %}", "{% url 'index' %}");
+        handleClockAction('#clockInButton', "{% url 'clock-in' %}", "{% url 'index' %}");
+    });
+</script>
+
+   
+    <!-- <form id="clock-out-form" action="{% url 'clock-out' %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Clock Out">
+    </form> -->
+ 
+{% load tz %}
+
+{{ clocker.timestamp | localtime }}    
+  
+  
+   
 </html>
+
+

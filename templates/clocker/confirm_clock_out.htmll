@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Clock Out</title>
+</head>
+<body>
+    <h1>Confirmation Required</h1>
+    <p>{{ message }}</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="confirm_choice" value="yes">Yes</button>
+        <button type="submit" name="confirm_choice" value="no">No</button>
+    </form>
+</body>
+</html>
