@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'company',
     'clocker',
     'employee',
     'django.contrib.admin',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'multiselectfield',
 ]
 
 MIDDLEWARE = [
@@ -82,8 +84,8 @@ WSGI_APPLICATION = 'HaltHR.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Timeclock',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'HaltHR',
         'USER': 'postgres',
         'PASSWORD': 'P@ssw0rd!@#$',
         'HOST': 'localhost',

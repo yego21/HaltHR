@@ -24,7 +24,7 @@ class Clocker(models.Model):
         """Convert total seconds to hours and minutes."""
         hours = seconds // 3600
         minutes = (seconds % 3600) // 60
-        return f'{hours} hours ,{minutes} minutes'
+        return f'{hours} hours, {minutes} minutes'
 
 
 
@@ -49,7 +49,7 @@ class Clocker(models.Model):
 
             difference_seconds = abs(start_time_seconds - time_in_seconds)
             if start_time_seconds > time_in_seconds:
-                return f'{self.seconds_to_hours_minutes(difference_seconds)} EARLY {start_time} {time_in_time}'
+                return f'{self.seconds_to_hours_minutes(difference_seconds)} EARLY'
             elif start_time_seconds < time_in_seconds:
                 if difference_seconds < 60:
                     return 'Just on time'
@@ -58,36 +58,9 @@ class Clocker(models.Model):
             else:
                 return 'Just on time'
 
-            # if start_time_seconds > time_in_seconds:
-            #
-            #     difference_seconds = (start_time_seconds) - (time_in_seconds)
-            #     return f'{self.seconds_to_hours_minutes(difference_seconds)} EARLY {start_time} {time_in_time}'
-            #
-            #
-            # elif start_time_seconds < time_in_seconds:
-            #     difference_seconds = (time_in_seconds) - (start_time_seconds)
-            #     if difference_seconds < 60:
-            #         return 'Just on time'
-            #     else:
-            #         return f'{self.seconds_to_hours_minutes(difference_seconds)} LATE'
-            # else:
-            #     return 'Just on time'
         else:
             return 'No time in recorded'
 
-    def evaluate_time(self, start_time_seconds, time_in_seconds, start_time, time_in_time):
-        # Calculate difference
-        difference_seconds = abs(start_time_seconds - time_in_seconds)
-
-        if start_time_seconds > time_in_seconds:
-            return f'{self.seconds_to_hours_minutes(difference_seconds)} EARLY {start_time} {time_in_time}'
-        elif start_time_seconds < time_in_seconds:
-            if difference_seconds < 60:
-                return 'Just on time'
-            else:
-                return f'{self.seconds_to_hours_minutes(difference_seconds)} LATE'
-        else:
-            return 'Just on time'
 
     def __str__(self):
         # Convert time_in and time_out to local time (+08:00)

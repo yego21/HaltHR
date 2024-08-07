@@ -1,0 +1,19 @@
+<!-- templates/admin/company/department/change_form.html -->
+{% extends "admin/change_form.html" %}
+
+{% block content %}
+{{ block.super }}
+<h2>Department Members</h2>
+<ul>
+{% if department %}
+    {% for member in department.get_members %}
+    <a href="{% url 'admin:employee_userprofile_change' member.id %}">
+        <li>{{ member.user.username }}</li></a>
+    {% empty %}
+        <li>No members</li>
+    {% endfor %}
+{% else %}
+    <li>No department data available</li>
+{% endif %}
+</ul>
+{% endblock %}
