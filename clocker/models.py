@@ -27,39 +27,46 @@ class Clocker(models.Model):
         return f'{hours} hours, {minutes} minutes'
 
 
-
+    @property
     def calculate_time_difference(self):
         if self.time_in:
+
         # """Calculate the difference between two datetime.time objects in hours and minutes."""
             this_user = UserProfile.objects.get(user=self.user)
-            start_time = this_user.user_shift.start_time
 
-            # start_time_str = start_time.strftime('%H%M%S')
-            # start_time_int = int(start_time_str)
-            #
-            #
-            # time_in_str = self.time_in.strftime('%H%M%S')
-            naive_time_in = timezone.make_naive(self.time_in)
-            time_in_time = timezone.make_aware(naive_time_in)
-            # time_in_int = int(time_in_str)
+            if this_user.user_shift:
+                start_time = this_user.user_shift.start_time
 
-            start_time_seconds = self.time_to_seconds(start_time)
-            time_in_seconds = self.time_to_seconds(time_in_time)
-            print(f'start seconds {start_time_seconds}')
+                # start_time_str = start_time.strftime('%H%M%S')
+                # start_time_int = int(start_time_str)
+                #
+                #
+                # time_in_str = self.time_in.strftime('%H%M%S')
+                naive_time_in = timezone.make_naive(self.time_in)
+                time_in_time = timezone.make_aware(naive_time_in)
+                # time_in_int = int(time_in_str)
 
-            difference_seconds = abs(start_time_seconds - time_in_seconds)
-            if start_time_seconds > time_in_seconds:
-                return f'{self.seconds_to_hours_minutes(difference_seconds)} EARLY'
-            elif start_time_seconds < time_in_seconds:
-                if difference_seconds < 60:
-                    return 'Just on time'
+                start_time_seconds = self.time_to_seconds(start_time)
+                time_in_seconds = self.time_to_seconds(time_in_time)
+                print(f'start seconds {start_time_seconds}')
+
+                difference_seconds = abs(start_time_seconds - time_in_seconds)
+                if start_time_seconds > time_in_seconds:
+                    return f'{self.seconds_to_hours_minutes(difference_seconds)} EARLY'
+                elif start_time_seconds < time_in_seconds:
+                    if difference_seconds < 60:
+                        return 'Just on time'
+                    else:
+                        return f'{self.seconds_to_hours_minutes(difference_seconds)} LATE'
                 else:
-                    return f'{self.seconds_to_hours_minutes(difference_seconds)} LATE'
+                    return 'Just on time'
             else:
-                return 'Just on time'
+                return 'User has no shift assigned.'
 
         else:
             return 'No time in recorded'
+
+
 
 
     def __str__(self):
@@ -67,8 +74,10 @@ class Clocker(models.Model):
         # time_in_local = localtime(self.time_in).strftime('%I:%M %p') if self.time_in else 'N/A'
         # time_out_local = localtime(self.time_out).strftime('%I:%M %p') if self.time_out else 'N/A'
         this_user = UserProfile.objects.get(user=self.user)
-        return f"Name: {self.user.first_name} {self.user.last_name}___________________________Shift: {this_user.user_shift.start_time}"
-
+        if this_user.user_shift:
+            return f"Name: {self.user.first_name} {self.user.last_name}___________________________Shift: {this_user.user_shift.start_time}"
+        else:
+            return f"Name: {self.user.first_name} {self.user.last_name}___________________________Shift: User has no shift assigned."
 
 
 

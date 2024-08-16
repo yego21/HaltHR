@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf import settings
 
 urlpatterns = [
 
@@ -23,5 +24,12 @@ urlpatterns = [
     path('company/', include('company.urls')),
     path("", include("clocker.urls")),
     path('employee/', include('employee.urls')),  # Include Django authentication URLs
-
+    path('exporter/', include('exporter.urls')),
 ]
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns
+
+

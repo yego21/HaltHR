@@ -1,0 +1,19 @@
+/* popup.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 20px;
+}
+
+th {
+    background-color: #0f7918;
+    text-align: left;
+}
+h1 {
+    background-color: #721414;
+    text-align: right;
+}

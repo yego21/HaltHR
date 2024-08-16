@@ -1,6 +1,6 @@
 # views.py
 import logging
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -12,6 +12,7 @@ from datetime import datetime
 from django.contrib.auth import logout
 from django.http import JsonResponse
 from django.core.management import call_command
+from exporter.exports import export_clocker_to_csv, export_clocker_to_xls
 
 
 
@@ -80,5 +81,47 @@ def clock_out(request):
             # messages.warning(request,f'{user.username} does not have Clock in record for today, are you sure to Clock out?')
             return redirect('index')
     return redirect(reverse('index'))
+
+# def clocker_views(request):
+#     return render(request, 'admin/clocker/clocker/')
+
+
+
+
+
+
+def clocker_popup(request, user_id):
+    # clocker = get_object_or_404(Clocker, pk=pk)
+
+
+    start_date = request.GET.get('start_date')
+    end_date = request.GET.get('end_date')
+
+    if start_date and end_date:
+        user_clocker = Clocker.objects.filter(user_id=user_id)
+        user_clocker = user_clocker.filter(date__range=[start_date, end_date])
+    else:
+        user_clocker = None
+    user = get_object_or_404(UserProfile, user_id=user_id)
+
+
+    if 'export_clocker_csv' in request.GET:
+        return export_clocker_to_csv(user_clocker, user)
+
+    if 'export_clocker_xls' in request.GET:
+        return export_clocker_to_xls(user_clocker, user)
+
+    return render(request, 'clocker/clocker_popup.html', {'user_clocker': user_clocker, 'user': user})
+
+
+
+
+
+
+
+
+
+
+
 
 

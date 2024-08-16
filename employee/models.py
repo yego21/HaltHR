@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 from company.models import Department
+import sys
 
 
 
@@ -25,15 +26,29 @@ class UserProfile(models.Model):
     user_shift = models.ForeignKey(Shift, on_delete=models.SET_NULL, null=True, blank=True)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
     @property
-    def is_department_head(self):
+    def is_department_head(self, null=True):
         if self.department:
-                if self.department.department_head == self:
-                    # return f'{self.user.username} {self.department.department_head}'
-                    return 'Department Head'
-                else:
-                    return 'Member'
+            if self.department and self.department.department_head == self:
+                return True
+            return False
+
+    @property
     def full_name(self):
         return f'{self.user.first_name} {self.user.last_name}'
+        # return self.user.username
+
+    # def save(self, *args, **kwargs):
+    #     # Update is_staff field based on is_department_head property
+    #     if self.is_department_head == 'Department Head':
+    #         self.user.is_staff = True
+    #     else:
+    #         self.user.is_staff = False
+    #
+    #     # Save the user instance
+    #     self.user.save()
+    #
+    #     # Save the UserProfile instance
+    #     super().save(*args, **kwargs)
 
 
     hire_date = models.DateField(default='1970-01-01')

@@ -1,0 +1,2163 @@
+[
+
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$dOIwOia192bLc68GJCFqUX$NjEjVesOpYBmoXP0ENczHRTVnDq7crkAVOAU++qrc20=",
+    "last_login": "2024-08-08T07:53:24Z",
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "user",
+    "last_name": "one",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-01T07:27:45Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$lv9LGDOs8MsyRckvv7wfCd$ZA25BRoLZB97+3VhCcHYYKBI5hxji5uczJNS3uRDJ5E=",
+    "last_login": "2024-08-08T08:13:16.962Z",
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "User",
+    "last_name": "Two",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-02T08:13:31Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$W4yEgeaOqozzJNGDIsPaZy$d/+iQFYpnmHiYyagZScRkEYWPyw4/r267an/3Y9H4Xo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user3",
+    "first_name": "User",
+    "last_name": "Three",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-06T03:12:20Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$JhHuGlpqb4hoOz6G2JuM3E$HmBqwEginiT9bAAgGfKR0tENhJxd3rXgn+FuGwaoVYk=",
+    "last_login": "2024-08-08T01:56:30Z",
+    "is_superuser": false,
+    "username": "user4",
+    "first_name": "User",
+    "last_name": "Four",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-06T03:13:36Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$oAbBCbLDIOqiO30ImujBn8$PNkSE9N+A/2NciUsUkzEGFKVLR9NzTb4UaBWb0JipjM=",
+    "last_login": "2024-08-08T08:06:52.885Z",
+    "is_superuser": false,
+    "username": "User5",
+    "first_name": "User",
+    "last_name": "Five",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-08T02:24:24Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$sdEv6vpRmOegss9hImSooS$jakjWYh/agWEidr/72iXmNQJrE8hpDpfd+LlwqxD2MU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user10",
+    "first_name": "User",
+    "last_name": "Ten",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-08T02:35:30Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+
+
+{
+  "model": "employee.userprofile",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "user_shift": 2,
+    "department": 1,
+    "hire_date": "2024-08-01"
+  }
+},
+{
+  "model": "employee.userprofile",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "user_shift": 1,
+    "department": 1,
+    "hire_date": "2024-08-02"
+  }
+},
+{
+  "model": "employee.userprofile",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "user_shift": 2,
+    "department": 2,
+    "hire_date": "2024-08-06"
+  }
+},
+{
+  "model": "employee.userprofile",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "user_shift": 1,
+    "department": 2,
+    "hire_date": "1970-01-01"
+  }
+},
+{
+  "model": "employee.userprofile",
+  "pk": 7,
+  "fields": {
+    "user": 7,
+    "user_shift": 2,
+    "department": 1,
+    "hire_date": "1970-01-01"
+  }
+},
+{
+  "model": "employee.userprofile",
+  "pk": 12,
+  "fields": {
+    "user": 12,
+    "user_shift": null,
+    "department": null,
+    "hire_date": "1970-01-01"
+  }
+},
+{
+  "model": "clocker.clocker",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "time_in": "2024-08-01T07:25:54.567Z",
+    "time_out": null,
+    "date": "2024-08-01"
+  }
+},
+{
+  "model": "clocker.clocker",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "time_in": "2024-08-06T03:08:11.114Z",
+    "time_out": "2024-08-06T03:50:25.759Z",
+    "date": "2024-08-06"
+  }
+},
+{
+  "model": "clocker.clocker",
+  "pk": 3,
+  "fields": {
+    "user": 2,
+    "time_in": "2024-08-08T00:06:51.676Z",
+    "time_out": "2024-08-08T00:06:57.861Z",
+    "date": "2024-08-08"
+  }
+},
+{
+  "model": "clocker.clocker",
+  "pk": 4,
+  "fields": {
+    "user": 7,
+    "time_in": "2024-08-08T08:08:59.531Z",
+    "time_out": null,
+    "date": "2024-08-08"
+  }
+},
+{
+  "model": "clocker.clocker",
+  "pk": 5,
+  "fields": {
+    "user": 3,
+    "time_in": "2024-08-08T08:14:28.546Z",
+    "time_out": "2024-08-08T08:14:40.535Z",
+    "date": "2024-08-08"
+  }
+},
+{
+  "model": "employee.shift",
+  "pk": 1,
+  "fields": {
+    "name": "Morning",
+    "start_time": "06:00:00",
+    "end_time": "12:00:00"
+  }
+},
+{
+  "model": "employee.shift",
+  "pk": 2,
+  "fields": {
+    "name": "Mid",
+    "start_time": "12:00:00",
+    "end_time": "18:00:00"
+  }
+},
+
+
+{
+  "model": "company.company",
+  "pk": 1,
+  "fields": {
+    "name": "MacroHard",
+    "address": "fdasgfs",
+    "email": "macrohard@email.com",
+    "phone": "12"
+  }
+},
+{
+  "model": "company.department",
+  "pk": 1,
+  "fields": {
+    "name": "IT",
+    "company": 1,
+    "department_head": 3
+  }
+},
+{
+  "model": "company.department",
+  "pk": 2,
+  "fields": {
+    "name": "HR",
+    "company": 1,
+    "department_head": 5
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-08-01T07:26:26.725Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "Morning",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-08-01T07:26:38.321Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Mid",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-08-01T07:26:49.593Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-08-01T07:27:07.384Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "MacroHard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-08-01T07:27:46.535Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-08-01T07:50:49.901Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-08-01T07:51:33.666Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Company\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-08-01T07:52:31.842Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-08-02T05:26:05.360Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-08-02T08:13:31.718Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "user2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-08-02T08:49:35.455Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-08-02T08:49:42.935Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-08-05T00:34:16.557Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "user2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-08-06T00:39:59.406Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "user2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-08-06T01:14:59.584Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-08-06T01:22:20.245Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-08-06T01:55:44.845Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-08-06T02:06:32.378Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "user2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-08-06T02:11:41.592Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-08-06T03:12:20.608Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "user3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-08-06T03:12:49.700Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-08-06T03:13:09.591Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "user3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\", \"Hire date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-08-06T03:13:18.104Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-08-06T03:13:36.942Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "user4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-08-06T03:13:48.315Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "user4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-08-06T04:49:58.502Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-08-06T04:50:23.491Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-08-06T04:51:03.558Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-08-06T06:12:15.955Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "user2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-08-06T06:12:25.209Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "user3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-08-06T06:12:40.172Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "user4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-08-06T06:34:36.405Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-08-06T06:37:44.607Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-08-06T06:39:56.961Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-08-06T06:40:22.719Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-08-07T01:00:19.773Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-08-07T01:06:57.371Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-08-07T01:07:27.403Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-08-07T01:11:58.140Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Department Heads",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-08-08T01:56:12.019Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "user4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-08-08T01:56:27.127Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "user4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-08-08T02:05:47.486Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-08-08T02:07:30.020Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "user4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-08-08T02:07:41.656Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-08-08T02:07:55.286Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-08-08T02:08:03.118Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-08-08T02:08:20.949Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-08-08T02:14:28.383Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-08-08T02:14:47.373Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-08-08T02:16:44.966Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-08-08T02:18:03.269Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-08-08T02:21:18.346Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-08-08T02:22:20.481Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-08-08T02:22:24.376Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-08-08T02:24:25.396Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "User5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-08-08T02:25:16.218Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "user6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-08-08T02:26:30.965Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "user7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-08-08T02:29:00.864Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-08-08T02:30:03.397Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "user8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-08-08T02:31:30.156Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-08-08T02:31:42.417Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "user9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-08-08T02:32:48.915Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "user9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-08-08T02:33:04.158Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "User Nine",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-08-08T02:35:31.258Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "12",
+    "object_repr": "user10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-08-08T03:06:51.623Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-08-08T03:07:33.235Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-08-08T03:08:32.956Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-08-08T03:10:58.582Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2024-08-08T03:11:41.389Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2024-08-08T03:32:23.675Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2024-08-08T07:15:22.081Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2024-08-08T07:23:59.132Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2024-08-08T07:24:04.152Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2024-08-08T07:30:05.574Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2024-08-08T07:33:47.315Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2024-08-08T07:37:58.890Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2024-08-08T07:38:14.822Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2024-08-08T07:40:39.067Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2024-08-08T07:40:42.042Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2024-08-08T07:41:10.924Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2024-08-08T07:47:30.386Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2024-08-08T07:47:42.342Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "HR",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2024-08-08T07:52:00.489Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2024-08-08T07:52:41.688Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2024-08-08T07:53:02.560Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2024-08-08T07:53:44.427Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2024-08-08T07:53:54.943Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "user1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2024-08-08T08:01:41.435Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": " ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2024-08-08T08:05:14.776Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2024-08-08T08:05:20.863Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2024-08-08T08:05:38.564Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "7",
+    "object_repr": "User5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2024-08-08T08:05:52.913Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "User Five",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2024-08-08T08:06:00.673Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2024-08-08T08:08:10.285Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "8",
+    "object_repr": "user6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2024-08-08T08:08:15.630Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "9",
+    "object_repr": "user7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2024-08-08T08:08:19.902Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "user8",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2024-08-08T08:08:24.252Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "user9",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2024-08-08T08:08:39.406Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "12",
+    "object_repr": "user10",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2024-08-08T08:12:32.311Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add company",
+    "content_type": 1,
+    "codename": "add_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change company",
+    "content_type": 1,
+    "codename": "change_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete company",
+    "content_type": 1,
+    "codename": "delete_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view company",
+    "content_type": 1,
+    "codename": "view_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add announcement",
+    "content_type": 2,
+    "codename": "add_announcement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change announcement",
+    "content_type": 2,
+    "codename": "change_announcement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete announcement",
+    "content_type": 2,
+    "codename": "delete_announcement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view announcement",
+    "content_type": 2,
+    "codename": "view_announcement"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add department",
+    "content_type": 3,
+    "codename": "add_department"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change department",
+    "content_type": 3,
+    "codename": "change_department"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete department",
+    "content_type": 3,
+    "codename": "delete_department"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view department",
+    "content_type": 3,
+    "codename": "view_department"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add event",
+    "content_type": 4,
+    "codename": "add_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change event",
+    "content_type": 4,
+    "codename": "change_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete event",
+    "content_type": 4,
+    "codename": "delete_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view event",
+    "content_type": 4,
+    "codename": "view_event"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add clocker",
+    "content_type": 5,
+    "codename": "add_clocker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change clocker",
+    "content_type": 5,
+    "codename": "change_clocker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete clocker",
+    "content_type": 5,
+    "codename": "delete_clocker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view clocker",
+    "content_type": 5,
+    "codename": "view_clocker"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add shift",
+    "content_type": 6,
+    "codename": "add_shift"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change shift",
+    "content_type": 6,
+    "codename": "change_shift"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete shift",
+    "content_type": 6,
+    "codename": "delete_shift"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view shift",
+    "content_type": 6,
+    "codename": "view_shift"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add user profile",
+    "content_type": 7,
+    "codename": "add_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change user profile",
+    "content_type": 7,
+    "codename": "change_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete user profile",
+    "content_type": 7,
+    "codename": "delete_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view user profile",
+    "content_type": 7,
+    "codename": "view_userprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 8,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 8,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 8,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 8,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 9,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 9,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 9,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 9,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 10,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 10,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 10,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 10,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 11,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 11,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 11,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 11,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 12,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 12,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 12,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 12,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 13,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 13,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 13,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 13,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Department Heads",
+    "permissions": [
+      12,
+      16,
+      24,
+      28,
+      52
+    ]
+  }
+},
+
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "company",
+    "model": "company"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "company",
+    "model": "announcement"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "company",
+    "model": "department"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "company",
+    "model": "event"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "clocker",
+    "model": "clocker"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "employee",
+    "model": "shift"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "employee",
+    "model": "userprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5v4dy5ln002551hwmayy1c49llghz9g7",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyEsFBGP3vsNZHcBqRpISnsy_rtt0oPOcd6beYuA61LC2tMcpiiuAsTptyPkZ6o7iA-s9ya51WWeSO6KPGiXY4vpdTvcv4OCvWzrwSpPDC6R10o7b0lrTzlBtgryEJPZEq0BBu9RK76AcghEaI1zZxafL8g1Nyw:1sbstt:aNyncrrYrOmfD8jSuOY3mOMDPbcsRXrTu8DpLxfbJKA",
+    "expire_date": "2024-08-22T02:29:13.728Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a2yqvd8obdjrv6fbi6y74x1acr5nsyu1",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGlkm6y8lPWewvN41DiBHipMKcXcSKQVounlv5i1iWpca185zHElcBIjTb4cpP7ntgB6p3SeZp7bMI8pdkQft8jYRv66H-3dQU6_bWmV0gTMVQo_KaItFaciA_hycSd4xKKuTA72lWDIWyQceGAbQjE58vvN8N90:1sbyGq:2Vg8Y940J4AjbtuNS9F6z_bG3DnR_gLCx_fRI3Lg5-8",
+    "expire_date": "2024-08-22T08:13:16.968Z"
+  }
+}
+]
