@@ -9,7 +9,6 @@ class ClockerAdmin(admin.ModelAdmin):
 
     def get_remarks(self, obj):
         return obj.calculate_time_difference
-
     get_remarks.short_description = 'Remarks'
 
     # calculate_time_difference.short_description = "View Clocker Records"

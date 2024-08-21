@@ -1,0 +1,12 @@
+/* Change the header background color */
+.header {
+    background-color: #17d687; /* New header color */
+}
+
+/* Change the color of the navigation bar */
+.nav-sidebar .nav-item > a.nav-link.active,
+.nav-sidebar .nav-item > a.nav-link:hover {
+    background-color: #8f1111; /* New active link color */
+}
+
+/* Change other elements as needed */

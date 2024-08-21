@@ -1,0 +1,23 @@
+<!-- templates/base.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaltHR</title>
+    <link rel="stylesheet" href="{% static 'bootstrap\css\bootstrap.min.css' %}">
+</head>
+<body>
+    <!-- Include the header template -->
+    {% include 'includes/header.html' %}
+
+    <!-- Block for page-specific content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

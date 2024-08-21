@@ -32,10 +32,17 @@ class UserProfile(models.Model):
                 return True
             return False
 
+
+
+    def full_name(self):
+        # return f'{self.user.first_name} {self.user.last_name}'
+        return self.user.username
+
     @property
     def full_name(self):
         return f'{self.user.first_name} {self.user.last_name}'
         # return self.user.username
+
 
     # def save(self, *args, **kwargs):
     #     # Update is_staff field based on is_department_head property

@@ -37,6 +37,7 @@ class Clocker(models.Model):
             if this_user.user_shift:
                 start_time = this_user.user_shift.start_time
 
+
                 # start_time_str = start_time.strftime('%H%M%S')
                 # start_time_int = int(start_time_str)
                 #
@@ -64,7 +65,7 @@ class Clocker(models.Model):
                 return 'User has no shift assigned.'
 
         else:
-            return 'No time in recorded'
+            return 'No Time In Recorded'
 
 
 

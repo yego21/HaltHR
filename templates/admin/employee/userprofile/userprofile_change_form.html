@@ -28,6 +28,11 @@
         //   alert('Button clicked!'); // This will show an alert when the button is clicked.
       });
   </script>
+<link rel="stylesheet" href="{% static 'css/popup.css' %}">
+<div id="clocker-popup" style="display:none;">
+    <div style="background:white; padding:20px; border:1px solid #ccc; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000;">
+        {% load static %}
+<!-- templates/clocker_popup.html -->
 
 <div id="clocker-popup" style="display:none;">
     <div style="background:white; padding:20px; border:1px solid #ccc; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000;">
@@ -38,9 +43,12 @@
 <html>
 <head>
     <title>Clocker Details</title>
+
+    <link rel="stylesheet" href="{% static 'css/popup.css' %}"> <!-- Optional: Add CSS for styling -->
     <link rel="stylesheet" href="{% static 'css/popup.css' %}"> 
+
 </head>
-<body>
+<!-- <body>
     <h1>Clocker Details</h1>
     <p>ID: {{ clocker.id }}</p>
     <p>User: {{ clocker.user_profile.user }}</p>
@@ -56,7 +64,11 @@
 </html>
     </div>
     <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
-</div> -->
+
+</div>
+=======
+</div> --> 
+
 
 
 

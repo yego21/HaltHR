@@ -1,5 +1,4 @@
 {% extends "admin/base_site.html" %}
-
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/popup.css' %}">
@@ -9,13 +8,25 @@
         <span class="popup-close" id="popup-close">&times;</span>
         <h1>Clocker Entries for {{ user.full_name }}</h1>
 
+      
         <form id="filter-form" method="get">
+            <label for="date_range">Date Range:</label>
+            <select id="date_range" name="date_range" onchange="setDateRange()">
+                <option value="">Select...</option>
+                <option value="today">Today</option>
+                <option value="this_week">This Week</option>
+                <option value="last_7_days">Last 7 Days</option>
+                <option value="last_15_days">Last 15 Days</option>
+                <option value="last_30_days">Last 30 Days</option>
+                <!-- Add more options as needed -->
+            </select>
+        
             <label for="start_date">Start Date:</label>
-            <input type="date" id="start_date" name="start_date" value="{{ request.GET.start_date }}">
-
+            <input type="date" id="start_date" name="start_date" value="{{ start_date }}">
+        
             <label for="end_date">End Date:</label>
-            <input type="date" id="end_date" name="end_date" value="{{ request.GET.end_date }}">
-
+            <input type="date" id="end_date" name="end_date" value="{{ end_date }}">
+        
             <button type="submit">Filter</button>
         </form>
 
@@ -47,7 +58,7 @@
                     {% endfor %}
                 {% else %}
                 <tr>
-                    <td colspan="5">No gfhfghfg entries found.</td>
+                    <td colspan="5">No clocker entries found.</td>
                 </tr>               
                 {% endif %}
             </tbody>
@@ -86,12 +97,12 @@
         {% endif %}  
     </a> -->
     
-    <a href="?start_date={{ request.GET.start_date }}&end_date={{ request.GET.end_date }}&export_clocker_xls=true">{% if user_clocker %}Export as Excel    
+    <a href="?start_date={{ request.GET.start_date }}&end_date={{ request.GET.end_date }}&export_clocker_xls=true">{% if user_clocker %}Download
         {% endif %}  
     </a>
 
 
-
+<script src="{% static 'js/clocker_filter.js' %}"></script>
 {% endblock %}
 
 
