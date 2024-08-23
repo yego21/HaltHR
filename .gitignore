@@ -109,6 +109,8 @@ dmypy.json
 # macOS
 .DS_Store
 
+media/
+
 # Windows
 Thumbs.db
 ehthumbs.db

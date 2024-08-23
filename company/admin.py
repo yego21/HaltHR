@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 from django.urls import path
-from .models import Company, Department
+from .models import Company, Department, Event, Announcement
 from django.utils.html import format_html
 from django.contrib import admin
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
@@ -96,6 +96,8 @@ class DepartmentAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Company)
+admin.site.register(Event)
+admin.site.register(Announcement)
 # admin.site.unregister(Department)
 admin.site.register(Department, DepartmentAdmin)
 

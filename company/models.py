@@ -56,6 +56,8 @@ class Event(models.Model):
     time = models.TimeField()
     location = models.CharField(max_length=255)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    image1 = models.ImageField(upload_to='events/%m/%d/%Y/', default='events/event_1.jpg')
+    image2 = models.ImageField(upload_to='events/%m/%d/%Y/', blank=True)
 
     def __str__(self):
         return self.title

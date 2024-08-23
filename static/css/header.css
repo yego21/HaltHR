@@ -1,0 +1,45 @@
+.header-nav {
+    background-color:#3e74c5;
+    color: rgb(88, 68, 68); /* Optional: Set text color */
+}
+
+.header-nav .navbar-nav .nav-link {
+    color: rgb(233, 243, 204);
+    font-size: 14px; 
+}
+
+.header-nav .navbar-brand {
+    color: rgb(233, 243, 204);
+    font-size: 14px; 
+}
+
+.header-nav .navbar-nav .nav-link:hover {
+    color: lightgray; 
+}
+
+/* Ensure the form's button looks like a link */
+.nav-link-form {
+    margin: 0; /* Remove any default margin */
+}
+
+.nav-link-form .btn-link {
+    color: rgb(233, 243, 204);; /* Match the text color with the other nav links */
+    font-size: 14px; /* Ensure the font size is consistent */
+    background: none; /* Remove any background */
+    border: none; /* Remove any border */
+    padding: auto; /* Remove any default padding */
+    text-decoration: none; /* Remove underline from text */
+    cursor: pointer; /* Change cursor to pointer */
+    
+}
+
+.nav-link-form .btn-link:hover {
+    color: lightgray; /* Optional: Change color on hover */
+}
+
+#user-tools {
+    margin-left: auto; /* Pushes the div to the right within the flex container */
+}
+
+
+

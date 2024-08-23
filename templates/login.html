@@ -7,4 +7,9 @@
     <input type="password" id="password" name="password">
     <br>
     <input type="submit" value="Login">
+    {{ data }}
+    {% for event in events %}
+    <img src="{{ event.image1.url }}">
+    {% endfor %}
+    fdsgsdg
   </form>

@@ -1,7 +1,7 @@
 /* popup.css */
-<<<<<<< HEAD
-table {
-=======
+
+/* table { */
+
 /* table {
 >>>>>>> 493a5c3 (Add clock view filters and download feature)
     width: 100%;
@@ -9,7 +9,7 @@ table {
 }
 
 th, td {
-<<<<<<< HEAD
+
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -30,4 +30,4 @@ th {
 h1 {
     text-align: center
 } */
->>>>>>> 493a5c3 (Add clock view filters and download feature)
+

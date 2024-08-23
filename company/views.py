@@ -9,6 +9,8 @@ from .models import Department
 from employee.models import UserProfile
 from django.utils import timezone
 from django.http import JsonResponse
+from .models import Event
+
 
 #
 # def view_department_members(request, department_id):
@@ -28,7 +30,11 @@ from django.http import JsonResponse
 
 @login_required
 def view_members(request):
-    return render(request, 'company\department\department_change_form.html')
+    return render(request, 'company/department/department_change_form.html')
+
+
+
+
 
 
 

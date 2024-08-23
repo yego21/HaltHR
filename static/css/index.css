@@ -1,32 +1,100 @@
-.container {
-    margin-right: 200px; /* Adjust the margin to make space for the sidebar */
-    padding: 20px;
+@font-face {
+  font-family: 'DigitalClock';
+  src: url('/static/fonts/digital-7.ttf') format('truetype'); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
 }
 
-.sidebar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 200px; /* Adjust the width as needed */
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-left: 1px solid #ddd;
+
+
+
+.dashboard {
+  position: relative; 
+  align-self: center; 
+  width:auto; /* or any other value you prefer */
+  max-width: 110%;
+   /* to ensure it doesn't exceed the parent */
 }
 
-.sidebar button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+.bg-primary{
+  height:auto;
+  align-items: center;
+  padding: 50px; /* Optional padding */
+  display:flex;
+  justify-content: center;  
+  background-color: #316fb9 !important; /* Use your desired color */
 }
 
-.sidebar button:hover {
-    background-color: #0056b3;
+
+#eventCarousel {
+  width:auto;   /* Approximately 5 inches wide */
+  height:auto;  /* Approximately 5 inches tall */
+  border: none;
+  box-shadow: none; 
+  
 }
+
+#eventCarousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none; 
+}
+
+#eventCarousel .carousel-item {
+  width: 100%;
+  height: 100%; 
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: none; 
+}
+
+#eventCarousel .carousel-item img {
+  object-fit: fill; /* Ensures the image covers the container */
+  width: 100%;
+  height: 100%;  
+  transition: none; /* Remove transition to avoid resizing during slide */
+  border: none;
+  box-shadow: none; 
+}
+
+#eventCarousel .carousel-item.active {
+  display: flex; /* Ensure active item is flexed and centered */
+}
+
+.event_card {
+  background-color: #ffffff; /* Light grey background color */
+  padding: 15px; /* Optional: Add some padding */
+  border: none;
+  box-shadow: none; 
+  max-height: 700px;
+  min-height: 700px;
+}
+
+/* Ensures the carousel takes up the full height of the event_card */
+.event_card #eventCarousel {
+  height: 100%;
+}
+
+/* Remove borders from the card and its containing elements */
+h3 {
+  text-align: center;
+  font-family: 'DigitalClock', sans-serif;
+ 
+}
+
+#clocker_div{
+  border: 2px solid #00ff00; /* Red border */
+  padding: 10px;
+  margin: 10px;
+}
+
+
+#announcements {
+  max-height: 450px; /* Set this to the desired height */
+  overflow-y: auto;  /* Enable vertical scrolling if content exceeds max-height */
+  padding: 15px;     /* Optional: Add some padding for better spacing */
+  border-top: 1px solid #ddd; /* Optional: Add a border to distinguish it from other sections */
+}
+

@@ -1,190 +1,147 @@
 {% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>   
-  
 {% block content %}
-
-
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Dashboard</title>
 
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-   
-    <title>Company Dashboard</title>
-    
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Company</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Announcements</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Welcome, Admin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-<body>
-    <div class="container">
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-4">
-        <h1>Company Dashboard</h1>
-        <p>Showcasing Our Latest Events, Hiring Opportunities, and Announcements</p>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container my-4">
-        <!-- Events Section -->
-        <section id="events" class="mb-4">
-            <h2>Company Events</h2>
-            <div class="card-group">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Event 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Event 1</h5>
-                        <p class="card-text">Description of the first event. Details about what is happening and when.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Event 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Event 2</h5>
-                        <p class="card-text">Description of the second event. Details about what is happening and when.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Event 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Event 3</h5>
-                        <p class="card-text">Description of the third event. Details about what is happening and when.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hiring Opportunities Section -->
-        <section id="careers" class="mb-4">
-            <h2>Hiring Opportunities</h2>
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <h5 class="mb-1">Job Title 1</h5>
-                    <p class="mb-1">Brief description of the job. Qualifications and responsibilities.</p>
-                    <small>Location: City</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <h5 class="mb-1">Job Title 2</h5>
-                    <p class="mb-1">Brief description of the job. Qualifications and responsibilities.</p>
-                    <small>Location: City</small>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <h5 class="mb-1">Job Title 3</h5>
-                    <p class="mb-1">Brief description of the job. Qualifications and responsibilities.</p>
-                    <small>Location: City</small>
-                </a>
-            </div>
-        </section>
-
-        <!-- Announcements Section -->
-        <section id="announcements">
-            <h2>Announcements</h2>
-            <div class="alert alert-info" role="alert">
-                <h4 class="alert-heading">Announcement Title 1</h4>
-                <p>Details about the first announcement. Important updates and information.</p>
-                <hr>
-                <p class="mb-0">Additional details if necessary.</p>
-            </div>
-            <div class="alert alert-warning" role="alert">
-                <h4 class="alert-heading">Announcement Title 2</h4>
-                <p>Details about the second announcement. Important updates and information.</p>
-                <hr>
-                <p class="mb-0">Additional details if necessary.</p>
-            </div>
-            <div class="alert alert-success" role="alert">
-                <h4 class="alert-heading">Announcement 
-        </div>
-    </div>
-
-<div class="sidebar">
-    <h1>Welcome, {{ user.username }}</h1>
-    <button
-    id="clockInButton"
-    hx-post="{% url 'clock-in' %}"
-    hx-target="#response-message"
-    hx-swap="innerHTML"
-    hx-confirm="Are you sure you want to clock in?"
-    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-    Clock In
-</button>
-
-
-<button
-    id="clockOutButton"
-    hx-post="{% url 'clock-out' %}"
-    hx-target="#response-message"
-    hx-swap="innerHTML"
-    hx-confirm="Are you sure you want to clock out?"
-    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-    Clock Out
-</button>
-
-<div id="response-message">frgdfgdfg</div>
- 
-<!--     
-    <button id="clockInButton">Clock In</button>       
-    <button id="clockOutButton">Clock Out</button> -->
-</div>
-<!-- <script>
-    // Define URLs as JavaScript variables
-    var clockInUrl = "{% url 'clock-in' %}";
-    var clockOutUrl = "{% url 'clock-out' %}";
-    var redirectUrl = "{% url 'index' %}";
-</script> -->
-
-
-{% load tz %}
-
-{{ clocker.timestamp | localtime }}    
-<button hx-get="{% url 'htmx_view' %}" hx-target="#result">Click Me</button>
-<div id="result"></div>  
-<script src="{% static 'js/htmx.min.js' %}"></script>  
-<script src="{% static 'js/clocker_buttons.js' %}"></script>  
-{% endblock %}   
-
-
-
+    {{ test }}
    
+            <!-- Main Content Column -->
+            <div class="dashboard">
+                <!-- Header -->
+                <div class="container-fluid">
+                   <!-- {{ test }}
+                    <header class="bg-primary text-white text-center py-2">                     
+                         <h1>Welcome to Company {{data}}</h1> 
+                         <p>{{ data }}</p>                        
+                    </header>                 -->
+                                      
+                    
+                    <!-- Events Section -->
+                    
+                    <section id="events" class="mb-2 mt-2">                        
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-3 mb-3" style="max-height: 600px;">
+                                <div class="card" id="clocker_div">                                
+                                    <div class="card-body">
+                                        <h3 class="card-title">Employee Clock-In</h3>
+                                        <section id="clock-section">
+                                            <div class="d-flex justify-content-center">
+                                                <button
+                                                    id="clockInButton"
+                                                    class="btn btn-success me-2"
+                                                    hx-post="{% url 'clock-in' %}"
+                                                    hx-target="#response-message"
+                                                    hx-swap="innerHTML"
+                                                    hx-confirm="Are you sure you want to clock in?"
+                                                    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+                                                    Clock In
+                                                </button>
+                    
+                                                <button
+                                                    id="clockOutButton"
+                                                    class="btn btn-success"
+                                                    hx-post="{% url 'clock-out' %}"
+                                                    hx-target="#response-message"
+                                                    hx-swap="innerHTML"
+                                                    hx-confirm="Are you sure you want to clock out?"
+                                                    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+                                                    Clock Out
+                                                </button>
+                                            </div>
+                                            <div id="response-message" class="mt-3"></div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <section id="announcements">
+                                    <h2>Announcements</h2>
+                                    {% for announcement in announcements %}
+                                    <div class="alert alert-info" role="alert">
+                                        {{ announcement.title}}
+                                    </div>
+                                    <div>{{ announcement.content}}</div>
+                                    {% endfor %}
+                                </section>
+                            </div>
+                          
+                            <div class="col-sm-12 col-md-6 col-lg-9 mb-3" >
+                                <div class="card event_card">                                    
+                                    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            {% for event in events %}
+                                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                                <div class="col-sm-12 col-md-6 col-lg-9 mb-3">
+                                                    <div class="card">
+                                                        <img src="{{ event.image1.url }}" class="card-img-top" alt="{{ event.title }}">
+                                                        <div class="card-body">
+                                                            <h2>{{ event.title }}</h2>
+                                                            <p class="card-text">{{ event.description }}</p>
+                                                            <a href="#" class="btn btn-primary">Read More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                              
+                                <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    
+                
+                    <!-- Hiring Opportunities Section -->
+                    <section id="careers" class="mb-4">
+                        <h2>Hiring Opportunities</h2>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <h5 class="mb-1">Job Title 1</h5>
+                                <p class="mb-1">Brief description of the job. Qualifications and responsibilities.</p>
+                                <small>Location: City</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <h5 class="mb-1">Job Title 2</h5>
+                                <p class="mb-1">Brief description of the job. Qualifications and responsibilities.</p>
+                                <small>Location: City</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <h5 class="mb-1">Job Title 3</h5>
+                                <p class="mb-1">Brief description of the job. Qualifications and responsibilities.</p>
+                                <small>Location: City</small>
+                            </a>
+                        </div>
+                    </section>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-lg-3">Column 1</div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">Column 2</div>
+                        <div class="col-sm-12 col-md-4 col-lg-6">Column 3</div>
+                    </div>
+                
+                   
+                    
+            </div>      
+        </div> 
+            
+        
+   
+    <script src="{% static 'js/htmx.min.js' %}"></script>  
+    <script src="{% static 'js/clocker_buttons.js' %}"></script>  
+</body>
 </html>
-
-
+{% endblock %}
