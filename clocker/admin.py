@@ -5,11 +5,16 @@ from .models import Clocker
 from django.utils.dateparse import parse_date
 
 class ClockerAdmin(admin.ModelAdmin):
-    list_display = ('user', 'time_in', 'time_out', 'get_remarks')
+    list_display = ('get_full_name', 'time_in', 'time_out', 'get_remarks')
 
     def get_remarks(self, obj):
         return obj.calculate_time_difference
     get_remarks.short_description = 'Remarks'
+
+    def get_full_name(self, instance):
+        return instance.user.userprofile.full_name
+
+    get_full_name.short_description = 'Full Name'
 
     # calculate_time_difference.short_description = "View Clocker Records"
     # readonly_fields = ('get_shift_name',)

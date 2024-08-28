@@ -33,8 +33,32 @@
     
 }
 
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+}
+
 .nav-link-form .btn-link:hover {
     color: lightgray; /* Optional: Change color on hover */
+}
+
+#welcome {    
+    vertical-align: middle;
+    font-size: 14px; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #ebd300; /* Change the text color */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+    padding: 2px; /* Add padding around the text */
+    border-radius: 5px; /* Optional: round the corners */
+    
+}
+
+
+.profile-photo{
+    max-width:25px;
+    max-height:25px;
+    border-radius: 5px;
 }
 
 #user-tools {

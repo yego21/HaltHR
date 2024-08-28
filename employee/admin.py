@@ -39,10 +39,12 @@ class UserAdmin(BaseUserAdmin):
 
 
 
+
+
 class UserProfileAdmin(admin.ModelAdmin):
     change_form_template = 'admin/employee/userprofile/userprofile_change_form.html'
-    list_display = ('full_name', 'department', 'position_display')
-    readonly_fields = ('position_display', 'full_name_display', 'hire_date')
+    list_display = ('full_name', 'department', 'position')
+    # readonly_fields = ('position_display', 'full_name_display', 'hire_date')
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
         # Get the UserProfile object based on the object_id
@@ -60,12 +62,13 @@ class UserProfileAdmin(admin.ModelAdmin):
         return f'{full_name.first_name} {full_name.last_name}'
     full_name_display.short_description = 'Full Name'
 
-    def position_display(self, instance):
-        if instance.is_department_head is None:
-            return 'None'
-        return 'Department Head' if instance.is_department_head else 'Member'
 
-    position_display.short_description = 'Position'
+    # def position_display(self, instance):
+    #     if instance.is_department_head is None:
+    #         return 'None'
+    #     return 'Department Head' if instance.is_department_head else 'Member'
+
+    # position_display.short_description = 'Position'
 
     actions = ['view_clocker_records']
 

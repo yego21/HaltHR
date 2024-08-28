@@ -12,6 +12,7 @@ from django.http import JsonResponse
 from .models import Event
 
 
+
 #
 # def view_department_members(request, department_id):
 #     # Retrieve the department based on the department_id from the URL

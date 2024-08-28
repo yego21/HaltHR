@@ -6,7 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HaltHR</title>
-    <link rel="stylesheet" href="{% static 'bootstrap\css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <style>
+        /* Ensure the body and html take up the full height of the viewport */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Make the main content flex-grow to fill available space */
+        .container {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- Include the header template -->
@@ -18,6 +32,10 @@
         {% endblock %}
     </div>
 
+    <!-- Include the footer template -->
+    {% include 'includes/footer.html' %}
+
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
+

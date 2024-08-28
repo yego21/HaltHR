@@ -1,28 +1,173 @@
-.sidebar {   
-  
-    position: fixed;
-    top: auto;
-    left: 100px;  
-    width: 300px;
-    height: 100vh;
-    background-color: #f8f9fa;
-    padding: 20px;
-    overflow-y: auto;
+@font-face {
+  font-family: 'DigitalClock';
+  src: url('/static/fonts/digital-7.ttf') format('truetype'); /* Adjust path and format */
+  font-weight: normal;
+  font-style: normal;
 }
 
-#clocker_bar {
-    margin-left: 20px; /* Same as sidebar width */
-    padding: 20px;
+body {
+  background-color: #e7eef8;
+
 }
-
-
-/* Main content adjustment */
-.main-content {
+.container-fluid {
   
 }
+
 
 .dashboard {
-  position: relative;
-  align-content: center;
+  position: relative; 
+  align-self: center; 
+  width:auto; /* or any other value you prefer */
+  max-width: 110%;
+   /* to ensure it doesn't exceed the parent */
+}
+
+.bg-primary{
+  height:auto;
+  align-items: center;
+  padding: 50px; /* Optional padding */
+  display:flex;
+  justify-content: center;  
+  background-color: #316fb9 !important; /* Use your desired color */
+}
+
+
+#eventCarousel {
+  width:120%;   /* Approximately 5 inches wide */
+  height:auto;  /* Approximately 5 inches tall */
+  border: none;
+  box-shadow: none; 
+  padding: 0%;
+}
+
+#eventCarousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none; 
+}
+
+#eventCarousel .carousel.slide{
+
+}
+
+#eventCarousel .carousel-item {
+  width: 100%;
+  height: 100%; 
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: none; 
+  overflow: hidden;
   
+}
+
+#eventCarousel .carousel-item img {
+  /* Ensures the image covers the container */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  transition: none; /* Remove transition to avoid resizing during slide */
+  border: none;
+  box-shadow: none;
+}
+
+#eventCarousel .carousel-item.active {
+  display: block; /* Ensure active item is flexed and centered */
+  border: none;
+}
+
+.event_card {
+  background-color: #e7eef8; /* Light grey background color */
+  padding: 0px; /* Optional: Add some padding */
+  border: none;
+  box-shadow: none; 
+  max-height: 700px;
+  min-height: 700px;
+  
+}
+
+.card .event_card {
+  align-self: center;
+  border: none;
+  flex: 1;
+  
+}
+
+/* Ensures the carousel takes up the full height of the event_card */
+.event_card #eventCarousel {
+  height: 100%;
+  border: none;
+}
+
+/* Remove borders from the card and its containing elements */
+h3 {
+  text-align: center;
+  font-family: 'DigitalClock', sans-serif;
+ 
+}
+
+#clocker_div{
+  border: 2px solid #00ff00; /* Red border */
+  padding: 10px;
+  margin: 10px;
+}
+
+
+#announcements {
+  max-height: 450px; /* Set this to the desired height */
+  overflow-y: auto;  /* Enable vertical scrolling if content exceeds max-height */
+  padding: 15px;     /* Optional: Add some padding for better spacing */
+  border-top: 1px solid #ddd; /* Optional: Add a border to distinguish it from other sections */
+}
+
+.event-title-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(81, 94, 23, 0.5); /* Dark transparent background */
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+
+.card {
+    border: none;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #d0d4f5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: column;  
+}
+
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center; /* Center pagination horizontally */
+  align-items: center; /* Center pagination vertically within its own height */
+  margin-top: auto; /* Push pagination to the bottom */
+  padding: 0 0; /* Optional: Add padding for spacing */
 }

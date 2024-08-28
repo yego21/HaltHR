@@ -5,7 +5,13 @@
   font-style: normal;
 }
 
+body {
+  background-color: #e7eef8;
 
+}
+.container-fluid {
+  
+}
 
 
 .dashboard {
@@ -27,11 +33,11 @@
 
 
 #eventCarousel {
-  width:auto;   /* Approximately 5 inches wide */
+  width:120%;   /* Approximately 5 inches wide */
   height:auto;  /* Approximately 5 inches tall */
   border: none;
   box-shadow: none; 
-  
+  padding: 0%;
 }
 
 #eventCarousel .carousel-inner {
@@ -41,6 +47,10 @@
   box-shadow: none; 
 }
 
+#eventCarousel .carousel.slide{
+
+}
+
 #eventCarousel .carousel-item {
   width: 100%;
   height: 100%; 
@@ -48,33 +58,47 @@
   align-items: center;
   border: none;
   box-shadow: none; 
+  overflow: hidden;
+  
 }
 
 #eventCarousel .carousel-item img {
-  object-fit: fill; /* Ensures the image covers the container */
+  /* Ensures the image covers the container */
+  overflow: hidden;
   width: 100%;
-  height: 100%;  
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
   transition: none; /* Remove transition to avoid resizing during slide */
   border: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 #eventCarousel .carousel-item.active {
-  display: flex; /* Ensure active item is flexed and centered */
+  display: block; /* Ensure active item is flexed and centered */
+  border: none;
 }
 
 .event_card {
-  background-color: #ffffff; /* Light grey background color */
-  padding: 15px; /* Optional: Add some padding */
+  background-color: #e7eef8; /* Light grey background color */
+  padding: 0px; /* Optional: Add some padding */
   border: none;
   box-shadow: none; 
   max-height: 700px;
   min-height: 700px;
+  
+}
+
+.card .event_card {
+  align-self: center;
+  border: none;
+  flex: 1;
+  
 }
 
 /* Ensures the carousel takes up the full height of the event_card */
 .event_card #eventCarousel {
   height: 100%;
+  border: none;
 }
 
 /* Remove borders from the card and its containing elements */
@@ -98,3 +122,52 @@ h3 {
   border-top: 1px solid #ddd; /* Optional: Add a border to distinguish it from other sections */
 }
 
+.event-title-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(81, 94, 23, 0.5); /* Dark transparent background */
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+
+.card {
+    border: none;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #d0d4f5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: column;  
+}
+
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center; /* Center pagination horizontally */
+  align-items: center; /* Center pagination vertically within its own height */
+  margin-top: auto; /* Push pagination to the bottom */
+  padding: 0 0; /* Optional: Add padding for spacing */
+}

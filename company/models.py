@@ -3,9 +3,16 @@ from django.contrib.auth.models import User
 from django.contrib.postgres.fields import ArrayField
 from multiselectfield import MultiSelectField
 # from employee.models import UserProfile
+import os
 
-
+def event_directory_path(instance, filename):
+    event_name = instance.title
+    filename = f'{event_name}.jpg'
+    return os.path.join('events/', event_name, filename)
 # Create your models here.
+
+
+
 class Company(models.Model):
     name = models.CharField(max_length=255)
     address = models.TextField()
@@ -56,8 +63,8 @@ class Event(models.Model):
     time = models.TimeField()
     location = models.CharField(max_length=255)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    image1 = models.ImageField(upload_to='events/%m/%d/%Y/', default='events/event_1.jpg')
-    image2 = models.ImageField(upload_to='events/%m/%d/%Y/', blank=True)
+    image1 = models.ImageField(upload_to=event_directory_path, default='events/event_1.jpg')
+    image2 = models.ImageField(upload_to=event_directory_path, blank=True)
 
     def __str__(self):
         return self.title
