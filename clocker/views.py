@@ -31,7 +31,7 @@ def clock_in(request):
         has_clocked_out = Clocker.objects.filter(user=user, date=today, time_out__isnull=False).first()
 
         if has_clocked_in:
-            return HttpResponse(f'{user.username} has already clocked in for today, please proceed to clock out or contact your system administrator.', content_type='text/html')
+            return HttpResponse(f'<p style="color: red;">{user.username} has already clocked in for today, please proceed to clock out or contact your system administrator.</p>', content_type='text/html')
             # return JsonResponse({'status': 'failure', 'message': f'{user.username} has already clocked in for today, please proceed to clock out or contact your system administrator'})
             # print(f"existing clocker = true, existing shift = true,")
 
@@ -40,7 +40,7 @@ def clock_in(request):
             time_in = timezone.now()
             clocker = Clocker(user=user, date=today, time_in=time_in)
             clocker.save()
-            return JsonResponse({'status': 'success', 'message': 'Clock in time recorded successfully.'})
+            return HttpResponse('Clock in time recorded successfully.')
             print("Clock in time recorded successfully.")
             # messages.success(request, f'{user.username} clocked in at {time_in}.')
 
@@ -54,14 +54,13 @@ def clock_out(request):
     has_clocked_out = Clocker.objects.filter(user=user, date=today, time_out__isnull=False).first()
 
     if has_clocked_out:
-        return JsonResponse({'status': 'failure',
-                             'message': f'{user.username} has already clocked out for today, record not submitted.'})
+        return HttpResponse(f'{user.username} has already clocked out for today, record not submitted.')
     else:
         if has_clocked_in:
             # User has a time_in recorded but no time_out yet
             has_clocked_in.time_out = timezone.now()
             has_clocked_in.save()
-            return JsonResponse({'status': 'success', 'message': 'Clock out time recorded successfully.'})
+            return HttpResponse('Clock out time recorded successfully.')
 
         else:
             confirm = request.POST.get('confirm')
@@ -71,12 +70,11 @@ def clock_out(request):
                 clocker.save()
                 # messages.warning(request,
                 #                  f'{user.username} does not have Clock in record for today, are you sure to Clock out?')
-                return JsonResponse({'status': 'success', 'message': 'Clock out time recorded successfully.'})
+                return HttpResponse('Clock out time recorded successfully.')
 
             else:
                 # return redirect('index')
-                return JsonResponse({'status': 'confirm',
-                                     'message': f'{user.username} does not have Clock in record for today, are you sure you want to Clock out?'})
+                return HttpResponse(f'{user.username} does not have Clock in record for today, are you sure you want to Clock out?')
 
 
             # messages.warning(request,f'{user.username} does not have Clock in record for today, are you sure to Clock out?')

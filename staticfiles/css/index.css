@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #e7eef8;
+  background-color: #fafafa;
 
 }
 .container-fluid {
@@ -79,7 +79,7 @@ body {
 }
 
 .event_card {
-  background-color: #e7eef8; /* Light grey background color */
+  background-color: #f0f3cc; /* Light grey background color */
   padding: 0px; /* Optional: Add some padding */
   border: none;
   box-shadow: none; 
@@ -104,15 +104,26 @@ body {
 /* Remove borders from the card and its containing elements */
 h3 {
   text-align: center;
-  font-family: 'DigitalClock', sans-serif;
+  
  
 }
 
 #clocker_div{
-  border: 2px solid #00ff00; /* Red border */
+  border: 2px solid #343a40; /* Red border */
   padding: 10px;
   margin: 10px;
 }
+
+#clockInButton{ 
+  /* font-family: 'DigitalClock', sans-serif; */
+  background-color: #247a12; /* Primary button background color */
+} 
+
+#clockOutButton{ 
+  background-color: #247a12; /* Primary button background color */
+ 
+
+} 
 
 
 #announcements {
@@ -132,10 +143,19 @@ h3 {
   text-align: center;
 }
 
+.upcoming-text {
+  font-size: 0.85rem; /* Smaller font size */
+  color: #caab46; /* Gold color for the 'UPCOMING | {event date}' part */
+}
+ .event-date {
+  font-size: 0.85rem;
+ }
+
+
 .event-title {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.25rem; /* Larger font size for the event title */
+  color: black; /* Black color for the event title */
+  font-weight: bold; 
 }
 
 
@@ -145,7 +165,7 @@ h3 {
     border: none;
     /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #d0d4f5;
+    background-color: #fdfff6;
 }
 
 .card:hover {

@@ -1,6 +1,6 @@
 .header-nav {
-    background-color:#3e74c5;
-    color: rgb(88, 68, 68); /* Optional: Set text color */
+    background-color:#b69a41;
+    color: rgba(35, 34, 41, 0.863); /* Optional: Set text color */
 }
 
 .header-nav .navbar-nav .nav-link {
@@ -8,10 +8,59 @@
     font-size: 14px; 
 }
 
-.header-nav .navbar-brand {
-    color: rgb(233, 243, 204);
+.header-nav .navbar-brand {   
     font-size: 14px; 
 }
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {    
+    max-height: 40px; /* Adjust this size as needed */
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    filter: brightness(0) invert(1); /* Adjust to blend with the rest of the nav (e.g., white logo on dark navbar) */
+}
+
+.navbar-brand a {
+    text-decoration: none;
+}
+
+.navbar-admin {   
+    display: flex;
+    align-items: right;
+    padding: 0.5rem 1rem;    
+}
+
+.navbar-admin img {    
+    max-height: 30px; /* Adjust this size as needed */
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    filter: brightness(0) invert(1); /* Adjust to blend with the rest of the nav (e.g., white logo on dark navbar) */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #f5f1ea; /* or any classy color like dark grey */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-item .nav-separator {
+    color: #cccccc; /* A lighter shade for the separator */
+    font-weight: 300;
+    margin: 0 0.5rem;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: #d4af37; /* A gold or any elegant highlight color */
+    text-decoration: none;
+}
+
 
 .header-nav .navbar-nav .nav-link:hover {
     color: lightgray; 
@@ -40,14 +89,14 @@
 }
 
 .nav-link-form .btn-link:hover {
-    color: lightgray; /* Optional: Change color on hover */
+    color: rgb(0, 0, 0); /* Optional: Change color on hover */
 }
 
 #welcome {    
     vertical-align: middle;
     font-size: 14px; /* Adjust the font size */
     font-weight: bold; /* Make the text bold */
-    color: #ebd300; /* Change the text color */
+    color: #f5f1ea; /* Change the text color */
     text-transform: capitalize; /* Capitalize the first letter of each word */
     padding: 2px; /* Add padding around the text */
     border-radius: 5px; /* Optional: round the corners */

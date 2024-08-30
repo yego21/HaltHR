@@ -3,25 +3,42 @@
  <link rel="stylesheet" href="{% static 'css/header.css' %}">
 
 <nav class="navbar navbar-expand-lg header-nav"  style="padding-left: 20px;" >
-    <a class="navbar-brand" href="#">HaltHR</a>
+    <!-- <a class="navbar-brand" href="#">HaltHR</a> -->
+    <div class="navbar-brand">
+      <a href="#"><img src="{% static 'images/temp.png' %}" alt="Logo"></a>
+  </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Careers</a>
+            <a class="nav-link" href="#">Careers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+            <span class="nav-separator">|</span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
         </li>
-      </ul>      
+        <li class="nav-item">
+            <span class="nav-separator">|</span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+        </li>
+    </ul>
+         
     
     <div id="user-tools">
       <ul class="navbar-nav">
+        <div class="navbar-admin">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'admin:index' %}"><img src="{% static 'images/admin.png' %}" alt="adminzone"></a>
+      </li></div>
+      <li class="nav-item">
+        <span class="nav-separator">|</span>
+    </li>
         <li class="nav-item">
           <a class="nav-link" id="welcome">Hi, {{ user.first_name }}</a>
       </li>           

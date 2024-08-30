@@ -1,0 +1,2608 @@
+[
+{
+    "model": "company.company",
+    "pk": 1,
+    "fields": {
+        "name": "MacroHard",
+        "address": "gfdgdg",
+        "email": "gfdgdfgdfg@email.com",
+        "phone": "324242342"
+    }
+},
+{
+    "model": "company.department",
+    "pk": 1,
+    "fields": {
+        "name": "IT",
+        "company": 1,
+        "department_head": 23
+    }
+},
+{
+    "model": "company.department",
+    "pk": 2,
+    "fields": {
+        "name": "HR",
+        "company": 1,
+        "department_head": 26
+    }
+},
+{
+    "model": "company.event",
+    "pk": 4,
+    "fields": {
+        "title": "Sample Event",
+        "description": "Description of the sample event",
+        "date": "2024-08-22",
+        "time": "14:00:00",
+        "location": "Sample Location",
+        "company": 1,
+        "image1": "events/08/23/2024/twyEMz0.jpeg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 5,
+    "fields": {
+        "title": "Event 3",
+        "description": "Event 3 details.",
+        "date": "2024-08-17",
+        "time": "14:02:43",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Event 3/Event_3.jpg",
+        "image2": "events/08/23/2024/183-square.png-500h.png"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 8,
+    "fields": {
+        "title": "event 4",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-26",
+        "time": "10:47:55",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event 4/event_4.jpg",
+        "image2": "events/event 4/event_4_fWfFSOX.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 9,
+    "fields": {
+        "title": "Christmas Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-28",
+        "time": "09:49:37",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Christmas Party/Christmas_Party.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 10,
+    "fields": {
+        "title": "Halloween Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:49:55",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event_1.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 11,
+    "fields": {
+        "title": "New Year Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:50:26",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/New Year Party/New_Year_Party.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 12,
+    "fields": {
+        "title": "Super Event",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:50:57",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Super Event/Super_Event.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.announcement",
+    "pk": 1,
+    "fields": {
+        "title": "New Policies",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date_posted": "2024-08-23",
+        "company": 1
+    }
+},
+{
+    "model": "company.announcement",
+    "pk": 2,
+    "fields": {
+        "title": "New Schedules",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date_posted": "2024-08-23",
+        "company": 1
+    }
+},
+{
+    "model": "employee.shift",
+    "pk": 1,
+    "fields": {
+        "name": "Morning",
+        "start_time": "06:00:00",
+        "end_time": "12:00:00"
+    }
+},
+{
+    "model": "employee.shift",
+    "pk": 2,
+    "fields": {
+        "name": "Mid",
+        "start_time": "12:00:00",
+        "end_time": "18:00:00"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "company",
+        "model": "company"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "company",
+        "model": "event"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "company",
+        "model": "announcement"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "company",
+        "model": "department"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "clocker",
+        "model": "clocker"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "employee",
+        "model": "shift"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "employee",
+        "model": "userprofile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "69zelm3d3fbn5ysuybml5yhin1cmm99c",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pABytC6dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWRpx-t0DxkeoO-E711mRsdV3mIHdFHrTLa-P0vBzu30GhXr51QIs6a8fgRjAJgC0BwTRlq3HkyIFdHrTGjIxKAcfB2Ki0Q7JkIoj3B88HN10:1sh0xk:CyxSqjidAHXcJYrLCeH9vEop4FgujOcr5Gy-k3bGxF4",
+        "expire_date": "2024-09-05T06:06:24.065Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9uoxkuxkjcb69266eecqefhmes5oglie",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1scFN1:5kdnYZ8XOKGpRJd718aCbvZXfCnZz1b39AGYFji6sh4",
+        "expire_date": "2024-08-23T02:28:47.686Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ae82ngc8euba4inzt6zqk83ach5ti5td",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pABytC6dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWRpx-t0DxkeoO-E711mRsdV3mIHdFHrTLa-P0vBzu30GhXr51QIs6a8fgRjAJgC0BwTRlq3HkyIFdHrTGjIxKAcfB2Ki0Q7JkIoj3B88HN10:1sfsmz:PRaNleMoCO8pXbdzqcrOIOdcMH4isbsGSYo8IhSO3cQ",
+        "expire_date": "2024-09-02T03:10:37.961Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ajrd0r5ly5m47kx3mxrn3ree4yv9reom",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hAon_Jcuu8ZyIMHUjWQlHZlvLsh6UK3M5N5M4_HXvzR0-ZXYldm2OWXBYzPVIegB9Z747HVfVsDHwk_bedLo_S6ne3foGAvY2tBQXaTM1kkzFLmQGCNJKECSGFJzS4YpIhWTwRRaB1mYbWlDJJIs88X2Ds3rw:1sgKFh:w5-cxOQip6H-PXkT3VDsm8cmWs255UiiGUyiVfm0wn8",
+        "expire_date": "2024-09-03T08:30:05.451Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cv5mcqbzx70rn6hw4apqm3y1416elch4",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1seNyD:EuOUlNy3StZTKMLuZDLL5G3zBmK3zn4C0F78tnHpY_w",
+        "expire_date": "2024-08-29T00:04:01.704Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "fcnzf2q996u215jn8u2hxek2jp8zqt4k",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hDAYQCX7nsGMpRBqoYmpV0Z765NutDtf-_9l4i0rTVunZc4ZXERKE6_W6LxwW0H-U7tNstxbusyJbkr8qBdDnPm5_Vw_w4q9fqti-eQjQ_WKsO-IDtypB0ky0BnNA7BFKsBVUBvCyRHBkCjSiVp8Fa8P8xDNs0:1siP3a:6X0uSykB-9_nAzYPjLg1Mk32bAtto3ucqTe5nRiCk50",
+        "expire_date": "2024-09-09T02:02:10.792Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "gr2rc2mmh09r8pxqrqs8ieocve5v81p5",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBghgIu3XsGMsBUqoYmpV0Z765NutDtf-_9l4i0rTVunZc4FXEWKE6_W6L84LaDcqd2m2We27pMSe6KPGiX17nw83K4fweVev3WQ3KoCYG0M94gK52U5QGUCdmbZBUjaD2CpeTYQkYToDgfigEePZF4fwCzTTcB:1selHU:xbtFooVLx4MDXGl1ElNT4CDms05d0JYwuU5v_4YGA50",
+        "expire_date": "2024-08-30T00:57:28.960Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "i1uoby5hzzt4dtmuxbae0bfh723gtes8",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1siTxS:muQGmWf2lLcnAb5VkFreeGqebVA2ytssqdSiyqLyDME",
+        "expire_date": "2024-09-09T07:16:10.864Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "n78loz2tl3zkxv41ijbym1my78iswfjs",
+    "fields": {
+        "session_data": "e30:1shIbv:3vq5RlHYY3uDbA7w8nnApr0kFh80yrDL9q8XhINlCog",
+        "expire_date": "2024-09-06T00:57:03.119Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pp1l80wj9dfdsllggz7e3jknq80nonqh",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1sdIn3:QcXa7_6Cpk5YZFpKlEN0e_DEVbF6j2WuKZkOHirYsgw",
+        "expire_date": "2024-08-26T00:20:01.537Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add company",
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "codename": "add_company"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change company",
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "codename": "change_company"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete company",
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "codename": "delete_company"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view company",
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "codename": "view_company"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add event",
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "codename": "add_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change event",
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "codename": "change_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete event",
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "codename": "delete_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view event",
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "codename": "view_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add announcement",
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "codename": "add_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change announcement",
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "codename": "change_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete announcement",
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "codename": "delete_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view announcement",
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "codename": "view_announcement"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add department",
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "codename": "add_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change department",
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "codename": "change_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete department",
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "codename": "delete_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view department",
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "codename": "view_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add clocker",
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "codename": "add_clocker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change clocker",
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "codename": "change_clocker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete clocker",
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "codename": "delete_clocker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view clocker",
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "codename": "view_clocker"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add shift",
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "codename": "add_shift"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change shift",
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "codename": "change_shift"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete shift",
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "codename": "delete_shift"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view shift",
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "codename": "view_shift"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user profile",
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "codename": "add_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user profile",
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "codename": "change_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user profile",
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "codename": "delete_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user profile",
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "codename": "view_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Department Heads",
+        "permissions": [
+            [
+                "view_clocker",
+                "clocker",
+                "clocker"
+            ],
+            [
+                "view_announcement",
+                "company",
+                "announcement"
+            ],
+            [
+                "view_department",
+                "company",
+                "department"
+            ],
+            [
+                "view_event",
+                "company",
+                "event"
+            ],
+            [
+                "view_shift",
+                "employee",
+                "shift"
+            ],
+            [
+                "view_userprofile",
+                "employee",
+                "userprofile"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$LyiBE6adBf2UKK2haj7kHj$tCZJJgAD+JaQLZYSXOgpenCnVQBRIjXWEnnJ0kc7kmo=",
+        "last_login": "2024-08-26T07:16:10.856Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "admin",
+        "last_name": "ko",
+        "email": "admin@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-09T02:28:38Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Xnxu1MRYnbYHOklZThHAV4$2dtd8psR1pfyJj2+sXJZsRb9p5TrP3qoMpsJ6FVSmmI=",
+        "last_login": "2024-08-22T06:06:24.059Z",
+        "is_superuser": false,
+        "username": "user1",
+        "first_name": "User",
+        "last_name": "One",
+        "email": "user1@email.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-09T02:58:12Z",
+        "groups": [
+            [
+                "Department Heads"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$DR2f2gpCx3VCXNHo2rYppU$SqKnvYbU6S/q+1I8N2f2X1Z/I5BXu3lKLgoru/IWEIM=",
+        "last_login": "2024-08-23T08:29:18.810Z",
+        "is_superuser": false,
+        "username": "user2",
+        "first_name": "User",
+        "last_name": "Two",
+        "email": "user2@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-09T03:25:37Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$bsjYYHwblruektYqTCMnaW$+c5vN28EaRSYTymGIx7GDF9EMeupWu6EGJ9Ktb8STFM=",
+        "last_login": "2024-08-20T08:30:05.438Z",
+        "is_superuser": false,
+        "username": "user3",
+        "first_name": "gwapo",
+        "last_name": "ko",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-09T05:42:41Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$lGdlSyCByfGGlLueR5kwAm$aWZRKjsEub7z4v0aNzIkk6jxygvMepM4V+/P4o7nip0=",
+        "last_login": "2024-08-26T02:02:10Z",
+        "is_superuser": false,
+        "username": "user4",
+        "first_name": "User",
+        "last_name": "Four",
+        "email": "user4@email.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-09T07:37:52Z",
+        "groups": [
+            [
+                "Department Heads"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-08-09T02:58:13.310Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "user1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-08-09T02:58:28.138Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "user1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-08-09T02:59:03.028Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-08-09T02:59:37.094Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "object_id": "1",
+        "object_repr": "MacroHard",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-08-09T03:00:10.872Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "object_id": "1",
+        "object_repr": "Morning",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-08-09T03:00:23.056Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "object_id": "2",
+        "object_repr": "Mid",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-08-09T03:00:33.188Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "23",
+        "object_repr": "User One",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-08-09T03:00:48.276Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Company\", \"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-08-09T03:02:06.440Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Department Heads",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-08-09T03:25:16.764Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Department Heads",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-08-09T03:25:37.842Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "user2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-08-09T03:25:54.447Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "user2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-08-09T03:26:04.574Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-08-09T03:26:16.046Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "24",
+        "object_repr": "User Two",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-08-09T03:26:29.373Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-08-09T05:42:42.304Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "user3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-08-09T05:42:48.346Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "user3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-08-09T05:43:30.931Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "25",
+        "object_repr": "gwapo ko",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-08-09T05:44:56.670Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-08-09T07:37:52.856Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "user4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-08-09T07:38:04.204Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "user4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-08-12T01:10:08.851Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "23",
+        "object_repr": "User One",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-08-12T01:34:52.147Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-08-12T01:35:50.205Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "23",
+        "object_repr": "User One",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-08-13T02:04:53.680Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "22",
+        "object_repr": " ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-08-14T05:23:13.296Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-08-15T02:21:46.870Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-08-16T07:33:39.335Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-08-23T06:07:45.125Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-08-23T06:26:47.143Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-08-23T06:27:50.017Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "4",
+        "object_repr": "Sample Event",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-08-23T06:48:55.755Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "4",
+        "object_repr": "Sample Event",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-08-23T07:02:49.881Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-08-23T07:43:20.915Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "object_id": "1",
+        "object_repr": "New Policies",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-08-23T07:43:44.492Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "object_id": "2",
+        "object_repr": "New Schedules",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-08-26T02:45:28.301Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "6",
+        "object_repr": "Eevnt 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-08-26T02:46:53.779Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "6",
+        "object_repr": "Eevnt 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-08-26T02:48:09.571Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "7",
+        "object_repr": "event 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-08-26T02:48:32.748Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "7",
+        "object_repr": "event 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-08-26T02:50:48.751Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-08-26T02:52:38.597Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-08-26T02:54:48.968Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-08-26T02:56:59.634Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-08-26T03:01:21.776Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-08-26T03:01:41.437Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-08-26T03:02:21.029Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-08-26T03:03:03.282Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-08-26T03:11:22.222Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "user4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-08-26T03:31:07.132Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-08-27T01:49:44.327Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "9",
+        "object_repr": "Christmas Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-08-27T01:50:09.772Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "10",
+        "object_repr": "Halloween Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-08-27T01:50:35.589Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-08-27T01:51:06.652Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "12",
+        "object_repr": "Super Event",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2024-08-27T02:32:12.922Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2024-08-27T04:01:51.574Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "9",
+        "object_repr": "Christmas Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2024-08-28T03:41:28.155Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "25",
+        "object_repr": "gwapo ko",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2024-08-28T03:41:41.566Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "24",
+        "object_repr": "User Two",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department\", \"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2024-08-28T03:54:03.153Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2024-08-29T04:57:42.259Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "10",
+        "object_repr": "Halloween Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2024-08-30T03:22:06.378Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "12",
+        "object_repr": "Super Event",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2024-08-30T03:22:13.354Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2024-08-30T03:22:15.854Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2024-08-30T03:22:22.514Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "9",
+        "object_repr": "Christmas Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2024-08-30T03:22:26.467Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "user_shift": null,
+        "department": 1,
+        "photo": "photos/admin_ko/22_k0LhhJZ.png",
+        "address": null,
+        "contact": null,
+        "position": "Member",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "user_shift": 2,
+        "department": 1,
+        "photo": "photos/default_photo.png",
+        "address": null,
+        "contact": null,
+        "position": "Member",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "user_shift": 2,
+        "department": 1,
+        "photo": "photos/User_Two/24.png",
+        "address": "",
+        "contact": null,
+        "position": "Developer",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "user_shift": 2,
+        "department": 2,
+        "photo": "photos/default_photo.png",
+        "address": "",
+        "contact": null,
+        "position": "Developer",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "user_shift": null,
+        "department": 2,
+        "photo": "photos/User_Four/26_x3Kycnb.png",
+        "address": "",
+        "contact": null,
+        "position": "Team Leader",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-09T03:01:08.242Z",
+        "time_out": null,
+        "date": "2024-08-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-09T05:43:08.511Z",
+        "time_out": "2024-08-09T05:43:51.822Z",
+        "date": "2024-08-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-09T08:16:16.710Z",
+        "time_out": "2024-08-09T08:16:26.236Z",
+        "date": "2024-08-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-12T00:24:37.927Z",
+        "time_out": "2024-08-12T01:29:13.091Z",
+        "date": "2024-08-12"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-14T02:09:05.588Z",
+        "time_out": "2024-08-14T02:09:13.213Z",
+        "date": "2024-08-14"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-14T08:40:43.432Z",
+        "time_out": "2024-08-14T08:40:45.613Z",
+        "date": "2024-08-14"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-15T00:03:36.904Z",
+        "time_out": "2024-08-15T00:03:38.787Z",
+        "date": "2024-08-15"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-15T00:03:54.203Z",
+        "time_out": "2024-08-15T00:03:55.738Z",
+        "date": "2024-08-15"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-16T00:44:51.342Z",
+        "time_out": "2024-08-16T00:45:11.779Z",
+        "date": "2024-08-16"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-16T00:57:32.238Z",
+        "time_out": "2024-08-16T00:57:35.038Z",
+        "date": "2024-08-16"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-19T01:12:47.652Z",
+        "time_out": "2024-08-19T01:12:50.042Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-19T02:39:30.579Z",
+        "time_out": "2024-08-19T02:39:33.691Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-19T03:10:00.884Z",
+        "time_out": "2024-08-19T03:10:03.152Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-19T03:10:39.530Z",
+        "time_out": "2024-08-19T03:10:42.345Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": null,
+        "time_out": "2024-08-19T07:35:50.865Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-19T07:36:01.761Z",
+        "time_out": null,
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-20T00:57:11.491Z",
+        "time_out": "2024-08-20T00:57:14.684Z",
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": null,
+        "time_out": "2024-08-20T01:37:36.295Z",
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-20T02:11:36.265Z",
+        "time_out": null,
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-20T08:30:12.210Z",
+        "time_out": "2024-08-20T08:30:57.274Z",
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-20T23:56:10.143Z",
+        "time_out": "2024-08-20T23:56:13.365Z",
+        "date": "2024-08-21"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-21T01:41:20.574Z",
+        "time_out": "2024-08-21T01:41:25.617Z",
+        "date": "2024-08-21"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-22T01:53:43.521Z",
+        "time_out": "2024-08-22T01:53:45.502Z",
+        "date": "2024-08-22"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-23T01:02:38.526Z",
+        "time_out": "2024-08-23T01:02:53.384Z",
+        "date": "2024-08-23"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-26T01:28:36.732Z",
+        "time_out": "2024-08-26T01:28:47.535Z",
+        "date": "2024-08-26"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-26T23:58:29.168Z",
+        "time_out": null,
+        "date": "2024-08-27"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 27,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-29T00:10:15.898Z",
+        "time_out": "2024-08-29T00:10:18.434Z",
+        "date": "2024-08-29"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 28,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-30T02:51:31.406Z",
+        "time_out": "2024-08-30T02:51:33.994Z",
+        "date": "2024-08-30"
+    }
+}
+]
