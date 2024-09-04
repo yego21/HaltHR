@@ -9,5 +9,6 @@ urlpatterns = [
     # path('clocker/', ClockerListView.as_view(), name='clocker_list'),
     path('admin/clocker/filter-clocker/<int:user_id>', views.clocker_entries, name='clocker_entries'),
     path('clocker_popup/<int:user_id>/', views.clocker_popup, name='clocker_popup'),
+    path('attendance_logs/<int:user_id>/', views.attendance_logs, name='attendance_logs'),
     path('htmx', views.htmx_view, name='htmx_view')
 ]

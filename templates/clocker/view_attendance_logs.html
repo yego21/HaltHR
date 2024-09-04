@@ -1,15 +1,13 @@
-{% extends "admin/base_site.html" %}
 {% load static %}
-{% block content %}
-<link rel="stylesheet" href="{% static 'css/popup.css' %}">
+<link rel="stylesheet" href="{% static 'css/view_attendance.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"> 
+   
 
-<div class="popup-overlay" id="popup-overlay">
-    <div class="popup-container">
-        <span class="popup-close" id="popup-close">&times;</span>
-        <h1>Clocker Entries for {{ user.full_name }}</h1>
+<div class="container-fluid">
+        <h2>View Attendance - {{ user.full_name }}</h2>
 
       
-        <form id="filter-form" method="get">
+        <form id="filter-form" method="get">        
             <label for="date_range">Date Range:</label>
             <select id="date_range" name="date_range" onchange="setDateRange()">
                 <option value="">Select...</option>
@@ -62,24 +60,21 @@
                 </tr>               
                 {% endif %}
             </tbody>
-        </table>
-    </div>
-</div>
-
+       </table>     
+ </div>
 <script>
     // JavaScript to handle showing and hiding the popup
     document.getElementById('popup-close').addEventListener('click', function() {
-        document.getElementById('popup-overlay').style.display = 'none';
+        document.getElementById('view-attendance-overlay').style.display = 'none';
     });
 
     // You can also use JavaScript to show the popup
     function showPopup() {
-        document.getElementById('popup-overlay').style.display = 'block';
+        document.getElementById('view-attendance-overlay').style.display = 'block';
     }
 
     // Call this function when you need to show the popup
     showPopup();
-
 
     document.getElementById('filter-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -103,8 +98,7 @@
 
 
 <script src="{% static 'js/clocker_filter.js' %}"></script>
-{% endblock %}
-
+     
 
 
 

@@ -1,5 +1,5 @@
 .header-nav {
-    background-color:#b69a41;
+    background-color:#110f08;
     color: rgba(35, 34, 41, 0.863); /* Optional: Set text color */
 }
 
@@ -8,8 +8,7 @@
     font-size: 14px; 
 }
 
-.header-nav .navbar-brand {
-    color: rgb(233, 243, 204);
+.header-nav .navbar-brand {   
     font-size: 14px; 
 }
 
@@ -19,7 +18,7 @@
     padding: 0.5rem 1rem;
 }
 
-.navbar-brand img {
+.navbar-brand img {    
     max-height: 40px; /* Adjust this size as needed */
     max-width: 100%;
     height: auto;
@@ -37,7 +36,7 @@
     padding: 0.5rem 1rem;    
 }
 
-.navbar-admin img {
+.navbar-admin img {    
     max-height: 30px; /* Adjust this size as needed */
     max-width: 100%;
     height: auto;
@@ -46,7 +45,7 @@
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #ffffff; /* or any classy color like dark grey */
+    color: #f5f1ea; /* or any classy color like dark grey */
     font-weight: 500;
     padding: 0.5rem 1rem;
 }
@@ -90,14 +89,14 @@
 }
 
 .nav-link-form .btn-link:hover {
-    color: lightgray; /* Optional: Change color on hover */
+    color: rgb(0, 0, 0); /* Optional: Change color on hover */
 }
 
 #welcome {    
     vertical-align: middle;
     font-size: 14px; /* Adjust the font size */
     font-weight: bold; /* Make the text bold */
-    color: #ffffff; /* Change the text color */
+    color: #f5f1ea; /* Change the text color */
     text-transform: capitalize; /* Capitalize the first letter of each word */
     padding: 2px; /* Add padding around the text */
     border-radius: 5px; /* Optional: round the corners */

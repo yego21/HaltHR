@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 from django.urls import path
-from .models import Company, Department, Event, Announcement
+from .models import Company, Department, Event, Announcement, Event_Media
 from django.utils.html import format_html
 from django.contrib import admin
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
@@ -9,6 +9,18 @@ from employee.models import UserProfile
 from .forms import DepartmentForm
 from django.http import HttpResponseForbidden
 from django import forms
+
+
+
+class Event_MediaInline(admin.StackedInline):
+    model = Event_Media
+    extra = 4
+
+class EventAdmin(admin.ModelAdmin):
+    model = Event
+    inlines = [Event_MediaInline]
+
+
 
 
 
@@ -68,38 +80,22 @@ class DepartmentAdmin(admin.ModelAdmin):
         extra_context['department'] = department
         return super().change_view(request, object_id, form_url, extra_context=extra_context)
 
-
-
-
-
-
-
     def response_change(self, request, obj):
         # Custom redirection logic
         # Redirecting to the change list view if the user lacks permission
         return HttpResponseRedirect(reverse('admin:company_department_changelist'))
 
-    # def get_members(self, obj):
-    #     return ", ".join([profile.user.username for profile in obj.get_members()])
 
-    # get_members.short_description = 'Members'
-
-
-
-
-    # def display_members(self, obj):
-    #     return ", ".join(obj.get_members())
-    #
-    # display_members.short_description = 'Members'
-    # inlines = [UserProfileInline]
 
 
 # Register your models here.
-admin.site.register(Company)
-admin.site.register(Event)
+# admin.site.register(Company)
+admin.site.register(Event, EventAdmin)
 admin.site.register(Announcement)
 # admin.site.unregister(Department)
 admin.site.register(Department, DepartmentAdmin)
+admin.site.register(Event_Media)
 
 
 
+admin.site.register(Company)

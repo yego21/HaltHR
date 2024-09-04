@@ -109,8 +109,7 @@ h3 {
 }
 
 #clocker_div{
-  border: 2px solid #343a40; /* Red border */
-  padding: 10px;
+  border: 2px ridge  #b69a41; 
   margin: 10px;
 }
 
@@ -120,10 +119,21 @@ h3 {
 } 
 
 #clockOutButton{ 
-  background-color: #247a12; /* Primary button background color */
- 
-
+  background-color: #247a12; /* Primary button background color */ 
 } 
+
+.profile-icons {
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center align the items horizontally */
+  gap: 30px; /* Space between the icons */
+}
+
+.profile-icons img {
+  width: 24px; /* Set the width of the icons */
+  height: 24px; /* Set the height of the icons */
+  object-fit: contain; 
+}
+
 
 
 #announcements {
@@ -191,3 +201,19 @@ h3 {
   margin-top: auto; /* Push pagination to the bottom */
   padding: 0 0; /* Optional: Add padding for spacing */
 }
+
+
+.response-message{
+  max-height: 0;
+  transition: opacity 1s ease-in-out;
+  /* Start with zero height */
+  overflow: hidden; /* Hide content that exceeds the container's height */
+  opacity: 0;
+  transition: max-height 1s ease-in-out, opacity 1s ease-in-out; /* Animate height and opacity */
+}
+.response-message.show{
+  max-height: 100px; /* Adjust to fit your content or use auto if content varies */
+  opacity: 1;
+}
+
+

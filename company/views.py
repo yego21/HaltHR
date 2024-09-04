@@ -33,6 +33,10 @@ from .models import Event
 def view_members(request):
     return render(request, 'company/department/department_change_form.html')
 
+def event_details(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    return render(request, 'company/event/event_details_partial.html', {'event': event})
+
 
 
 

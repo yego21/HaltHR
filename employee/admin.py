@@ -43,7 +43,7 @@ class UserAdmin(BaseUserAdmin):
 
 class UserProfileAdmin(admin.ModelAdmin):
     change_form_template = 'admin/employee/userprofile/userprofile_change_form.html'
-    list_display = ('full_name', 'department', 'position')
+    list_display = ('full_name', 'department', 'position', 'user_shift')
     # readonly_fields = ('position_display', 'full_name_display', 'hire_date')
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
@@ -70,27 +70,6 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     # position_display.short_description = 'Position'
 
-    actions = ['view_clocker_records']
-
-    def view_clocker_records(self, request, queryset):
-        if 'apply' in request.POST:
-            start_date = request.POST.get('start_date')
-            end_date = request.POST.get('end_date')
-            start_date = datetime.strptime(start_date, '%Y-%m-%d') if start_date else None
-            end_date = datetime.strptime(end_date, '%Y-%m-%d') if end_date else None
-
-            records = Clocker.objects.filter(user__in=queryset, clock_in__date__range=(start_date, end_date))
-
-            context = {
-                'records': records,
-                'start_date': start_date,
-                'end_date': end_date,
-            }
-            return render(request, 'admin/view_clocker_records.html', context)
-
-        return render(request, 'admin/filter_clocker_records.html')
-
-    view_clocker_records.short_description = "View Clocker Records"
 
 
 

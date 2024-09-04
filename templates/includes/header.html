@@ -51,13 +51,15 @@
                 <li><a class="dropdown-item" href="{% url 'userprofile' %}">Profile</a></li>
                 <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin Zone</a></li>
                 <li><a class="dropdown-item" 
-                      hx-post="{% url 'logout' %}" 
-                      hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
-                      hx-confirm="Are you sure you want to log out?"
-                      hx-target="body"  
-                      hx-swap="innerHTML"
-                      style="cursor: pointer;">Logout</a>
-              </a></li>
+                  hx-post="{% url 'logout' %}" 
+                  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'                      
+                  hx-confirm="Are you sure you want to log out?"
+                  hx-trigger="click"
+                  hx-target="body"  
+                  hx-swap="outerHTML"
+                  style="cursor: pointer;">
+                   Logout
+               </a></li>
             </ul>
         </li>
          
@@ -69,13 +71,26 @@
     
       <!-- JavaScript for Logout Form Submission (optional) -->
       <script>
-        document.getElementById('logout-form').addEventListener('submit', function(event) {
-          event.preventDefault();  // Prevent default form submission
+        // Listen to HTMX's afterOnLoad event on the document body
+        document.body.addEventListener('htmx:afterOnLoad', function(evt) {
+            // Extract the response and ensure it's properly handled
+            try {
+                // Parse the JSON response if possible
+                var xhr = evt.detail.xhr;
+                var response = JSON.parse(xhr.responseText);
     
-          // Submit the form
-          this.submit();
+                // Check if the response indicates a redirect
+                if (response.redirect) {
+                    // Redirect the user to the specified URL
+                    window.location.href = response.redirect_url;
+                }
+            } catch (e) {
+                // Handle any errors in the response or JSON parsing
+                console.error("Error handling HTMX response:", e);
+            }
         });
-      </script>       
+    </script>    
+    <script src="{% static 'js/htmx.min.js' %}"></script>  
   
 
   

@@ -7,13 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Dashboard</title>
-    
-
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'htmx.min.js' %}"></script>    
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/view_attendance.css' %}">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
+        <span class="popup-close" id="popup-close">&times;</span>
+
+    <!-- <div id="popup-container">test here</div> -->
    
             <!-- Main Content Column -->
             <div class="dashboard">
@@ -86,9 +88,19 @@
                                             </div>
                                             <div class="response-message"></div>
                                         </section>
-                                        <span class="profile-icons"><img title="Notes" src="{% static 'images/sticky-notes.png' %}" alt="">
-                                            <img title="Current Task" href= "#" src="{% static 'images/task.png' %}" alt="">
-                                            <a href= "{% url 'clocker_popup' user_id=request.user.id %}"><img title="Attendance"  src="{% static 'images/attendance.png' %}" alt=""></img></a></span>
+                                        <span class="profile-icons">
+                                            <a href="{% url 'htmx_view' %}"><img title="Notes" src="{% static 'images/sticky-notes.png' %}" alt=""></a>
+                                            <a href="{% url 'htmx_view' %}"><img title="Current Task" href= "#" src="{% static 'images/task.png' %}" alt=""></a>                                            
+                                            <a href="#"                                                
+                                                 id="view-attendance-popup">                                                                           
+                                                 <!-- hx-get="{% url 'attendance_logs' user_id=request.user.id %}"                                                 
+                                                 hx-trigger="click" 
+                                                 hx-target="#view-attendance-container"
+                                                 hx-swap="innerHTML">                                                                                   -->
+                                                 <img title="Attendance"  src="{% static 'images/attendance.png' %}" alt="">
+                                        </a>
+                                        </span>
+                                       
                                     </div>
                                 </div>
                                 <section id="announcements">
@@ -133,7 +145,13 @@
                                     <div class="row" data-masonry='{"percentPosition": true }'>
                                         {% for event in events %}
                                         <div class="col-sm-12 col-md-6 col-lg-4 mb-4 mt-3">
-                                            <div class="card h-100 shadow">
+                                            <div class="card h-100 shadow"
+                                                hx-get="{% url 'event_details' event.id %}"
+                                                hx-target="#eventModalBody"
+                                                hx-trigger="click"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#eventModal"
+                                                style="cursor: pointer;">
                                                 <img src="{{ event.image1.url }}" class="card-img-top" alt="{{ event.title }}">
                                                 <div class="card-body">
                                                    <h6 class="text-uppercase">
@@ -211,13 +229,52 @@
                     
             </div>      
         </div> 
+     <script>
+        document.getElementById('view-attendance-popup').addEventListener('click', function() {
             
-        
-        
-    <script src="{% static 'js/htmx.min.js' %}"></script>  
-    <script src="{% static 'js/clocker_buttons.js' %}"></script>  
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script> -->
+            var popupUrl = "{% url 'attendance_logs' user_id=request.user.id %}";
+
+            // Open a new window
+            var popupWindow = window.open(popupUrl, "popupWindow", "width=1000,height=600,scrollbars=yes");
+
+            // Use HTMX to load the content
+            htmx.ajax('GET', popupUrl, { 
+                target: popupWindow.document.body, 
+                swap: 'innerHTML' 
+            });
+        });
+     </script>       
+            
+   
+
+
+   
 </body>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script> -->
+<script src="{% static 'js/htmx.min.js' %}"></script>  
+<script src="{% static 'js/clocker_buttons.js' %}"></script> 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+<!-- Event Modal -->
+
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="eventModalBody">
+          <!-- Event details content will be loaded here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 
 </html>

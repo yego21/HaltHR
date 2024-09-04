@@ -1,0 +1,19 @@
+<!-- event_details_partial.html -->
+
+<h5>{{ event.title }}</h5>
+<p>{{ event.description }}</p>
+<p><strong>Date:</strong> {{ event.date }}</p>
+<div class="row">
+    {% if event.photos %}
+      {% for photo in event.photos.all %}
+        <div class="col-3 mb-2">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#fullImageModal" data-img-src="{{ photo.url }}">
+            <img src="{{ photo.url }}" class="img-thumbnail" alt="Event Photo">
+          </a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No photos available.</p>
+    {% endif %}
+  </div>
+<!-- Add more event details as needed -->

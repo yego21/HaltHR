@@ -24,18 +24,25 @@
         var clockerId = this.getAttribute('data-clocker-id');
         var user = '{{user_profile.user.id}}'
         var popupUrl = "{% url 'clocker_popup' 0 %}".replace('0', user);
-        window.open(popupUrl, 'popupWindow', 'width=600,height=400,scrollbars=yes');
+
+        var width = 800; // Desired width of the popup window
+        var height = 600; // Desired height of the popup window
+
+        // Calculate the position to center the window on the screen
+        var left = (screen.width - width) / 2;
+        var top = (screen.height - height) / 2;
+       
+        window.open(popupUrl, 'popupWindow', `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`);
         //   alert('Button clicked!'); // This will show an alert when the button is clicked.
       });
   </script>
 <link rel="stylesheet" href="{% static 'css/popup.css' %}">
-<div id="clocker-popup" style="display:none;">
-    <div style="background:white; padding:20px; border:1px solid #ccc; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000;">
-        {% load static %}
+<!-- <div id="clocker-popup" style="display:none;"> -->
+    <!-- <div style="background:white; padding:20px; border:1px solid #ccc; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000;"> -->
+       
 <!-- templates/clocker_popup.html -->
 
-<div id="clocker-popup" style="display:none;">
-    <div style="background:white; padding:20px; border:1px solid #ccc; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:1000;">
+
        
 <!-- templates/clocker_popup.html -->
 <!-- {% load static %}
