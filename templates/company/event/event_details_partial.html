@@ -1,9 +1,75 @@
 <!-- event_details_partial.html -->
-
+{% load imagekit %}
 <h5>{{ event.title }}</h5>
 <p>{{ event.description }}</p>
 <p><strong>Date:</strong> {{ event.date }}</p>
-<div class="row">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+    .media-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Add some space between thumbnails */
+    }
+   
+    .media-item a {
+        display: block;
+    }
+    .vid-thumbnail-container {
+    position: relative;
+    display: inline-block;
+    }
+  
+
+    .play-icon { 
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px; /* Adjust size as necessary */
+        color: rgb(255, 255, 255); /* White color */
+        opacity: 0.7;  /* Add transparency to the icon */
+        z-index: 1;
+        cursor: pointer;
+    }
+</style>
+
+<div class="media-gallery">
+    {% for media in media %}
+    
+        {% if media.media_type == 'photo' %}
+            <div class="media-item">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#mediaModal" data-media-url="{{ media.file.url }}" data-media-type="photo">
+                    <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}">
+                </a>
+            </div>
+        {% elif media.media_type == 'video' %}
+        <div class="media-item">                
+            <a href="#" data-bs-toggle="modal" data-bs-target="#mediaModal" data-media-url="{{ media.file.url }}" data-media-type="video">         
+            <div class="vid-thumbnail-container">
+                <img class="vid-thumbnail" src="{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
+                <div class="play-icon">
+                    <i class="fas fa-play"></i> <!-- This is the Font Awesome play icon -->
+                </div>
+            </div>
+            </a>
+        </div>
+                     
+                      
+                   
+                   
+                       
+                 
+               
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+
+
+<!-- <div class="row">
     {% if event.photos %}
       {% for photo in event.photos.all %}
         <div class="col-3 mb-2">
@@ -15,5 +81,5 @@
     {% else %}
       <p>No photos available.</p>
     {% endif %}
-  </div>
+  </div> -->
 <!-- Add more event details as needed -->

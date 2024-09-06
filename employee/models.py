@@ -5,6 +5,7 @@ from django.utils import timezone
 from company.models import Department
 import os
 
+
 def user_directory_path(instance, filename):
     full_name = instance.full_name.replace(" ", "_")
     filename = f'{instance.id}.png'
@@ -73,19 +74,7 @@ class UserProfile(models.Model):
     # Department = models.ForeignKey()
 
 
-
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name}'
 
-# class UserShift(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     user_shift = models.CharField(max_length=100)
-#     start_time = models.DateTimeField(default=timezone.now, null=True)
-#     end_time = models.DateTimeField(default=timezone.now, null=True)
-#     date = models.DateField(default=timezone.now)
-#
-#     def __str__(self):
-#         return f'{self.user.username} - {self.user_shift.name} - {self.date}'
-from django.db import models
 
-# Create your models here.

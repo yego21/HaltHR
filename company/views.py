@@ -9,7 +9,7 @@ from .models import Department
 from employee.models import UserProfile
 from django.utils import timezone
 from django.http import JsonResponse
-from .models import Event
+from .models import Event, Event_Media
 
 
 
@@ -33,9 +33,15 @@ from .models import Event
 def view_members(request):
     return render(request, 'company/department/department_change_form.html')
 
+
 def event_details(request, event_id):
     event = get_object_or_404(Event, id=event_id)
-    return render(request, 'company/event/event_details_partial.html', {'event': event})
+    media = Event_Media.objects.filter(event=event)
+    context = {
+        'event': event,
+        'media': media
+    }
+    return render(request, 'company/event/event_details_partial.html', context)
 
 
 

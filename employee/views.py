@@ -60,7 +60,7 @@ class UserProfileView(DetailView):
 
 class UserProfileUpdateView(UpdateView):
     model = UserProfile
-    fields = ['user_shift', 'photo']
+    fields = ['photo']
     template_name = 'employee/userprofile_edit.html'
     success_url = reverse_lazy('userprofile')
 
