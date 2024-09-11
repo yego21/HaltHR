@@ -37,12 +37,31 @@ def view_members(request):
 def event_details(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     media = Event_Media.objects.filter(event=event)
+
+
+    # Get the previous event
+    previous_event = Event.objects.filter(date__lt=event.date).order_by('-date').first()
+
+    # Get the next event
+    next_event = Event.objects.filter(date__gt=event.date).order_by('date').first()
+
     context = {
         'event': event,
+        'previous_event': previous_event,
+        'next_event': next_event,
         'media': media
     }
     return render(request, 'company/event/event_details_partial.html', context)
 
+def load_media(request, media_id):
+    event_media = get_object_or_404(Event_Media, id=media_id)
+
+    # Determine if the media is a photo or video
+    context = {
+        'event_media': event_media,
+    }
+
+    return render(request, 'company/event/event_carousel_partial.html', context)
 
 
 

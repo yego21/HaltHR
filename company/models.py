@@ -12,7 +12,7 @@ from django.conf import settings
 
 
 class Thumbnail(ImageSpec):
-    processors = [ResizeToFill(40, 40)]
+    processors = [ResizeToFill(80, 80)]
     format = 'JPEG'
     options = {'quality': 60}
 
@@ -55,10 +55,15 @@ def create_video_thumbnail(instance):
             result = image_generator.generate()
 
             # Save the result to a new path
+            thumbnail_dir = os.path.join('media/CACHE/thumbnails/')
             final_thumbnail_path = os.path.join('media/CACHE/thumbnails/', f'{instance.id}_thumbnail.jpg')
+            os.makedirs(thumbnail_dir, exist_ok=True)
             with open(final_thumbnail_path, 'wb') as dest:
                 dest.write(result.read())
         return final_thumbnail_path
+
+
+
 
 
 class Company(models.Model):
@@ -113,7 +118,7 @@ class Event_Media(models.Model):
 
     media_type = models.CharField(max_length=10, choices=MEDIA_TYPE_CHOICES)
     file = models.FileField(upload_to=event_files_directory_path)  # Set a generic path
-    media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(40, 40)], format='JPEG',
+    media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(80, 70)], format='JPEG',
                                      options={'quality': 60})
     # Call the function to get the path for the thumbnail
 
