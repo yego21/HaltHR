@@ -56,12 +56,17 @@ def event_details(request, event_id):
 def load_media(request, media_id):
     event_media = get_object_or_404(Event_Media, id=media_id)
 
-    # Determine if the media is a photo or video
+    previous_media = Event_Media.objects.filter(event_id=event_media.event_id, id__lt=event_media.id).order_by('-id').first()
+    next_media = Event_Media.objects.filter(event_id=event_media.event_id, id__gt=event_media.id).order_by('id').first()
+
     context = {
         'event_media': event_media,
+        'previous_media': previous_media,
+        'next_media': next_media,
     }
 
-    return render(request, 'company/event/event_carousel_partial.html', context)
+
+    return render(request, 'company/event/event_media_viewer.html', context)
 
 
 

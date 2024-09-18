@@ -6,31 +6,38 @@
 
 <div id="current-event-container">
     
-    
+  <a href="{% url 'index' %}">Home</a>
 
   <div class="event_banner">
     <img src="{{ event.image1.url }}" alt="event_banner" class="banner-image">
     <h5 class="banner-title">{{ event.title }}</h5>
-    <!-- Previous button (left side) -->
+
     {% if previous_event %}
-      <button class="navigation-btn next-btn"
-              hx-get="{% url 'event_details' previous_event.id %}"
-              hx-target="#current-event-container"
-              hx-swap="innerHTML">
-              &#x2192; <!-- Unicode for right arrow -->
-       
-      </button>
-    {% endif %}
+    <button class="navigation-btn next-btn"
+            hx-get="{% url 'event_details' previous_event.id %}"
+            hx-target="#current-event-container"
+            hx-swap="innerHTML">
+            &#x2192;
+            <!-- Unicode for left arrow -->
+     
+    </button>
+  {% endif %}
+
+    {% if next_event %}
+    <button class="navigation-btn prev-btn"
+            hx-get="{% url 'event_details' next_event.id %}"
+            hx-target="#current-event-container"
+            hx-swap="innerHTML">
+            &#x2190;
+            <!-- Unicode for right arrow -->
+           
+    </button>
+  {% endif %}
+    <!-- Previous button (left side) -->
+ 
 
     <!-- Next button (right side) -->
-    {% if next_event %}
-      <button class="navigation-btn prev-btn"
-              hx-get="{% url 'event_details' next_event.id %}"
-              hx-target="#current-event-container"
-              hx-swap="innerHTML">
-              &#x2190; <!-- Unicode for left arrow -->
-      </button>
-    {% endif %}
+   
   </div>
   <p>{{ event.description }}</p>
   <p><strong>Date:</strong> {{ event.date }}</p>
@@ -47,7 +54,7 @@
                   href="#"
                   hx-get="{% url 'load_media' media.id %}" 
                   hx-trigger="click" 
-                  hx-target="#mediaa"  
+                  hx-target="#event-media-view"  
                   data-bs-toggle="modal"
                   data-bs-target="#event-media-modal"> 
                     
@@ -63,7 +70,7 @@
               href="#"
               hx-get="{% url 'load_media' media.id %}" 
               hx-trigger="click" 
-              hx-target="#mediaa"
+              hx-target="#event-media-view"
               data-bs-toggle="modal"
               data-bs-target="#event-media-modal"> 
         
@@ -85,11 +92,9 @@
       <h5 class="modal-title" id="eventModalLabel"></h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-    <div class="modal-body" id="mediaa">
-      <!-- Event details content will be loaded here -->
-       {{event_media.caption}}
-     
-      
+      <div class="modal-body" id="event-media-view">
+        <!-- Event details content will be loaded here -->
+        {{event_media.caption}}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -103,26 +108,8 @@
   <link rel="stylesheet" href="{% static 'css/event_details.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <script src="{% static 'htmx.min.js' %}"></script>    
-
-
-
-
-
-
-
-
-<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" id="mediaa">
-        <img class="d-block w-100" src="..." alt="First slide">
-      </div>      
-    </div>
-  </div>      -->
-  
-  <!--  -->
-                   
-                      
-                 
+                    
+                
                
       
    
@@ -130,9 +117,9 @@
 <div id ="view_media"></div>              
 <script>
   document.getElementById('event-media-modal').addEventListener('hidden.bs.modal', function () {
-      var video = document.getElementById('mediaVideo');
+      var video = document.getElementById('event-video-play');
       video.pause(); // Pause the video
-      video.currentTime = 0; // Reset video to the beginning
+      // video.currentTime = 0; // Reset video to the beginning
   });
   </script>
 

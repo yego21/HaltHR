@@ -19,13 +19,29 @@
   right: 10px;
 }
 
+/* .prev-media {
+  left: 10px;
+}
+
+
+.next-media {
+  right: 10px;
+} */
+
+
 .navigation-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .event_banner {
-  width: 100%; /* Make the div take up the full width */
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 300px; /* Adjust as needed for your layout */
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
 }
 
 
@@ -55,7 +71,7 @@
 
 .event_banner img {
     width: 100%; /* Make the image take up the full width of the div */
-    max-height: 80vh; /* Limit the max height of the image to 80% of the viewport height */
+    max-height: 50vh; /* Limit the max height of the image to 80% of the viewport height */
     object-fit: cover; /* Ensure the image covers the space without stretching */
     display: block; /* Remove any extra space at the bottom */
 }

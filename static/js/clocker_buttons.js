@@ -12,6 +12,12 @@ document.addEventListener('htmx:afterSwap', function(event) {
 
 
 
+
+ 
+
+
+
+
 // document.addEventListener('DOMContentLoaded', function() {
 //     function getCookie(name) {
 //         let cookieValue = null;

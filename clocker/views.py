@@ -15,13 +15,6 @@ from django.core.management import call_command
 from exporter.exports import export_clocker_to_csv, export_clocker_to_xls
 
 
-
-
-
-
-
-
-
 @login_required
 def clock_in(request):
     if request.method == "POST":
@@ -31,7 +24,9 @@ def clock_in(request):
         has_clocked_out = Clocker.objects.filter(user=user, date=today, time_out__isnull=False).first()
 
         if has_clocked_in:
-            return HttpResponse(f'<p style="color: red;">{user.username} has already clocked in for today, please proceed to clock out or contact your system administrator.</p>', content_type='text/html')
+            return HttpResponse(
+                f'<p style="color: red;">{user.username} has already clocked in for today, please proceed to clock out or contact your system administrator.</p>',
+                content_type='text/html')
             # return JsonResponse({'status': 'failure', 'message': f'{user.username} has already clocked in for today, please proceed to clock out or contact your system administrator'})
             # print(f"existing clocker = true, existing shift = true,")
 
@@ -46,12 +41,17 @@ def clock_in(request):
 
         return redirect(reverse('index'))
 
+
 @login_required
 def clock_out(request):
     user = request.user
     today = timezone.localdate()
     has_clocked_in = Clocker.objects.filter(user=user, date=today, time_in__isnull=False, time_out__isnull=True).first()
     has_clocked_out = Clocker.objects.filter(user=user, date=today, time_out__isnull=False).first()
+    context = {
+        'has_clocked_in': has_clocked_in is not None,
+        'response': HttpResponse('Clock out time recorded successfully.')
+    }
 
     if has_clocked_out:
         return HttpResponse(f'{user.username} has already clocked out for today, record not submitted.')
@@ -64,26 +64,29 @@ def clock_out(request):
 
         else:
             confirm = request.POST.get('confirm')
+            confirmed_clock_out = False
             if confirm == 'yes':
                 time_out = timezone.now()
                 clocker = Clocker(user=user, time_out=time_out)
                 clocker.save()
-                # messages.warning(request,
-                #                  f'{user.username} does not have Clock in record for today, are you sure to Clock out?')
-                return HttpResponse('Clock out time recorded successfully.')
+                print('confirm-yes')
+                confirmed_clock_out = True
+                return HttpResponse('Clock out confirmed')
 
-            else:
-                # return redirect('index')
-                return HttpResponse(f'{user.username} does not have Clock in record for today, are you sure you want to Clock out?')
+            if not confirmed_clock_out:
+                response = JsonResponse({'status': 'confirm',
+                                         'message': f'{user.username} does not have Clock in record for today, are you sure you want to Clock out?'})
+                return response
 
+            # elif confirmed_clock_out:
+            #     response = HttpResponse('Clock out confirmed')
+            #     return response
 
-            # messages.warning(request,f'{user.username} does not have Clock in record for today, are you sure to Clock out?')
-            return redirect('index')
-    return redirect(reverse('index'))
+        # return HttpResponse("You don't have Clock in record for today, are you sure to Clock out?")
+        # messages.warning(request,f' does not have Clock in record for today, are you sure to Clock out?')
+        # return redirect('index')
 
-# def clocker_views(request):
-#     return render(request, 'admin/clocker/clocker/')
-
+    # return redirect(reverse('index'))
 
 
 def clocker_entries(request):
@@ -107,15 +110,11 @@ def clocker_entries(request):
     # return redirect(reverse('admin/clocker/clocker', args=[user_id]))
 
 
-
-
 def clocker_popup(request, user_id):
     # clocker = get_object_or_404(Clocker, pk=pk)
 
     user_clocker = Clocker.objects.filter(user_id=user_id)
     user = UserProfile.objects.get(user_id=user_id)
-
-
 
     start_date = request.GET.get('start_date')
     end_date = request.GET.get('end_date')
@@ -127,15 +126,14 @@ def clocker_popup(request, user_id):
         user_clocker = None
     user = get_object_or_404(UserProfile, user_id=user_id)
 
-
     if 'export_clocker_csv' in request.GET:
         return export_clocker_to_csv(user_clocker, user)
 
     if 'export_clocker_xls' in request.GET:
         return export_clocker_to_xls(user_clocker, user)
 
-
     return render(request, 'clocker/clocker_popup.html', {'user_clocker': user_clocker, 'user': user})
+
 
 def attendance_logs(request, user_id):
     # clocker = get_object_or_404(Clocker, pk=pk)
@@ -143,8 +141,6 @@ def attendance_logs(request, user_id):
     user_clocker = Clocker.objects.filter(user_id=user_id)
     user = UserProfile.objects.get(user_id=user_id)
 
-
-
     start_date = request.GET.get('start_date')
     end_date = request.GET.get('end_date')
 
@@ -155,21 +151,14 @@ def attendance_logs(request, user_id):
         user_clocker = None
     user = get_object_or_404(UserProfile, user_id=user_id)
 
-
     if 'export_clocker_csv' in request.GET:
         return export_clocker_to_csv(user_clocker, user)
 
     if 'export_clocker_xls' in request.GET:
         return export_clocker_to_xls(user_clocker, user)
 
-
     return render(request, 'clocker/view_attendance_logs.html', {'user_clocker': user_clocker, 'user': user})
+
+
 def htmx_view(request):
     return render(request, 'tester.html')
-
-
-
-
-
-
-

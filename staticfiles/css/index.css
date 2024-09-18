@@ -191,6 +191,8 @@ h3 {
 .event-container {
   display: flex;
   flex-direction: column;  
+  overflow-y: auto;  /* Enable vertical scrolling if content exceeds max-height */
+  max-height: 450px; 
 }
 
 
