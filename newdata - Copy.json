@@ -1,0 +1,5806 @@
+[
+{
+    "model": "company.company",
+    "pk": 1,
+    "fields": {
+        "name": "MacroHard",
+        "address": "gfdgdg",
+        "email": "gfdgdfgdfg@email.com",
+        "phone": "324242342"
+    }
+},
+{
+    "model": "company.department",
+    "pk": 1,
+    "fields": {
+        "name": "IT",
+        "company": 1,
+        "department_head": 29
+    }
+},
+{
+    "model": "company.department",
+    "pk": 2,
+    "fields": {
+        "name": "HR",
+        "company": 1,
+        "department_head": 25
+    }
+},
+{
+    "model": "company.event",
+    "pk": 4,
+    "fields": {
+        "title": "Sample Event",
+        "description": "Description of the sample event",
+        "date": "2024-08-22",
+        "time": "14:00:00",
+        "location": "Sample Location",
+        "company": 1,
+        "image1": "events/08/23/2024/twyEMz0.jpeg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 5,
+    "fields": {
+        "title": "Event 3",
+        "description": "Event 3 details.",
+        "date": "2024-08-17",
+        "time": "14:02:43",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Event 3/Event_3.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 8,
+    "fields": {
+        "title": "event 4",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-26",
+        "time": "10:47:55",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event 4/event_4.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 9,
+    "fields": {
+        "title": "Christmas Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-28",
+        "time": "09:49:37",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Christmas Party/Christmas_Party.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 10,
+    "fields": {
+        "title": "Halloween Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:49:55",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event_1.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 11,
+    "fields": {
+        "title": "New Year Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:50:26",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/New Year Party/New_Year_Party.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 12,
+    "fields": {
+        "title": "Super Event",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:50:57",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Super Event/Super_Event.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 13,
+    "fields": {
+        "title": "Another Event",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-09-05",
+        "time": "00:00:00",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event_1.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 14,
+    "fields": {
+        "title": "Event Again",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-09-04",
+        "time": "11:10:17",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Event Again/Event_Again.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 16,
+    "fields": {
+        "title": "Partyy",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-09-24",
+        "time": "11:36:33",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Partyy/Partyy.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 20,
+    "fields": {
+        "title": "New Year Event Party",
+        "description": "aggadfdfxcvcv",
+        "date": "2024-09-09",
+        "time": "09:27:37",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/New Year Event Party/New_Ye_d7WXn2K.jpg"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 51,
+    "fields": {
+        "event": 16,
+        "media_type": "photo",
+        "file": "events_media/Partyy/images/ajaja.jpg",
+        "caption": "ajaja"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 52,
+    "fields": {
+        "event": 16,
+        "media_type": "video",
+        "file": "events_media/Partyy/videos/1.mp4",
+        "caption": "hahaha"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 53,
+    "fields": {
+        "event": 16,
+        "media_type": "video",
+        "file": "events_media/Partyy/videos/dszdsaa.mp4",
+        "caption": "dszdsaa"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 54,
+    "fields": {
+        "event": 9,
+        "media_type": "photo",
+        "file": "events_media/Christmas Party/images/aha.png",
+        "caption": "aha"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 55,
+    "fields": {
+        "event": 9,
+        "media_type": "video",
+        "file": "events_media/Christmas Party/videos/haha.mp4",
+        "caption": "haha"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 56,
+    "fields": {
+        "event": 10,
+        "media_type": "photo",
+        "file": "events_media/Halloween Party/images/ghjuhj.PNG",
+        "caption": "ghjuhj"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 57,
+    "fields": {
+        "event": 4,
+        "media_type": "photo",
+        "file": "events_media/Sample Event/images/hk.jpg",
+        "caption": "hk"
+    }
+},
+{
+    "model": "company.event_media",
+    "pk": 58,
+    "fields": {
+        "event": 4,
+        "media_type": "video",
+        "file": "events_media/Sample Event/videos/lk.mp4",
+        "caption": "l;k;"
+    }
+},
+{
+    "model": "company.announcement",
+    "pk": 1,
+    "fields": {
+        "title": "New Policies",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date_posted": "2024-08-23",
+        "company": 1
+    }
+},
+{
+    "model": "company.announcement",
+    "pk": 2,
+    "fields": {
+        "title": "New Schedules",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date_posted": "2024-08-23",
+        "company": 1
+    }
+},
+{
+    "model": "employee.shift",
+    "pk": 1,
+    "fields": {
+        "name": "Morning",
+        "start_time": "06:00:00",
+        "end_time": "12:00:00"
+    }
+},
+{
+    "model": "employee.shift",
+    "pk": 2,
+    "fields": {
+        "name": "Mid",
+        "start_time": "12:00:00",
+        "end_time": "18:00:00"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "69zelm3d3fbn5ysuybml5yhin1cmm99c",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pABytC6dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWRpx-t0DxkeoO-E711mRsdV3mIHdFHrTLa-P0vBzu30GhXr51QIs6a8fgRjAJgC0BwTRlq3HkyIFdHrTGjIxKAcfB2Ki0Q7JkIoj3B88HN10:1sh0xk:CyxSqjidAHXcJYrLCeH9vEop4FgujOcr5Gy-k3bGxF4",
+        "expire_date": "2024-09-05T06:06:24.065Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9uoxkuxkjcb69266eecqefhmes5oglie",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1scFN1:5kdnYZ8XOKGpRJd718aCbvZXfCnZz1b39AGYFji6sh4",
+        "expire_date": "2024-08-23T02:28:47.686Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ae82ngc8euba4inzt6zqk83ach5ti5td",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pABytC6dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWRpx-t0DxkeoO-E711mRsdV3mIHdFHrTLa-P0vBzu30GhXr51QIs6a8fgRjAJgC0BwTRlq3HkyIFdHrTGjIxKAcfB2Ki0Q7JkIoj3B88HN10:1sfsmz:PRaNleMoCO8pXbdzqcrOIOdcMH4isbsGSYo8IhSO3cQ",
+        "expire_date": "2024-09-02T03:10:37.961Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ajrd0r5ly5m47kx3mxrn3ree4yv9reom",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hAon_Jcuu8ZyIMHUjWQlHZlvLsh6UK3M5N5M4_HXvzR0-ZXYldm2OWXBYzPVIegB9Z747HVfVsDHwk_bedLo_S6ne3foGAvY2tBQXaTM1kkzFLmQGCNJKECSGFJzS4YpIhWTwRRaB1mYbWlDJJIs88X2Ds3rw:1sgKFh:w5-cxOQip6H-PXkT3VDsm8cmWs255UiiGUyiVfm0wn8",
+        "expire_date": "2024-09-03T08:30:05.451Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cv5mcqbzx70rn6hw4apqm3y1416elch4",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1seNyD:EuOUlNy3StZTKMLuZDLL5G3zBmK3zn4C0F78tnHpY_w",
+        "expire_date": "2024-08-29T00:04:01.704Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "dvbbavgtezw1e7mzywjhttj38p50uwks",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hAon_Jcuu8ZyIMHUjWQlHZlvLsh6UK3M5N5M4_HXvzR0-ZXYldm2OWXBYzPVIegB9Z747HVfVsDHwk_bedLo_S6ne3foGAvY2tBQXaTM1kkzFLmQGCNJKECSGFJzS4YpIhWTwRRaB1mYbWlDJJIs88X2Ds3rw:1soYag:oq-8fk5BQtlayH4Sd9JLkT5uz2iXeoTyQUZrru6avW8",
+        "expire_date": "2024-09-26T01:25:46.662Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "gr2rc2mmh09r8pxqrqs8ieocve5v81p5",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBghgIu3XsGMsBUqoYmpV0Z765NutDtf-_9l4i0rTVunZc4FXEWKE6_W6L84LaDcqd2m2We27pMSe6KPGiX17nw83K4fweVev3WQ3KoCYG0M94gK52U5QGUCdmbZBUjaD2CpeTYQkYToDgfigEePZF4fwCzTTcB:1selHU:xbtFooVLx4MDXGl1ElNT4CDms05d0JYwuU5v_4YGA50",
+        "expire_date": "2024-08-30T00:57:28.960Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "i1uoby5hzzt4dtmuxbae0bfh723gtes8",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1siTxS:muQGmWf2lLcnAb5VkFreeGqebVA2ytssqdSiyqLyDME",
+        "expire_date": "2024-09-09T07:16:10.864Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kzhnm997rpeeiokhbqx0ukq1bxmcc0ts",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBghgIu3XsGMsBUqoYmpV0Z765NutDtf-_9l4i0rTVunZc4FXEWKE6_W6L84LaDcqd2m2We27pMSe6KPGiX17nw83K4fweVev3WQ3KoCYG0M94gK52U5QGUCdmbZBUjaD2CpeTYQkYToDgfigEePZF4fwCzTTcB:1sqNqe:2Nhq4GOSgWo-0Wg6q_7bnF1n7ShmogWYLbeZjWwcOBk",
+        "expire_date": "2024-10-01T02:21:48.506Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "n78loz2tl3zkxv41ijbym1my78iswfjs",
+    "fields": {
+        "session_data": "e30:1shIbv:3vq5RlHYY3uDbA7w8nnApr0kFh80yrDL9q8XhINlCog",
+        "expire_date": "2024-09-06T00:57:03.119Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "o56qpnmfpu90tmzgmkzyxzsb5rulsff1",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1sl29Z:9XLKkkD78TSodAbsSYSBImFyv99qdTd7TFPtXiAs_og",
+        "expire_date": "2024-09-16T08:11:13.963Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "pp1l80wj9dfdsllggz7e3jknq80nonqh",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1sdIn3:QcXa7_6Cpk5YZFpKlEN0e_DEVbF6j2WuKZkOHirYsgw",
+        "expire_date": "2024-08-26T00:20:01.537Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "r1buep58cvh5y5i8rj6fu6mi1v8uowz0",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1slKYE:CPGrJ4UEkIMQBymRRwccJ2PsJqrkG51IArBcR0zSR38",
+        "expire_date": "2024-09-17T03:49:54.967Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "uwrtuyg8xj8gjqkdaaiamr527tmtv2y4",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hAon_Jcuu8ZyIMHUjWQlHZlvLsh6UK3M5N5M4_HXvzR0-ZXYldm2OWXBYzPVIegB9Z747HVfVsDHwk_bedLo_S6ne3foGAvY2tBQXaTM1kkzFLmQGCNJKECSGFJzS4YpIhWTwRRaB1mYbWlDJJIs88X2Ds3rw:1sjuIv:Ei-G29-17TAtjUFN1Oi1AICj-FqIWXrE6R54dR8Yk3g",
+        "expire_date": "2024-09-13T05:36:13.172Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "zhxqddrj671cbad33v077nr4gc1u7d20",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBAoIxL956BzMBUqoYmpV0Z725JutDt--_9t4i4rSVujZc4ZXERRpx-GWF6cu1DfmC9zzLNdV0mkl2Rx9rkbc78uh7u30HBVvaawWYYButC0qzOSFqPXnnaGXg2hslC8n4MDCFQcAjZIpNSqocuic8X02g3mg:1soYaK:PScQpgBncytqjqnsGHGvxzMPNHafC-8A7X6_izNXa-Q",
+        "expire_date": "2024-09-26T01:25:24.062Z"
+    }
+},
+{
+    "model": "auth.group",
+    "fields": {
+        "name": "Department Heads",
+        "permissions": [
+            [
+                "view_clocker",
+                "clocker",
+                "clocker"
+            ],
+            [
+                "view_announcement",
+                "company",
+                "announcement"
+            ],
+            [
+                "view_department",
+                "company",
+                "department"
+            ],
+            [
+                "view_event",
+                "company",
+                "event"
+            ],
+            [
+                "view_shift",
+                "employee",
+                "shift"
+            ],
+            [
+                "view_userprofile",
+                "employee",
+                "userprofile"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$LyiBE6adBf2UKK2haj7kHj$tCZJJgAD+JaQLZYSXOgpenCnVQBRIjXWEnnJ0kc7kmo=",
+        "last_login": "2024-09-12T01:25:24.054Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "admin",
+        "last_name": "ko",
+        "email": "admin@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-09T02:28:38Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Xnxu1MRYnbYHOklZThHAV4$2dtd8psR1pfyJj2+sXJZsRb9p5TrP3qoMpsJ6FVSmmI=",
+        "last_login": "2024-08-22T06:06:24.059Z",
+        "is_superuser": false,
+        "username": "user1",
+        "first_name": "User",
+        "last_name": "One",
+        "email": "user1@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-09T02:58:12Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$DR2f2gpCx3VCXNHo2rYppU$SqKnvYbU6S/q+1I8N2f2X1Z/I5BXu3lKLgoru/IWEIM=",
+        "last_login": "2024-09-17T02:21:48.492Z",
+        "is_superuser": false,
+        "username": "user2",
+        "first_name": "User",
+        "last_name": "Two",
+        "email": "user2@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-09T03:25:37Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$bsjYYHwblruektYqTCMnaW$+c5vN28EaRSYTymGIx7GDF9EMeupWu6EGJ9Ktb8STFM=",
+        "last_login": "2024-09-12T01:25:46.655Z",
+        "is_superuser": false,
+        "username": "user3",
+        "first_name": "gwapo",
+        "last_name": "ko",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-09T05:42:41Z",
+        "groups": [
+            [
+                "Department Heads"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$lGdlSyCByfGGlLueR5kwAm$aWZRKjsEub7z4v0aNzIkk6jxygvMepM4V+/P4o7nip0=",
+        "last_login": "2024-09-03T00:14:17.782Z",
+        "is_superuser": false,
+        "username": "user4",
+        "first_name": "User",
+        "last_name": "Four",
+        "email": "user4@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-09T07:37:52Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$cp1aWN0eJAtaO5F6OOayb9$tQufm+2xZeBzyIjtOXgpqunBr0cI9Q6AkZllgCWl9Vg=",
+        "last_login": "2024-09-02T03:10:19.686Z",
+        "is_superuser": false,
+        "username": "John",
+        "first_name": "John",
+        "last_name": "Smith",
+        "email": "js@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-02T03:09:00Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$jD2lUQa9CZ2GPyp6nkm6rq$kt6uli+sK+tfV8lhuf4Wr8KRx7+7yABcKYWxxd4gsI4=",
+        "last_login": "2024-09-09T01:22:41.714Z",
+        "is_superuser": false,
+        "username": "pedro",
+        "first_name": "Pedro",
+        "last_name": "Penduko",
+        "email": "pedro@email.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-09-09T01:21:34Z",
+        "groups": [
+            [
+                "Department Heads"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-08-09T02:58:13.310Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "user1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-08-09T02:58:28.138Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "user1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-08-09T02:59:03.028Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-08-09T02:59:37.094Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "object_id": "1",
+        "object_repr": "MacroHard",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-08-09T03:00:10.872Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "object_id": "1",
+        "object_repr": "Morning",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-08-09T03:00:23.056Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "shift"
+        ],
+        "object_id": "2",
+        "object_repr": "Mid",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-08-09T03:00:33.188Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "23",
+        "object_repr": "User One",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-08-09T03:00:48.276Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Company\", \"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-08-09T03:02:06.440Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Department Heads",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-08-09T03:25:16.764Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "3",
+        "object_repr": "Department Heads",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-08-09T03:25:37.842Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "user2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-08-09T03:25:54.447Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "user2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-08-09T03:26:04.574Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-08-09T03:26:16.046Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "24",
+        "object_repr": "User Two",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-08-09T03:26:29.373Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-08-09T05:42:42.304Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "user3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-08-09T05:42:48.346Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "user3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-08-09T05:43:30.931Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "25",
+        "object_repr": "gwapo ko",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-08-09T05:44:56.670Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-08-09T07:37:52.856Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "user4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-08-09T07:38:04.204Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "user4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-08-12T01:10:08.851Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "23",
+        "object_repr": "User One",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-08-12T01:34:52.147Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-08-12T01:35:50.205Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "23",
+        "object_repr": "User One",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-08-13T02:04:53.680Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "22",
+        "object_repr": " ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-08-14T05:23:13.296Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-08-15T02:21:46.870Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-08-16T07:33:39.335Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-08-23T06:07:45.125Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-08-23T06:26:47.143Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-08-23T06:27:50.017Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "4",
+        "object_repr": "Sample Event",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-08-23T06:48:55.755Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "4",
+        "object_repr": "Sample Event",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-08-23T07:02:49.881Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-08-23T07:43:20.915Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "object_id": "1",
+        "object_repr": "New Policies",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-08-23T07:43:44.492Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "announcement"
+        ],
+        "object_id": "2",
+        "object_repr": "New Schedules",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-08-26T02:45:28.301Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "6",
+        "object_repr": "Eevnt 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-08-26T02:46:53.779Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "6",
+        "object_repr": "Eevnt 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-08-26T02:48:09.571Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "7",
+        "object_repr": "event 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-08-26T02:48:32.748Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "7",
+        "object_repr": "event 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-08-26T02:50:48.751Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-08-26T02:52:38.597Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-08-26T02:54:48.968Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-08-26T02:56:59.634Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-08-26T03:01:21.776Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2024-08-26T03:01:41.437Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2024-08-26T03:02:21.029Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2024-08-26T03:03:03.282Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2024-08-26T03:11:22.222Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "6",
+        "object_repr": "user4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2024-08-26T03:31:07.132Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2024-08-27T01:49:44.327Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "9",
+        "object_repr": "Christmas Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2024-08-27T01:50:09.772Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "10",
+        "object_repr": "Halloween Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2024-08-27T01:50:35.589Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2024-08-27T01:51:06.652Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "12",
+        "object_repr": "Super Event",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2024-08-27T02:32:12.922Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "5",
+        "object_repr": "Event 3",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image1\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2024-08-27T04:01:51.574Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "9",
+        "object_repr": "Christmas Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2024-08-28T03:41:28.155Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "25",
+        "object_repr": "gwapo ko",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2024-08-28T03:41:41.566Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "24",
+        "object_repr": "User Two",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department\", \"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2024-08-28T03:54:03.153Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Position\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2024-08-29T04:57:42.259Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "10",
+        "object_repr": "Halloween Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2024-08-30T03:22:06.378Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "12",
+        "object_repr": "Super Event",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2024-08-30T03:22:13.354Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2024-08-30T03:22:15.854Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2024-08-30T03:22:22.514Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "9",
+        "object_repr": "Christmas Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2024-08-30T03:22:26.467Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "8",
+        "object_repr": "event 4",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2024-09-02T02:39:32.518Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "aris",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2024-09-02T02:39:53.554Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "aris",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2024-09-02T02:41:23.794Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "27",
+        "object_repr": "Aris Gwapo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\", \"Address\", \"Hire date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2024-09-02T02:43:27.909Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2024-09-02T03:06:53.519Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "aris",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2024-09-02T03:07:50.371Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2024-09-02T03:08:26.765Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2024-09-02T03:09:00.750Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "8",
+        "object_repr": "John",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2024-09-02T03:09:30.189Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "8",
+        "object_repr": "John",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2024-09-02T03:10:45.948Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "28",
+        "object_repr": "John Smith",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\", \"Photo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2024-09-02T03:11:02.765Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2024-09-03T00:53:59.482Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "22",
+        "object_repr": "admin ko",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2024-09-03T00:55:20.360Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2024-09-03T00:55:33.197Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2024-09-03T00:56:14.521Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "28",
+        "object_repr": "John Smith",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2024-09-03T00:57:29.263Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2024-09-03T00:57:57.807Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2024-09-03T00:58:44.118Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "HR",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2024-09-04T03:08:56.267Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "object_id": "1",
+        "object_repr": "MacroHard",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event\", \"object\": \"Another Event\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2024-09-04T03:10:34.669Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "object_id": "1",
+        "object_repr": "MacroHard",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event\", \"object\": \"Event Again\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2024-09-04T03:36:58.453Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "company"
+        ],
+        "object_id": "1",
+        "object_repr": "MacroHard",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event\", \"object\": \"Partyy\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2024-09-04T03:38:13.235Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2024-09-04T05:53:24.113Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "1",
+        "object_repr": "Photo 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2024-09-04T06:14:38.328Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "13",
+        "object_repr": "Another Event",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 2\"}}, {\"added\": {\"name\": \"event_ media\", \"object\": \"Video 3\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2024-09-04T06:15:17.300Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 4\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2024-09-04T06:21:15.805Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 5\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2024-09-04T06:22:17.183Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "5",
+        "object_repr": "Photo 5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2024-09-04T06:22:26.874Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "4",
+        "object_repr": "Photo 4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2024-09-04T06:22:30.373Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "3",
+        "object_repr": "Video 3",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2024-09-04T06:22:33.514Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "2",
+        "object_repr": "Photo 2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2024-09-04T06:22:36.236Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "1",
+        "object_repr": "Photo 1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2024-09-04T06:23:59.182Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "12",
+        "object_repr": "Super Event",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 6\"}}, {\"added\": {\"name\": \"event_ media\", \"object\": \"Video 7\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2024-09-04T06:28:00.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "7",
+        "object_repr": "Video 7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2024-09-04T06:28:04.373Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "6",
+        "object_repr": "Photo 6",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2024-09-04T06:38:47.919Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "19",
+        "object_repr": "dsf",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 8\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2024-09-04T06:39:00.342Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "19",
+        "object_repr": "dsf",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2024-09-05T05:46:59.889Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "9",
+        "object_repr": "Video 9",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2024-09-05T05:47:34.035Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "9",
+        "object_repr": "Video 9",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2024-09-05T06:25:13.971Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "10",
+        "object_repr": "Photo 10",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2024-09-05T06:32:54.954Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "10",
+        "object_repr": "Photo 10",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Event\", \"File\", \"Caption\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2024-09-05T06:34:04.335Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "10",
+        "object_repr": "Photo 10",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2024-09-05T06:34:27.071Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "11",
+        "object_repr": "Photo 11",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2024-09-05T06:34:59.196Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "12",
+        "object_repr": "Video 12",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2024-09-05T06:36:46.576Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "12",
+        "object_repr": "Video 12",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2024-09-05T06:36:50.060Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "11",
+        "object_repr": "Photo 11",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2024-09-05T06:36:58.871Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "13",
+        "object_repr": "Photo 13",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2024-09-05T06:37:17.295Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "14",
+        "object_repr": "Video 14",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2024-09-05T06:38:04.511Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 15\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2024-09-05T06:38:23.838Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 16\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2024-09-05T06:47:30.628Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 17\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2024-09-05T06:52:00.812Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 18\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2024-09-05T06:54:09.760Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 19\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2024-09-05T07:00:26.489Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 20\"}}, {\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 21\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2024-09-05T07:00:36.742Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 22\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2024-09-05T07:03:19.257Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2024-09-05T07:10:58.791Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 23\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2024-09-05T07:11:10.266Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "13",
+        "object_repr": "Another Event",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 24\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2024-09-05T07:16:01.277Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2024-09-05T07:16:34.874Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Photo None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2024-09-05T07:19:19.237Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "24",
+        "object_repr": "Video 24",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2024-09-05T07:39:44.517Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2024-09-05T07:40:54.440Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "26",
+        "object_repr": "User Four",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2024-09-06T01:03:21.190Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 25\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2024-09-06T01:34:03.014Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2024-09-06T02:07:04.378Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 26\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2024-09-06T02:22:55.095Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2024-09-06T02:23:06.555Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 27\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2024-09-06T02:24:17.118Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2024-09-06T02:24:25.998Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 28\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2024-09-06T02:25:59.463Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 29\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2024-09-06T02:29:10.788Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"event_ media\", \"object\": \"Video 28\", \"fields\": [\"File\"]}}, {\"changed\": {\"name\": \"event_ media\", \"object\": \"Video 29\", \"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2024-09-06T02:44:17.622Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2024-09-06T02:44:37.578Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 30\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2024-09-06T02:59:19.151Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 33\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2024-09-06T05:39:01.693Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2024-09-06T05:39:15.752Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 34\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2024-09-06T05:41:02.396Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 35\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2024-09-06T05:43:54.581Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2024-09-06T05:44:08.246Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2024-09-06T05:44:18.133Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 36\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2024-09-06T05:46:07.557Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 37\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2024-09-06T05:49:27.318Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2024-09-06T06:01:01.408Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2024-09-06T06:01:37.702Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 38\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2024-09-06T06:41:14.522Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2024-09-06T06:59:53.044Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2024-09-06T07:18:24.367Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 39\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2024-09-06T07:24:05.917Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}, {\"deleted\": {\"name\": \"event_ media\", \"object\": \"Video None\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2024-09-06T07:24:15.546Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 40\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2024-09-06T07:29:54.775Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 41\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2024-09-06T07:32:02.248Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "14",
+        "object_repr": "Event Again",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2024-09-06T08:26:32.515Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "13",
+        "object_repr": "Another Event",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 42\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2024-09-06T08:27:08.182Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 43\"}}, {\"added\": {\"name\": \"event_ media\", \"object\": \"Video 44\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+        "action_time": "2024-09-06T08:36:43.481Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 45\"}}, {\"changed\": {\"name\": \"event_ media\", \"object\": \"Video 43\", \"fields\": [\"File\"]}}, {\"changed\": {\"name\": \"event_ media\", \"object\": \"Video 44\", \"fields\": [\"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+        "action_time": "2024-09-09T01:21:35.337Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "9",
+        "object_repr": "pedro",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2024-09-09T01:21:57.690Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "9",
+        "object_repr": "pedro",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2024-09-09T01:23:39.015Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "employee",
+            "userprofile"
+        ],
+        "object_id": "29",
+        "object_repr": "Pedro Penduko",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User shift\", \"Department\", \"Address\", \"Contact\", \"Position\", \"Hire date\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2024-09-09T01:26:11.454Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "IT",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Department head\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2024-09-09T01:28:06.892Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "20",
+        "object_repr": "New Year Event Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+        "action_time": "2024-09-09T01:32:46.707Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 46\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+        "action_time": "2024-09-09T01:36:08.738Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 47\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+        "action_time": "2024-09-09T01:38:50.732Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "11",
+        "object_repr": "New Year Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"event_ media\", \"object\": \"Photo 47\", \"fields\": [\"Media type\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+        "action_time": "2024-09-09T01:54:04.204Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "48",
+        "object_repr": "Photo 48",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+        "action_time": "2024-09-09T02:04:31.326Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "49",
+        "object_repr": "Photo 49",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+        "action_time": "2024-09-09T02:04:58.368Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "48",
+        "object_repr": "Video 48",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Media type\", \"File\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+        "action_time": "2024-09-09T02:05:13.873Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "50",
+        "object_repr": "Photo 50",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+        "action_time": "2024-09-09T03:19:32.360Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Photo 51\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+        "action_time": "2024-09-09T06:09:32.354Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"added\": {\"name\": \"event_ media\", \"object\": \"Video 52\"}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+        "action_time": "2024-09-11T03:33:51.106Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "52",
+        "object_repr": "Video 52",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Caption\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+        "action_time": "2024-09-11T03:49:23.501Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "53",
+        "object_repr": "Video 53",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+        "action_time": "2024-09-11T07:56:08.863Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event"
+        ],
+        "object_id": "16",
+        "object_repr": "Partyy",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+        "action_time": "2024-09-12T01:26:38.876Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "46",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+        "action_time": "2024-09-12T01:26:42.923Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "47",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+        "action_time": "2024-09-12T02:39:08.788Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "48",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+        "action_time": "2024-09-12T02:40:43.162Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "49",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+        "action_time": "2024-09-12T02:41:01.587Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "50",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+        "action_time": "2024-09-12T02:43:54.090Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "51",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+        "action_time": "2024-09-12T02:54:38.636Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "52",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+        "action_time": "2024-09-12T03:06:16.327Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "55",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+        "action_time": "2024-09-12T03:06:20.520Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "54",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+        "action_time": "2024-09-12T03:06:24.743Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "53",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+        "action_time": "2024-09-12T03:52:11.298Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "62",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 187,
+    "fields": {
+        "action_time": "2024-09-12T03:52:15.139Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "61",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 188,
+    "fields": {
+        "action_time": "2024-09-12T03:52:18.549Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "60",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 189,
+    "fields": {
+        "action_time": "2024-09-12T03:52:22.159Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "59",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 190,
+    "fields": {
+        "action_time": "2024-09-12T03:52:25.806Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "58",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 191,
+    "fields": {
+        "action_time": "2024-09-12T03:52:33.326Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "57",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 192,
+    "fields": {
+        "action_time": "2024-09-12T03:52:36.990Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "56",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 193,
+    "fields": {
+        "action_time": "2024-09-12T03:55:43.611Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "63",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 194,
+    "fields": {
+        "action_time": "2024-09-12T03:56:58.192Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "65",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 195,
+    "fields": {
+        "action_time": "2024-09-12T05:36:25.186Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "64",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 196,
+    "fields": {
+        "action_time": "2024-09-12T05:40:57.852Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "66",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 197,
+    "fields": {
+        "action_time": "2024-09-12T05:42:38.190Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "67",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 198,
+    "fields": {
+        "action_time": "2024-09-12T05:42:57.290Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "68",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 199,
+    "fields": {
+        "action_time": "2024-09-12T05:43:18.746Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "69",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 200,
+    "fields": {
+        "action_time": "2024-09-12T05:43:22.992Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "70",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 201,
+    "fields": {
+        "action_time": "2024-09-12T05:43:41.321Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "71",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 202,
+    "fields": {
+        "action_time": "2024-09-12T05:43:58.042Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "72",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 203,
+    "fields": {
+        "action_time": "2024-09-12T05:45:20.633Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "73",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 204,
+    "fields": {
+        "action_time": "2024-09-12T07:01:21.806Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "74",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 205,
+    "fields": {
+        "action_time": "2024-09-12T07:02:08.824Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "75",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 206,
+    "fields": {
+        "action_time": "2024-09-12T07:02:37.287Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "76",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 207,
+    "fields": {
+        "action_time": "2024-09-12T07:04:17.784Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "77",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 208,
+    "fields": {
+        "action_time": "2024-09-12T07:10:03.158Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "78",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 209,
+    "fields": {
+        "action_time": "2024-09-12T07:10:23.548Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "79",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 210,
+    "fields": {
+        "action_time": "2024-09-12T07:11:52.960Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "80",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 211,
+    "fields": {
+        "action_time": "2024-09-12T07:12:24.954Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "81",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 212,
+    "fields": {
+        "action_time": "2024-09-12T07:12:29.470Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "82",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 213,
+    "fields": {
+        "action_time": "2024-09-12T07:16:07.103Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "83",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 214,
+    "fields": {
+        "action_time": "2024-09-12T07:16:35.494Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "84",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 215,
+    "fields": {
+        "action_time": "2024-09-12T07:21:32.260Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "85",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 216,
+    "fields": {
+        "action_time": "2024-09-12T07:22:09.583Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "86",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 217,
+    "fields": {
+        "action_time": "2024-09-12T07:26:50.205Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "87",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 218,
+    "fields": {
+        "action_time": "2024-09-12T07:28:15.444Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "89",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 219,
+    "fields": {
+        "action_time": "2024-09-12T07:28:19.300Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "88",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 220,
+    "fields": {
+        "action_time": "2024-09-12T07:31:33.017Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "91",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 221,
+    "fields": {
+        "action_time": "2024-09-12T07:31:36.358Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "90",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 222,
+    "fields": {
+        "action_time": "2024-09-12T07:32:14.510Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "42",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 223,
+    "fields": {
+        "action_time": "2024-09-12T07:32:19.033Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "92",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 224,
+    "fields": {
+        "action_time": "2024-09-12T07:32:44.496Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "93",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 225,
+    "fields": {
+        "action_time": "2024-09-12T07:32:57.382Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "94",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 226,
+    "fields": {
+        "action_time": "2024-09-12T07:33:20.228Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "95",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 227,
+    "fields": {
+        "action_time": "2024-09-12T07:35:26.821Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "96",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 228,
+    "fields": {
+        "action_time": "2024-09-12T07:57:07.682Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "97",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 229,
+    "fields": {
+        "action_time": "2024-09-12T08:06:13.313Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "98",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 230,
+    "fields": {
+        "action_time": "2024-09-13T01:40:03.238Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "100",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 231,
+    "fields": {
+        "action_time": "2024-09-13T01:40:20.618Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "99",
+        "object_repr": "Name: gwapo ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 232,
+    "fields": {
+        "action_time": "2024-09-13T01:40:26.083Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "43",
+        "object_repr": "Name: User Two___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 233,
+    "fields": {
+        "action_time": "2024-09-13T01:44:13.459Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "102",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 234,
+    "fields": {
+        "action_time": "2024-09-13T01:44:17.348Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "101",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 235,
+    "fields": {
+        "action_time": "2024-09-13T01:44:32.939Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "103",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 236,
+    "fields": {
+        "action_time": "2024-09-13T01:47:04.667Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "104",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 237,
+    "fields": {
+        "action_time": "2024-09-13T01:55:47.245Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "105",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 238,
+    "fields": {
+        "action_time": "2024-09-13T02:03:10.361Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "106",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 239,
+    "fields": {
+        "action_time": "2024-09-13T02:07:59.819Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "107",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 240,
+    "fields": {
+        "action_time": "2024-09-13T02:10:07.946Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "108",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 241,
+    "fields": {
+        "action_time": "2024-09-13T02:18:58.882Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "109",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 242,
+    "fields": {
+        "action_time": "2024-09-13T02:21:54.179Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "110",
+        "object_repr": "Name: admin ko___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 243,
+    "fields": {
+        "action_time": "2024-09-17T02:22:33.161Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "112",
+        "object_repr": "Name: User Two___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 244,
+    "fields": {
+        "action_time": "2024-09-17T02:22:52.245Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "113",
+        "object_repr": "Name: User Two___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 245,
+    "fields": {
+        "action_time": "2024-09-17T05:20:00.669Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "54",
+        "object_repr": "Photo 54",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 246,
+    "fields": {
+        "action_time": "2024-09-17T05:20:12.970Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "55",
+        "object_repr": "Video 55",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 247,
+    "fields": {
+        "action_time": "2024-09-17T05:21:44.320Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "49",
+        "object_repr": "Photo 49",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 248,
+    "fields": {
+        "action_time": "2024-09-17T05:21:58.778Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "56",
+        "object_repr": "Photo 56",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 249,
+    "fields": {
+        "action_time": "2024-09-17T05:22:30.062Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "48",
+        "object_repr": "Video 48",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 250,
+    "fields": {
+        "action_time": "2024-09-17T05:22:34.134Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "50",
+        "object_repr": "Photo 50",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 251,
+    "fields": {
+        "action_time": "2024-09-17T05:23:05.519Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "48",
+        "object_repr": "Video 48",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 252,
+    "fields": {
+        "action_time": "2024-09-17T05:23:09.728Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "50",
+        "object_repr": "Photo 50",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 253,
+    "fields": {
+        "action_time": "2024-09-17T05:23:39.859Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "57",
+        "object_repr": "Photo 57",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 254,
+    "fields": {
+        "action_time": "2024-09-17T05:23:50.525Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "company",
+            "event_media"
+        ],
+        "object_id": "58",
+        "object_repr": "Video 58",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 255,
+    "fields": {
+        "action_time": "2024-09-17T06:09:19.118Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "clocker",
+            "clocker"
+        ],
+        "object_id": "114",
+        "object_repr": "Name: User Two___________________________Shift: 12:00:00",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "user_shift": 2,
+        "department": 1,
+        "photo": "photos/admin_ko/22.png",
+        "address": "",
+        "contact": null,
+        "position": "Member",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "user_shift": 2,
+        "department": 1,
+        "photo": "photos/default_photo.png",
+        "address": null,
+        "contact": null,
+        "position": "Member",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "user_shift": 2,
+        "department": 1,
+        "photo": "photos/User_Two/24.png",
+        "address": "",
+        "contact": null,
+        "position": "Developer",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "user_shift": 2,
+        "department": 2,
+        "photo": "photos/gwapo_ko/25.png",
+        "address": "",
+        "contact": null,
+        "position": "Developer",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "user_shift": 1,
+        "department": 2,
+        "photo": "photos/User_Four/26_LykbdFH.png",
+        "address": "",
+        "contact": null,
+        "position": "Team Leader",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 28,
+    "fields": {
+        "user": [
+            "John"
+        ],
+        "user_shift": 1,
+        "department": 1,
+        "photo": "photos/John_Smith/28_IEdJhvZ.png",
+        "address": "",
+        "contact": null,
+        "position": "Member",
+        "hire_date": "1970-01-01"
+    }
+},
+{
+    "model": "employee.userprofile",
+    "pk": 29,
+    "fields": {
+        "user": [
+            "pedro"
+        ],
+        "user_shift": 1,
+        "department": 1,
+        "photo": "photos/Pedro_Penduko/29.png",
+        "address": "cebu",
+        "contact": "12312231235",
+        "position": "Guard",
+        "hire_date": "2024-09-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-09T03:01:08.242Z",
+        "time_out": null,
+        "date": "2024-08-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-09T05:43:08.511Z",
+        "time_out": "2024-08-09T05:43:51.822Z",
+        "date": "2024-08-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-09T08:16:16.710Z",
+        "time_out": "2024-08-09T08:16:26.236Z",
+        "date": "2024-08-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-12T00:24:37.927Z",
+        "time_out": "2024-08-12T01:29:13.091Z",
+        "date": "2024-08-12"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-14T02:09:05.588Z",
+        "time_out": "2024-08-14T02:09:13.213Z",
+        "date": "2024-08-14"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-14T08:40:43.432Z",
+        "time_out": "2024-08-14T08:40:45.613Z",
+        "date": "2024-08-14"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-15T00:03:36.904Z",
+        "time_out": "2024-08-15T00:03:38.787Z",
+        "date": "2024-08-15"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-15T00:03:54.203Z",
+        "time_out": "2024-08-15T00:03:55.738Z",
+        "date": "2024-08-15"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-16T00:44:51.342Z",
+        "time_out": "2024-08-16T00:45:11.779Z",
+        "date": "2024-08-16"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-16T00:57:32.238Z",
+        "time_out": "2024-08-16T00:57:35.038Z",
+        "date": "2024-08-16"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-19T01:12:47.652Z",
+        "time_out": "2024-08-19T01:12:50.042Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-19T02:39:30.579Z",
+        "time_out": "2024-08-19T02:39:33.691Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-19T03:10:00.884Z",
+        "time_out": "2024-08-19T03:10:03.152Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "user1"
+        ],
+        "time_in": "2024-08-19T03:10:39.530Z",
+        "time_out": "2024-08-19T03:10:42.345Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": null,
+        "time_out": "2024-08-19T07:35:50.865Z",
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-19T07:36:01.761Z",
+        "time_out": null,
+        "date": "2024-08-19"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-20T00:57:11.491Z",
+        "time_out": "2024-08-20T00:57:14.684Z",
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": null,
+        "time_out": "2024-08-20T01:37:36.295Z",
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-20T02:11:36.265Z",
+        "time_out": null,
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-20T08:30:12.210Z",
+        "time_out": "2024-08-20T08:30:57.274Z",
+        "date": "2024-08-20"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-20T23:56:10.143Z",
+        "time_out": "2024-08-20T23:56:13.365Z",
+        "date": "2024-08-21"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-21T01:41:20.574Z",
+        "time_out": "2024-08-21T01:41:25.617Z",
+        "date": "2024-08-21"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-22T01:53:43.521Z",
+        "time_out": "2024-08-22T01:53:45.502Z",
+        "date": "2024-08-22"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-23T01:02:38.526Z",
+        "time_out": "2024-08-23T01:02:53.384Z",
+        "date": "2024-08-23"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-08-26T01:28:36.732Z",
+        "time_out": "2024-08-26T01:28:47.535Z",
+        "date": "2024-08-26"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-26T23:58:29.168Z",
+        "time_out": null,
+        "date": "2024-08-27"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 27,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-29T00:10:15.898Z",
+        "time_out": "2024-08-29T00:10:18.434Z",
+        "date": "2024-08-29"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 28,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-08-30T02:51:31.406Z",
+        "time_out": "2024-08-30T02:51:33.994Z",
+        "date": "2024-08-30"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 29,
+    "fields": {
+        "user": [
+            "user3"
+        ],
+        "time_in": "2024-08-30T05:36:43.822Z",
+        "time_out": "2024-08-30T05:36:58.634Z",
+        "date": "2024-08-30"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 30,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-08-30T06:32:52.660Z",
+        "time_out": "2024-08-30T06:33:01.573Z",
+        "date": "2024-08-30"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 32,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-09-02T03:08:01.437Z",
+        "time_out": "2024-09-02T03:08:36.209Z",
+        "date": "2024-09-02"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 33,
+    "fields": {
+        "user": [
+            "John"
+        ],
+        "time_in": "2024-09-02T03:10:22.271Z",
+        "time_out": "2024-09-02T03:11:15.733Z",
+        "date": "2024-09-02"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 34,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-09-03T00:53:16.825Z",
+        "time_out": "2024-09-03T01:23:23.847Z",
+        "date": "2024-09-03"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 35,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-09-03T00:58:09.526Z",
+        "time_out": "2024-09-03T00:58:32.916Z",
+        "date": "2024-09-03"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 36,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-09-04T00:26:46.931Z",
+        "time_out": "2024-09-04T03:13:03.404Z",
+        "date": "2024-09-04"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 37,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-09-05T00:10:55.619Z",
+        "time_out": null,
+        "date": "2024-09-05"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 38,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-09-05T07:39:21.477Z",
+        "time_out": null,
+        "date": "2024-09-05"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 39,
+    "fields": {
+        "user": [
+            "user4"
+        ],
+        "time_in": "2024-09-06T00:50:09.581Z",
+        "time_out": null,
+        "date": "2024-09-06"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 40,
+    "fields": {
+        "user": [
+            "pedro"
+        ],
+        "time_in": "2024-09-09T01:24:05.229Z",
+        "time_out": "2024-09-09T01:24:22.988Z",
+        "date": "2024-09-09"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 41,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": "2024-09-11T00:54:58.835Z",
+        "time_out": "2024-09-11T02:26:36.584Z",
+        "date": "2024-09-11"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 44,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-09-12T01:09:52.742Z",
+        "time_out": null,
+        "date": "2024-09-12"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 45,
+    "fields": {
+        "user": [
+            "pedro"
+        ],
+        "time_in": "2024-09-12T01:10:14.689Z",
+        "time_out": null,
+        "date": "2024-09-12"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 111,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "time_in": null,
+        "time_out": "2024-09-13T02:22:02.300Z",
+        "date": "2024-09-13"
+    }
+},
+{
+    "model": "clocker.clocker",
+    "pk": 115,
+    "fields": {
+        "user": [
+            "user2"
+        ],
+        "time_in": "2024-09-17T06:08:23.471Z",
+        "time_out": null,
+        "date": "2024-09-17"
+    }
+}
+]

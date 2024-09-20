@@ -1,12 +1,12 @@
 {% load static %}
 <script src="{% static 'htmx.min.js' %}"></script>    
+
 {% if previous_media %}
 <button class="navigation-btn prev-btn"
         hx-get="{% url 'load_media' previous_media.id %}"
         hx-target="#event-media-view"
         hx-swap="innerHTML">
-        &#x2190; 
-        {{event_media.event_id}}
+        &#x2190;         
 </button>
 {% endif %}
 
@@ -16,8 +16,7 @@
         hx-get="{% url 'load_media' next_media.id %}"
         hx-target="#event-media-view"
         hx-swap="innerHTML">
-        &#x2192;
-       {{event_media.event_id}}
+        &#x2192;       
 </button>
 {% endif %}
 </div>

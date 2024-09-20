@@ -149,8 +149,7 @@
                                             <div class="card h-100 shadow"
                                                 hx-get="{% url 'event_details' event.id %}"
                                                 hx-target="#main-container"
-                                                hx-trigger="click"
-                                               
+                                                hx-trigger="click"                                               
                                                 style="cursor: pointer;">
                                                 <img src="{{ event.image1.url }}" class="card-img-top" alt="{{ event.title }}">
                                                 <div class="card-body">
@@ -253,7 +252,7 @@
  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script> -->
 <script src="{% static 'js/htmx.min.js' %}"></script>  
 <script src="{% static 'js/clocker_buttons.js' %}"></script> 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script></script>
 
 <!-- Event Modal -->
 

@@ -37,8 +37,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  max-height: 300px; /* Adjust as needed for your layout */
+  max-width: 100%;  
   overflow: hidden;
   margin: 0 auto;
   text-align: center;
@@ -70,34 +69,34 @@
 
 
 .event_banner img {
-    width: 100%; /* Make the image take up the full width of the div */
-    max-height: 50vh; /* Limit the max height of the image to 80% of the viewport height */
-    object-fit: cover; /* Ensure the image covers the space without stretching */
-    display: block; /* Remove any extra space at the bottom */
+      width: 100%; /* Make the image take up the full width of the div */
+      max-height: 90vh; /* Limit the max height of the image to 80% of the viewport height */
+      object-fit: cover; /* Ensure the image covers the space without stretching */
+      display: block; /* Remove any extra space at the bottom */
 }
-    .media-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Add some space between thumbnails */
-    }
-   
-    .media-item a {
-        display: block;
-    }
-    .vid-thumbnail-container {
-    position: relative;
-    display: inline-block;
-    }
-  
+  .media-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Add some space between thumbnails */
+  }
 
-    .play-icon { 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 50px; /* Adjust size as necessary */
-        color: rgb(255, 255, 255); /* White color */
-        opacity: 0.7;  /* Add transparency to the icon */
-        z-index: 1;
-        cursor: pointer;
-    }
+  .media-item a {
+    display: block;
+  }
+  .vid-thumbnail-container {
+      position: relative;
+      display: inline-block;
+  }
+
+
+  .play-icon { 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px; /* Adjust size as necessary */
+      color: rgb(255, 255, 255); /* White color */
+      opacity: 0.7;  /* Add transparency to the icon */
+      z-index: 1;
+      cursor: pointer;
+  }

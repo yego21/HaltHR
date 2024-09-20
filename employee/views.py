@@ -39,7 +39,7 @@ def login_view(request):
 
 
 
-def logout_view(request):
+def logout_vieww(request):
     logout(request)
     if request.headers.get('HX-Request'):
         # If the request is from HTMX, return a JSON response with the redirect URL.
