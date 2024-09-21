@@ -25,7 +25,6 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 #     return render(request, 'index.html', {'data': data, 'events': events})
 
 
-
 @method_decorator(login_required, name='dispatch')
 class IndexView(TemplateView):
     template_name = 'index.html'

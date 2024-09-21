@@ -16,6 +16,12 @@ class Thumbnail(ImageSpec):
     format = 'JPEG'
     options = {'quality': 60}
 
+def hero_directory_path(instance, filename):
+    hero_image_name = instance.name
+    # Extract the original file extension
+    original_extension = os.path.splitext(filename)[1]  # Get the file extension (e.g., .jpg, .jpeg, .png)
+    filename = f'{hero_image_name}{original_extension}'  # Use the original extension
+    return os.path.join(settings.MEDIA_ROOT, 'hero', hero_image_name, filename)
 
 def event_directory_path(instance, filename):
     event_name = instance.title
@@ -60,6 +66,7 @@ def create_video_thumbnail(instance):
             os.makedirs(thumbnail_dir, exist_ok=True)
             with open(final_thumbnail_path, 'wb') as dest:
                 dest.write(result.read())
+
         return final_thumbnail_path
 
 
@@ -67,10 +74,20 @@ def create_video_thumbnail(instance):
 
 
 class Company(models.Model):
+    @classmethod
+    def get_solo(cls):
+        obj, created = cls.objects.get_or_create(id=1)  # Assuming ID 1 is your singleton
+        return obj
     name = models.CharField(max_length=255)
     address = models.TextField()
     email = models.EmailField()
     phone = models.CharField(max_length=15)
+    hero_image1 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
+    hero_image2 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
+    hero_image3 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
+    hero_image4 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
+    hero_image5 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
+
 
     def __str__(self):
         return self.name

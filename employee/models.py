@@ -33,11 +33,12 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     user_shift = models.ForeignKey(Shift, on_delete=models.SET_NULL, null=True, blank=True)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
-    photo = models.ImageField(upload_to=user_directory_path, default='photos/default_photo.png')
+    photo = models.ImageField(upload_to=user_directory_path, null=True)
     address = models.TextField(blank=True, null=True)
     contact = models.CharField(max_length=20, blank=True, null=True)
     position = models.CharField(default="Member", max_length=50)
     hire_date = models.DateField(default='1970-01-01')
+
     @property
     def is_department_head(self, null=True):
         if self.department:

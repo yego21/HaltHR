@@ -1,62 +1,119 @@
- 
-  {% load static %}
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Index Page</title>
-      <!-- Bootstrap CSS -->
-      <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-      <style>
-          /* Full-page background */
-          .hero {
-              background: url('{% static "images/banner2.jpg" %}') no-repeat center center;
-              background-size: cover;
-              height: 100vh; /* Full viewport height */
-              position: relative;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-          }
-  
-          /* Login form */
-          .login-form {
-              background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
-              padding: 2rem;
-              border-radius: 10px;
-              color: #fff;
-              width: 100%;
-              max-width: 350px;
-              margin-right: 2rem;
-          }
-      </style>
-  </head>
-  <body>
-  
-  <div class="hero">
-      <!-- Bootstrap container to center the login form -->
-      <div class="container">
-          <div class="d-flex justify-content-end">
-              <!-- Login form overlay -->
-              <form class="login-form" method="post">
-                {% csrf_token %}
-                  <h2 class="text-center">Login</h2>
-                  <div class="mb-3">
-                      <label for="username" class="form-label">Username</label>
-                      <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
-                  </div>
-                  <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">Login</button>
-              </form>
-          </div>
-      </div>
-  </div>
-  
-  <!-- Bootstrap JS -->
-  <script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script>
-  </body>
-  </html>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        .carousel-item {
+            background-size: cover;
+            height: 100vh;
+            /* Full viewport height */
+            position: absolute;
+            /* Make it absolute to overlap correctly */
+            width: 100%;
+            /* Ensure it takes full width */
+        }
+
+        .carousel-item.active {
+            position: relative;
+            /* The active item will be in normal flow */
+            z-index: 1;
+            /* Bring it to the front */
+        }
+
+        .carousel-item:not(.active) {
+            z-index: 0;
+            /* Other items are behind */
+        }
+
+
+        /* Dark overlay for login form */
+        .login-form {
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Transparent background */
+            padding: 2rem;
+            border-radius: 10px;
+            color: #fff;
+            width: 100%;
+            max-width: 350px;
+            position: absolute;
+            right: 20rem;
+            /* Align to the right */
+            top: 50%;
+            /* Center vertically */
+            transform: translateY(-50%);
+            z-index: 2;
+            /* Higher z-index to ensure it's on top */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero section with carousel background -->
+    <!-- Hero section with carousel background -->
+    <div class="hero">
+        <div id="backgroundCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                {% if hero_images|length > 0 %}
+                <!-- Loop through each available hero image -->
+                {% for image in hero_images %}
+                {% if image and image.url %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}"
+                    style="background-image: url('{{ image.url }}');"></div>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                <!-- Show default image if no hero images are available -->
+                <div class="carousel-item active" style="background-image: url('{% static " images/hero_default.jpg"
+                    %}');"></div>
+                {% endif %}
+
+            </div>
+
+            <!-- Optional controls for manual sliding -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#backgroundCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#backgroundCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Centered login form -->
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <form class="login-form" method="post">
+                    {% csrf_token %}
+                    <h2 class="text-center">Login</h2>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username"
+                            placeholder="Enter your username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+{% endblock %}

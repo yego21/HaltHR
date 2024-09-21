@@ -3,84 +3,92 @@
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="{% static 'css/userprofile.css' %}">
-    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="main-body">
-        
-              <!-- Breadcrumb -->
-              <nav aria-label="breadcrumb" class="main-breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>                  
-                  <li class="breadcrumb-item active" aria-current="page">User Profile</li>
-                </ol>
-              </nav>
-              <!-- /Breadcrumb -->
-        
-              <div class="row gutters-sm">
-                <div class="col-md-4 mb-3">
-                  <div class="card">
-                    
-                    <div class="card-body">
-                      <div class="d-flex flex-column align-items-center text-center">
-                        <form action="{% url 'userprofile_edit' %}" method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            <label for="change-photo-input" class="position-relative">
-                                <img src="{{ user.userprofile.photo.url }}" alt="Admin" class="rounded-circle" width="150" style="cursor:pointer;">
-                            </label>
-                            <input type="file" id="change-photo-input" name="photo" accept="image/*" style="display:none;" onchange="this.form.submit();">
-                        </form>
-                       
-                        <div class="mt-3">
-                          <h4>{{userprofile.full_name}}</h4>                          
-                          <p class="text-muted font-size-sm">{{userprofile.position}}</p>
-                          <div class="container mt-4">                         
-                            <div class="row">
-                                <!-- Available Status -->
-                                <div class="col-12 mb-2">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-circle-fill text-success me-2">● Available</i>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Busy Status -->
-                                <div class="col-12 mb-2">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-circle-fill text-danger me-2">● Busy</i>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                
-                                <!-- On Break Status -->
-                                <div class="col-12 mb-2">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-circle-fill text-warning me-2">● On break</i>
-                                        <span></span>
-                                    </div>
-                                </div>
 
-                                <div class="col-12 mb-2">
-                                    <div class="d-flex align-items-center">
-                                        <i class="bi bi-circle-fill text-muted me-2">● Off Shift</i>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="{% static 'css/userprofile.css' %}">
+  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-body">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="main-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+        </ol>
+      </nav>
+      <!-- /Breadcrumb -->
+
+      <div class="row gutters-sm">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center">
+                <form action="{% url 'userprofile_edit' %}" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <label for="change-photo-input" class="position-relative">
+
+
+                    <img
+                      src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"
+                      alt="Profile Photo" class="rounded-circle" width="150" style="cursor:pointer;">
+
+                  </label>
+                  <input type="file" id="change-photo-input" name="photo" accept="image/*" style="display:none;"
+                    onchange="this.form.submit();">
+                </form>
+
+                <div class="mt-3">
+                  <h4>{{userprofile.full_name}}</h4>
+                  <p class="text-muted font-size-sm">{{userprofile.position}}</p>
+                  <div class="container mt-4">
+                    <div class="row">
+                      <!-- Available Status -->
+                      <div class="col-12 mb-2">
+                        <div class="d-flex align-items-center">
+                          <i class="bi bi-circle-fill text-success me-2">● Available</i>
+                          <span></span>
                         </div>
-                          <button class="btn btn-primary">Follow</button>
-                          <button class="btn btn-outline-primary">Message</button>
+                      </div>
+
+                      <!-- Busy Status -->
+                      <div class="col-12 mb-2">
+                        <div class="d-flex align-items-center">
+                          <i class="bi bi-circle-fill text-danger me-2">● Busy</i>
+                          <span></span>
+                        </div>
+                      </div>
+
+                      <!-- On Break Status -->
+                      <div class="col-12 mb-2">
+                        <div class="d-flex align-items-center">
+                          <i class="bi bi-circle-fill text-warning me-2">● On break</i>
+                          <span></span>
+                        </div>
+                      </div>
+
+                      <div class="col-12 mb-2">
+                        <div class="d-flex align-items-center">
+                          <i class="bi bi-circle-fill text-muted me-2">● Off Shift</i>
+                          <span></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="card mt-3">
+                  <button class="btn btn-primary">Follow</button>
+                  <button class="btn btn-outline-primary">Message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="card mt-3">
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                         <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
@@ -104,92 +112,93 @@
                       </li>
                     </ul>
                   </div> -->
+        </div>
+        <div class="col-md-8">
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Full Name</h6>
                 </div>
-                <div class="col-md-8">
-                  <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Full Name</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                          {{userprofile.full_name}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Email</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.email}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Department</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{userprofile.department}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Position</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{userprofile.position}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Phone</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{userprofile.contact}}
-                        </div>
-                      </div>
-                      <hr>                     
-                     
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Address</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{userprofile.address}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Hire Date</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{userprofile.hire_date}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <h6 class="mb-0">Current Shift</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{userprofile.user_shift.start_time}} - {{userprofile.user_shift.end_time}}
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-    
-                  <!-- <div class="row gutters-sm">
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.full_name}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{user.email}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Department</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.department}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Position</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.position}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Phone</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.contact}}
+                </div>
+              </div>
+              <hr>
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Address</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.address}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Hire Date</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.hire_date}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Current Shift</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  {{userprofile.user_shift.start_time}} - {{userprofile.user_shift.end_time}}
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                  <a class="btn btn-info " target="__blank"
+                    href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row gutters-sm">
                     <div class="col-sm-6 mb-3">
                       <div class="card h-100">
                         <div class="card-body">
@@ -246,16 +255,17 @@
                     </div>
                   </div>
      -->
-    
-    
-                </div>
-              </div>
-    
-            </div>
+
+
         </div>
-        <script src="{% static 'js/htmx.min.js' %}"></script>  
-        <script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script>
+      </div>
+
+    </div>
+  </div>
+  <script src="{% static 'js/htmx.min.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script>
 </body>
+
 </html>
 
 {% endblock %}

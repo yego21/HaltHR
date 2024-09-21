@@ -29,7 +29,7 @@
         </li>
     </ul>
          
-    
+    {% if user.is_authenticated %}
     <div id="user-tools">
       <ul class="navbar-nav">
         <div class="navbar-admin">
@@ -45,7 +45,7 @@
          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="{{ user.userprofile.photo.url }}" alt="Profile Photo" class="profile-photo" >
+              <img src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}" alt="Profile Photo"  class="profile-photo" >
           </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
                 <li><a class="dropdown-item" href="{% url 'userprofile' %}">Profile</a></li>
@@ -65,6 +65,7 @@
          
       </ul>
     </div>
+    {% endif %}
     </div>
   
 </nav>

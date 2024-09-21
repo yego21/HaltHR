@@ -1,144 +1,111 @@
-<!-- event_details_partial.html -->
- {% load static %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 {% load imagekit %}
+<link rel="stylesheet" href="{% static 'css/event_details.css' %}">
+<div id="current-event-container" class="container mt-5">
 
+  <a href="{% url 'index' %}" class="btn btn-secondary mb-3">Home</a>
 
-
-<div id="current-event-container">
-    
-  <a href="{% url 'index' %}">Home</a>
-
-  <div class="event_banner">
-    <img src="{{ event.image1.url }}" alt="event_banner" class="banner-image">
+  <div class="event-banner mb-4 position-relative">
+    <img src="{{ event.image1.url }}" alt="Event Banner" class="img-fluid banner-image rounded">
     <h5 class="banner-title">{{ event.title }}</h5>
+  </div>
 
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5 class="card-title">Event Description</h5>
+      <p class="card-text">{{ event.description }}</p>
+      <p><strong>Date:</strong> {{ event.date }}</p>
+    </div>
+  </div>
+
+  <div class="navigation-buttons mb-4">
     {% if previous_event %}
-    <button class="navigation-btn next-btn"
-            hx-get="{% url 'event_details' previous_event.id %}"
-            hx-target="#current-event-container"
-            hx-swap="innerHTML">
-            &#x2192;
-            <!-- Unicode for left arrow -->
-     
+    <button class="navigation-btn prev-btn" hx-get="{% url 'event_details' previous_event.id %}"
+      hx-target="#current-event-container" hx-swap="innerHTML">
+      &#x2190; Previous Event
     </button>
-  {% endif %}
+    {% endif %}
 
     {% if next_event %}
-    <button class="navigation-btn prev-btn"
-            hx-get="{% url 'event_details' next_event.id %}"
-            hx-target="#current-event-container"
-            hx-swap="innerHTML">
-            &#x2190;
-            <!-- Unicode for right arrow -->
-           
+    <button class="navigation-btn next-btn" hx-get="{% url 'event_details' next_event.id %}"
+      hx-target="#current-event-container" hx-swap="innerHTML">
+      Next Event &#x2192;
     </button>
-  {% endif %}
-    <!-- Previous button (left side) -->
- 
-
-    <!-- Next button (right side) -->
-   
+    {% endif %}
   </div>
-  <p>{{ event.description }}</p>
-  <p><strong>Date:</strong> {{ event.date }}</p>
 
-
+  <h5 class="mt-4">Media Gallery</h5>
+  <div class="media-gallery">
+    {% for media in media %}   
   
-
-<div class="media-gallery">
-  {% for media in media %}   
-
-      {% if media.media_type == 'photo' %}
-          <div class="media-item">
-              <a id="view_event_media" data-media-id="{{ media.id }}"
-                  href="#"
-                  hx-get="{% url 'load_media' media.id %}" 
-                  hx-trigger="click" 
-                  hx-target="#event-media-view"  
-                  data-bs-toggle="modal"
-                  data-bs-target="#event-media-modal"> 
-                    
-                  <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}">
-              </a>
-             
-      </div>
-      {% elif media.media_type == 'video' %}
-         
-     
-          <div class="vid-thumbnail-container">
-              <a id="view_event_mediaa"
-              href="#"
-              hx-get="{% url 'load_media' media.id %}" 
-              hx-trigger="click" 
-              hx-target="#event-media-view"
-              data-bs-toggle="modal"
-              data-bs-target="#event-media-modal"> 
-        
-              <img class="vid-thumbnail" src="{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
-              <div class="play-icon">
-                  <i class="fa fa-play"></i>  <!-- Font Awesome play icon -->
-              </div>
-          </a>            
-          </div>
-      {% endif %}      
-  {% endfor %}    
-</div>  
-
-
-<div class="modal fade" id="event-media-modal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-lg">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="eventModalLabel"></h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-      <div class="modal-body" id="event-media-view">
-        <!-- Event details content will be loaded here -->
-        {{event_media.caption}}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
-
-  <link rel="stylesheet" href="{% static 'css/event_details.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<script src="{% static 'htmx.min.js' %}"></script>    
-                    
-                
+        {% if media.media_type == 'photo' %}
+            <div class="media-item">
+                <a id="view_event_media" data-media-id="{{ media.id }}"
+                    href="#"
+                    hx-get="{% url 'load_media' media.id %}" 
+                    hx-trigger="click" 
+                    hx-target="#event-media-view"  
+                    data-bs-toggle="modal"
+                    data-bs-target="#event-media-modal"> 
+                      
+                    <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}">
+                </a>
                
-      
-   
+        </div>
+        {% elif media.media_type == 'video' %}
+           
+       
+            <div class="vid-thumbnail-container">
+                <a id="view_event_mediaa"
+                href="#"
+                hx-get="{% url 'load_media' media.id %}" 
+                hx-trigger="click" 
+                hx-target="#event-media-view"
+                data-bs-toggle="modal"
+                data-bs-target="#event-media-modal"> 
+          
+                <img class="vid-thumbnail" src="{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
+                <div class="play-icon">
+                    <i class="fa fa-play"></i>  <!-- Font Awesome play icon -->
+                </div>
+            </a>            
+            </div>
+        {% endif %}      
+    {% endfor %}    
+  </div>  
 
-<div id ="view_media"></div>              
+  <!-- Modal -->
+  <div class="modal fade" id="event-media-modal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="event-media-view">
+          {{ event_media.caption }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<link rel="stylesheet" href="{% static 'css/event_details.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="{% static 'htmx.min.js' %}"></script>
+
 <script>
   document.getElementById('event-media-modal').addEventListener('hidden.bs.modal', function () {
-      var video = document.getElementById('event-video-play');
+    var video = document.getElementById('event-video-play');
+    if (video) {
       video.pause(); // Pause the video
-      // video.currentTime = 0; // Reset video to the beginning
+    }
   });
-  </script>
-
-
-
-
-
-
-<!-- <div class="row">
-    {% if event.photos %}
-      {% for photo in event.photos.all %}
-        <div class="col-3 mb-2">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#fullImageModal" data-img-src="{{ photo.url }}">
-            <img src="{{ photo.url }}" class="img-thumbnail" alt="Event Photo">
-          </a>
-        </div>
-      {% endfor %}
-    {% else %}
-      <p>No photos available.</p>
-    {% endif %}
-  </div> -->
-<!-- Add more event details as needed -->
+</script>
+{% endblock %}

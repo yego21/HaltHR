@@ -1,18 +1,15 @@
-from django.conf.global_settings import LOGIN_URL
-from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import logout
-from django.http import HttpResponse
-from company.models import Event
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.views import PasswordChangeView
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView
-from django.contrib.auth.models import User
-from django.urls import reverse_lazy, reverse
-from django.contrib.auth.views import PasswordChangeView
-from .models import UserProfile
-from django.http import JsonResponse
 
+from company.models import Company
+from .models import UserProfile
 
 
 def login_view(request):
@@ -28,18 +25,25 @@ def login_view(request):
     else:
         form = AuthenticationForm()
 
+    company = Company.get_solo()
+    hero_images = [
+        company.hero_image1 if company.hero_image1 else None,
+        company.hero_image2 if company.hero_image2 else None,
+        company.hero_image3 if company.hero_image3 else None,
+        company.hero_image4 if company.hero_image4 else None,
+        company.hero_image5 if company.hero_image5 else None,
+    ]
+    hero_images = [image for image in hero_images if image is not None]
+    context = {
+        'form': form,
+        'hero_images': hero_images
+    }
+    return render(request, 'employee/login.html', context)
+
+    # return render(request, 'employee/login.html', {'form': form})
 
 
-    return render(request, 'employee/login.html', {'form': form})
-
-
-
-
-
-
-
-
-def logout_vieww(request):
+def logout_view(request):
     logout(request)
     if request.headers.get('HX-Request'):
         # If the request is from HTMX, return a JSON response with the redirect URL.

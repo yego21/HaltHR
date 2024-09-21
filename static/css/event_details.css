@@ -1,102 +1,96 @@
 .navigation-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
-  font-size: 1.5rem;
-  padding: 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 10;
+  transition: background-color 0.3s;
 }
 
-.prev-btn {
-  left: 10px;
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.next-btn {
-  right: 10px;
+.prev-btn, .next-btn {
+  flex: 1;
+  margin: 0 10px; /* Space between buttons */
 }
-
-/* .prev-media {
-  left: 10px;
-}
-
-
-.next-media {
-  right: 10px;
-} */
-
 
 .navigation-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.event_banner {
+
+.event-banner {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;  
   overflow: hidden;
-  margin: 0 auto;
-  text-align: center;
 }
 
-
 .banner-image {
-    width: 100%; /* Adjust the image to fit the container */
-    height: auto;
+  width: 100%;
+  max-height: 70vh; /* Limit max height */
+  object-fit: cover;
+  display: block;
 }
 
 .banner-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    
-    /* Transparent dark background */
-    background-color: rgba(0, 0, 0, 0.6);
-    
-    /* Make sure it's above the image */
-    z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
 }
 
-
-.event_banner img {
-      width: 100%; /* Make the image take up the full width of the div */
-      max-height: 90vh; /* Limit the max height of the image to 80% of the viewport height */
-      object-fit: cover; /* Ensure the image covers the space without stretching */
-      display: block; /* Remove any extra space at the bottom */
+.media-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between thumbnails */
 }
-  .media-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px; /* Add some space between thumbnails */
-  }
 
-  .media-item a {
-    display: block;
-  }
-  .vid-thumbnail-container {
-      position: relative;
-      display: inline-block;
-  }
+.media-item {
+  position: relative;
+  flex: 1 0 30%; /* Flex-grow, shrink, and basis */
+}
 
+.media-item img, .vid-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
 
-  .play-icon { 
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 50px; /* Adjust size as necessary */
-      color: rgb(255, 255, 255); /* White color */
-      opacity: 0.7;  /* Add transparency to the icon */
-      z-index: 1;
-      cursor: pointer;
-  }
+.media-item img:hover, .vid-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.vid-thumbnail-container {
+  position: relative;
+  display: inline-block;
+}
+
+.play-icon { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px; /* Adjust size as necessary */
+  color: rgb(255, 255, 255);
+  opacity: 0.7; /* Transparency */
+  z-index: 1;
+  cursor: pointer;
+}
+
+.card {
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.card-title {
+  margin-bottom: 1rem; /* Space below the title */
+}

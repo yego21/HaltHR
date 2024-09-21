@@ -5,9 +5,9 @@
 /* VARIABLE DEFINITIONS */
 html[data-theme="light"],
 :root {
-    --primary: #063e7e;
-    --secondary: #3e74c5;
-    --accent: #d7e9ac;
+    --primary: #79aec8;
+    --secondary: #417690;
+    --accent: #f5dd5d;
     --primary-fg: #fff;
 
     --body-fg: #333;
@@ -22,7 +22,7 @@ html[data-theme="light"],
 
     --breadcrumbs-fg: #c4dce8;
     --breadcrumbs-link-fg: var(--body-bg);
-    --breadcrumbs-bg: #023875d7;
+    --breadcrumbs-bg: #264b5d;
 
     --link-fg: #417893;
     --link-hover-color: #036;
