@@ -37,7 +37,25 @@ class UserProfile(models.Model):
     address = models.TextField(blank=True, null=True)
     contact = models.CharField(max_length=20, blank=True, null=True)
     position = models.CharField(default="Member", max_length=50)
+    EMPLOYMENT_TYPES = [
+        ('FT', 'Full-time'),
+        ('PT', 'Part-time'),
+        ('CT', 'Contract'),
+        ('TP', 'Temporary'),
+        ('IN', 'Intern'),
+        ('FR', 'Freelance'),
+        ('CO', 'Consultant'),
+        ('OC', 'On-call'),
+        ('AP', 'Apprentice'),
+        ('CA', 'Casual'),
+    ]
+    employment_type = models.CharField(
+        max_length=2,
+        choices=EMPLOYMENT_TYPES,
+        default='FT',
+    )
     hire_date = models.DateField(default='1970-01-01')
+
 
     @property
     def is_department_head(self, null=True):

@@ -1,100 +1,187 @@
-{% extends "base.html" %}
+<!-- templates/base.html -->
 {% load static %}
-{% block content %}
 {% load imagekit %}
-<link rel="stylesheet" href="{% static 'css/event_details.css' %}">
-<div id="current-event-container" class="container mt-5">
+<!DOCTYPE html>
+<html lang="en">
 
-  <a href="{% url 'index' %}" class="btn btn-secondary mb-3">Home</a>
-
-  <div class="event-banner mb-4 position-relative">
-    <img src="{{ event.image1.url }}" alt="Event Banner" class="img-fluid banner-image rounded">
-    <h5 class="banner-title">{{ event.title }}</h5>
-  </div>
-
-  <div class="card mb-4">
-    <div class="card-body">
-      <h5 class="card-title">Event Description</h5>
-      <p class="card-text">{{ event.description }}</p>
-      <p><strong>Date:</strong> {{ event.date }}</p>
-    </div>
-  </div>
-
-  <div class="navigation-buttons mb-4">
-    {% if previous_event %}
-    <button class="navigation-btn prev-btn" hx-get="{% url 'event_details' previous_event.id %}"
-      hx-target="#current-event-container" hx-swap="innerHTML">
-      &#x2190; Previous Event
-    </button>
-    {% endif %}
-
-    {% if next_event %}
-    <button class="navigation-btn next-btn" hx-get="{% url 'event_details' next_event.id %}"
-      hx-target="#current-event-container" hx-swap="innerHTML">
-      Next Event &#x2192;
-    </button>
-    {% endif %}
-  </div>
-
-  <h5 class="mt-4">Media Gallery</h5>
-  <div class="media-gallery">
-    {% for media in media %}   
+<head>
   
-        {% if media.media_type == 'photo' %}
-            <div class="media-item">
-                <a id="view_event_media" data-media-id="{{ media.id }}"
-                    href="#"
-                    hx-get="{% url 'load_media' media.id %}" 
-                    hx-trigger="click" 
-                    hx-target="#event-media-view"  
-                    data-bs-toggle="modal"
-                    data-bs-target="#event-media-modal"> 
-                      
-                    <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}">
-                </a>
-               
-        </div>
-        {% elif media.media_type == 'video' %}
-           
-       
-            <div class="vid-thumbnail-container">
-                <a id="view_event_mediaa"
-                href="#"
-                hx-get="{% url 'load_media' media.id %}" 
-                hx-trigger="click" 
-                hx-target="#event-media-view"
-                data-bs-toggle="modal"
-                data-bs-target="#event-media-modal"> 
-          
-                <img class="vid-thumbnail" src="{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
-                <div class="play-icon">
-                    <i class="fa fa-play"></i>  <!-- Font Awesome play icon -->
-                </div>
-            </a>            
-            </div>
-        {% endif %}      
-    {% endfor %}    
-  </div>  
+<link rel="stylesheet" href="{% static 'css/event_details.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaltHR</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    
+</head>
+<div id="current-event-container">
+<body>
+    <!-- Include the header template -->
+    {% include 'includes/header.html' %}
 
-  <!-- Modal -->
-  <div class="modal fade" id="event-media-modal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="eventModalLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="event-media-view">
-          {{ event_media.caption }}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+    <!-- Block for page-specific content -->   
+
+  
+    
+      <div class="event-banner mb-4 position-relative">
+        <img src="{{ event.image1.url }}" alt="Event Banner" class="img-fluid banner-image rounded">
+        <h5 class="banner-title">{{ event.title }}</h5>
       </div>
+    <div class="container">
+      <div class="container mt-5">
+       
+    
+        <!-- Event Details -->
+        <div class="row">
+            <!-- Main Card for Event Info -->
+            <div class="col-md-8">
+              <div class="card shadow-sm mb-4 border-0 rounded">
+                  <div class="card-body p-4">
+                      <!-- Event Title -->
+                      <h3 class="card-title text-primary mb-4">{{ event.title }}</h3>
+          
+                      <!-- Event Description -->
+                      <h5 class="text-muted mb-3">About the Event:</h5>
+                      <p class="card-text">{{ event.description }}</p>
+          
+                      <!-- Event When & Where -->
+                      <ul class="list-unstyled mt-4">
+                          <li>
+                              <strong class="text-primary">When:</strong>                         
+                              {% for schedule in event_schedule %}
+                                  <div class="schedule-item mt-3 p-3 bg-light rounded border">
+                                      <h6 class="text-secondary">{{ schedule.description }}</h6>
+                                      <p class="mb-1">
+                                          {{ schedule.date|date:"M d, Y" }} 
+                                          {% if schedule.start_time %}
+                                              - {{ schedule.start_time|time:"g:i a" }} 
+                                              {% if schedule.end_time %}
+                                                  to {{ schedule.end_time|time:"g:i a" }}
+                                              {% endif %}
+                                          {% endif %}
+                                      </p>
+                                  </div>
+                              {% endfor %}
+                          </li>
+                          <li class="mt-4">
+                              <strong class="text-primary">Where:</strong> 
+                              <span class="text-muted">{{ event.location }}</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+    
+            <!-- Optional Sidebar (e.g., other upcoming events, contact info) -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>Upcoming Events</h5>
+                        <!-- Add dynamic upcoming event links or content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+      <!-- <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Event Description</h5>
+          <p class="card-text">{{ event.description }}</p>
+          <p class="card-text"><strong>Date:</strong></p>      
+          {% for date in event_schedule %}
+          <p>{{ date.date }} - {{ date.start_time }} - {{ date.end_time }}</p>
+          {% endfor %}
+        </div>
+      </div> -->
+    
+     
+    
+      <h5 class="mt-4">Gallery</h5>
+      <div class="media-gallery d-flex flex-wrap p-4 mb-4">
+          {% for media in media %}   
+              {% if media.media_type == 'photo' %}       
+                  <div class="media-item">
+                      <a id="view_event_media" data-media-id="{{ media.id }}"
+                         href="#"
+                         hx-get="{% url 'load_media' media.id %}" 
+                         hx-trigger="click" 
+                         hx-target="#event-media-view"  
+                         data-bs-toggle="modal"
+                         data-bs-target="#event-media-modal"> 
+                          <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}">
+                      </a>
+                  </div>
+              {% elif media.media_type == 'video' %}      
+                  <div class="vid-thumbnail-container">
+                      <a id="view_event_mediaa"
+                         href="#"
+                         hx-get="{% url 'load_media' media.id %}" 
+                         hx-trigger="click" 
+                         hx-target="#event-media-view"
+                         data-bs-toggle="modal"
+                         data-bs-target="#event-media-modal"> 
+                          <img class="vid-thumbnail" src="/{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
+                          <div class="play-icon">
+                              <i class="fa fa-play"></i>  <!-- Font Awesome play icon -->
+                          </div>
+                      </a>            
+                  </div>
+              {% endif %}      
+          {% endfor %}    
+      </div>
+      
 
-</div>
+      <div class="navigation-buttons mb-4">
+        {% if previous_event %}
+        <button class="navigation-btn prev-btn" hx-get="{% url 'event_details' previous_event.id %}"
+          hx-target="#current-event-container" hx-swap="innerHTML">
+          &#x2190; Previous Event
+        </button>
+        {% endif %}
+    
+        {% if next_event %}
+        <button class="navigation-btn next-btn" hx-get="{% url 'event_details' next_event.id %}"
+          hx-target="#current-event-container" hx-swap="innerHTML">
+          Next Event &#x2192;
+        </button>
+        {% endif %}
+      </div> 
+    </div>
+    {% include 'includes/footer.html' %}
+    </div>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="event-media-modal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eventModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="event-media-view">
+              {{ event_media.caption }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+         <!-- Include the footer template -->
+    
+      </div>
+    
+     
+
+
+
+   
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+</body>
+
+
+
+
 
 <link rel="stylesheet" href="{% static 'css/event_details.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -108,4 +195,3 @@
     }
   });
 </script>
-{% endblock %}

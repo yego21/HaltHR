@@ -1,30 +1,37 @@
 {% load static %}
 <script src="{% static 'htmx.min.js' %}"></script>
 
-{% if previous_media %}
-<button class="navigation-btn prev-btn" hx-get="{% url 'load_media' previous_media.id %}" hx-target="#event-media-view"
-    hx-swap="innerHTML">
-    &#x2190;
-</button>
-{% endif %}
+<div class="container d-flex justify-content-center align-items-center my-4 position-relative" style="max-width: 800px;">
+    
+    <!-- Previous Button -->
+    {% if previous_media %}
+    <button class="navigation-btn prev-btn position-absolute" style="left: -40px; top: 50%; transform: translateY(-50%);  border: none; font-size: 2rem; cursor: pointer;"
+        hx-get="{% url 'load_media' previous_media.id %}" hx-target="#event-media-view" hx-swap="innerHTML" class="text-dark">
+            &#x2190;       
+    </button>
+    {% endif %}
+    
+    <!-- Media Content -->
+    <div class="media-container text-center" style="width: 100%;">
+        {% if event_media.media_type == 'photo' %}
+        <img src="{{ event_media.file.url }}" alt="{{ event_media.caption }}" class="img-fluid rounded shadow" style="max-width: 100%; height: auto;">
+        {% elif event_media.media_type == 'video' %}
+        <video id="event-video-play" class="rounded shadow" style="width: 100%; height: auto;" controls>
+            <source src="{{event_media.file.url}}" type="video/mp4">
+            <source src="{{event_media.file.url}}" type="video/webm">
+            <source src="{{event_media.file.url}}" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <span class="d-block mt-2 text-muted">{{event_media.caption}}</span>
+        {% endif %}
+    </div>
 
+    <!-- Next Button -->
+    {% if next_media %}
+    <button class="navigation-btn next-btn position-absolute" style="right: -40px; top: 50%; transform: translateY(-50%); border: none; font-size: 2rem; cursor: pointer;"
+         hx-get="{% url 'load_media' next_media.id %}" hx-target="#event-media-view" hx-swap="innerHTML" class="text-dark">
+            &#x2192;        
+    </button>
+    {% endif %}
 
-{% if next_media %}
-<button class="navigation-btn next-btn" hx-get="{% url 'load_media' next_media.id %}" hx-target="#event-media-view"
-    hx-swap="innerHTML">
-    &#x2192;
-</button>
-{% endif %}
 </div>
-
-{% if event_media.media_type == 'photo' %}
-<img src="{{ event_media.file.url }}" alt="{{ event_media.caption }}" class="img-fluid">
-{% elif event_media.media_type == 'video' %}
-<video id="event-video-play" width="100%" height="100%" controls>
-    <source src="{{event_media.file.url}}" type="video/mp4">
-    <source src="{{event_media.file.url}}" type="video/webm">
-    <source src="{{event_media.file.url}}" type="video/ogg">
-    Your browser does not support the video tag.
-</video>
-<span>{{event_media.caption}}</span>
-{% endif %}

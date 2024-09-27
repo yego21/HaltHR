@@ -1,6 +1,6 @@
 .navigation-btn {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(1, 5, 10, 0.5);
   border: none;
   color: white;
   font-size: 1rem;
@@ -51,17 +51,18 @@
 .media-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Space between thumbnails */
+  gap: 5px; /* Space between thumbnails */
+  background-color: rgb(47, 48, 48);
 }
 
 .media-item {
   position: relative;
-  flex: 1 0 30%; /* Flex-grow, shrink, and basis */
+  
 }
 
 .media-item img, .vid-thumbnail {
   width: 100%;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   transition: transform 0.3s;
 }
 

@@ -1,8 +1,7 @@
 # views.py
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-
-from .models import Event, Event_Media
+from .models import Event, Event_Media, Event_Schedule
 
 
 @login_required
@@ -13,18 +12,19 @@ def view_members(request):
 def event_details(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     media = Event_Media.objects.filter(event=event)
-
+    event_schedule = Event_Schedule.objects.filter(event=event)
     # Get the previous event
-    previous_event = Event.objects.filter(date__lt=event.date).order_by('-date').first()
+    previous_event = Event.objects.filter(event_schedule__lt=event_schedule.first()).order_by('-event_schedule').first()
 
     # Get the next event
-    next_event = Event.objects.filter(date__gt=event.date).order_by('date').first()
+    next_event = Event.objects.filter(event_schedule__gt=event_schedule.first()).order_by('event_schedule').first()
 
     context = {
         'event': event,
         'previous_event': previous_event,
         'next_event': next_event,
-        'media': media
+        'media': media,
+        'event_schedule': event_schedule
     }
     return render(request, 'company/event/event_details_partial.html', context)
 

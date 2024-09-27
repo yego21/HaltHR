@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.translation.template import blankout
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
 from moviepy.editor import VideoFileClip
@@ -8,7 +9,8 @@ from imagekit import ImageSpec, register
 from imagekit.processors import ResizeToFill
 from django.core.files import File
 from django.conf import settings
-
+from django.db.models import JSONField
+from django.utils import timezone
 
 
 class Thumbnail(ImageSpec):
@@ -110,19 +112,59 @@ class Department(models.Model):
         return self.name
 
 
+
+
+
 class Event(models.Model):
     title = models.CharField(max_length=255)
-    description = models.TextField()
-    date = models.DateField()
-    time = models.TimeField()
-    location = models.CharField(max_length=255)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    image1 = models.ImageField(upload_to=event_directory_path, default='events/event_1.jpg')
 
-    # image2 = models.ImageField(upload_to=event_directory_path, blank=True)
+    EVENT_TYPE_CHOICES = [
+        ('seminar', 'Seminar'),
+        ('conference', 'Conference'),
+        ('workshop', 'Workshop'),
+        ('team_building', 'Team Building'),
+        ('product_launch', 'Product Launch'),
+        ('corporate_party', 'Corporate Party'),
+        ('networking', 'Networking Event'),
+        ('board_meeting', 'Board Meeting'),
+        ('training', 'Training Session'),
+        ('community_service', 'Community Service'),
+        ('fundraiser', 'Fundraiser'),
+        ('virtual_event', 'Virtual Event'),
+        ('award_ceremony', 'Award Ceremony'),
+        ('charity_event', 'Charity Event'),
+        ('clean_up_drive', 'Clean-up Drive'),
+        ('town_hall', 'Town Hall Meeting'),
+        ('retreat', 'Retreat'),
+        ('panel_discussion', 'Panel Discussion'),
+        ('general_meeting', 'General Meeting'),
+        ('client_meeting', 'Client Meeting'),
+    ]
+    category = models.CharField(max_length=50, choices=EVENT_TYPE_CHOICES, default="", blank=True)
+    description = models.TextField()
+
+
+    # Update to include time in the JSON field
+    # event_dates = JSONField(default=list, blank=True)
+
+    location = models.CharField(max_length=255)
+    company = models.ForeignKey('Company', on_delete=models.CASCADE)
+    image1 = models.ImageField(upload_to=event_directory_path, default='events/event_1.jpg')
 
     def __str__(self):
         return self.title
+
+class Event_Schedule(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    date = models.DateField(default=timezone.now)
+    start_time = models.TimeField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+
+
+    def __str__(self):
+        return str(self.date)
+
 
 
 class Event_Media(models.Model):
@@ -165,6 +207,8 @@ class Announcement(models.Model):
 
     def __str__(self):
         return self.title
+
+
 
 
 register.generator('company:thumbnail', Thumbnail)

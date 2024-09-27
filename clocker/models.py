@@ -49,7 +49,7 @@ class Clocker(models.Model):
 
                 start_time_seconds = self.time_to_seconds(start_time)
                 time_in_seconds = self.time_to_seconds(time_in_time)
-                print(f'start seconds {start_time_seconds}')
+                # print(f'start seconds {start_time_seconds}')
 
                 difference_seconds = abs(start_time_seconds - time_in_seconds)
                 if start_time_seconds > time_in_seconds:

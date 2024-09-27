@@ -7,118 +7,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Dashboard</title>
-    <script src="{% static 'htmx.min.js' %}"></script>
+    <title>Company Dashboard</title>    
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/view_attendance.css' %}">   
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/view_attendance.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">    
 </head>
-<div id="event_viewer">
-    <div class="container">
-        <body>
-            
 
+<div class="container">
 
-            <!-- <div id="popup-container">test here</div> -->
-
-            <!-- Main Content Column -->
-            <div class="dashboard">
-                <!-- Header -->
-                <div class="container-fluid" id="main-container">
-                    <!-- {{ test }}
+    <body>
+        <!-- Main Content Column -->
+        <div class="dashboard">
+            <!-- Header -->
+            <div class="container-fluid" id="main-container">
+                <!-- {{ test }}
                     <header class="bg-primary text-white text-center py-2">                     
                          <h1>Welcome to Company {{data}}</h1> 
                          <p>{{ data }}</p>                        
                     </header>                 -->
 
 
-                    <!-- Events Section -->
-
-                    <section id="events" class="mb-2 mt-2">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6 col-lg-3 mb-3 " style="max-height: 800x;">
-                                <div class="card" id="clocker_div">
-
-                                    <div class="card-body">
-
-                                        <div class="d-flex flex-column align-items-center text-center">
-                                            <a href="{% url 'userprofile' %}">
-
-                                                <img src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"
-                                                    alt="Profile Photo" class="rounded-circle" width="150"
-                                                    style="cursor:pointer;">
-
-                                            </a>
-
-                                            <div class="mt-3">
-                                                <h4>{{user.userprofile.full_name}}</h4>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <!-- Available Status -->
-                                                        <div class="col-12 mb-2">
-                                                            <div class="d-flex align-items-center">
-                                                                <i class="bi bi-circle-fill text-success me-2">●
-                                                                    Available</i>
-                                                                <span></span>
-                                                            </div>
-                                                        </div>
 
 
+                <div class="row mb-2 mt-2">
+                    <div class="col-sm-12 col-md-6 col-lg-3 mb-3 " id="side-panel">
+                        <section class="card" id="clocker-section">
+
+                            <div class="card-body">
+
+                                <div class="d-flex flex-column align-items-center text-center">
+                                    <a href="{% url 'userprofile' %}">
+
+                                        <img src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"
+                                            alt="Profile Photo" class="rounded-circle" width="150"
+                                            style="cursor:pointer;">
+                                    </a>
+
+                                    <div class="mt-3">
+                                        <h4>{{user.userprofile.full_name}}</h4>
+                                        <div class="container">
+                                            <div class="row">
+                                                <!-- Available Status -->
+                                                <div class="col-12 mb-2">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="bi bi-circle-fill text-success me-2">●
+                                                            Available</i>
+                                                        <span></span>
                                                     </div>
                                                 </div>
+
 
                                             </div>
                                         </div>
 
-                                        <section id="clock-section">
-                                            <div class="d-flex flex-column align-items-center">
-                                                <button id="clockInButton" class="btn btn-success w-100 mb-2"
-                                                    hx-post="{% url 'clock-in' %}" hx-target=".response-message"
-                                                    hx-swap="innerHTML" hx-confirm="Are you sure you want to clock in?"
-                                                    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-                                                    Clock In
-                                                </button>
-                                                <button id="clockOutButton" class="btn btn-success w-100 mb-2"
-                                                    hx-post="{% url 'clock-out' %}" hx-target=".response-message"
-                                                    hx-swap="innerHTML" hx-confirm="Are you sure you want to clock out?"
-                                                    hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-                                                    Clock Out
-                                                </button>
-                                            </div>
-                                            <div class="response-message"></div>
-                                        </section>
-                                        <span class="profile-icons">
-                                            <a href="{% url 'htmx_view' %}"><img title="Notes"
-                                                    src="{% static 'images/sticky-notes.png' %}" alt=""></a>
-                                            <a href="{% url 'htmx_view' %}"><img title="Current Task" href="#"
-                                                    src="{% static 'images/task.png' %}" alt=""></a>
-                                            <a href="#" id="view-attendance-popup">
-                                                <!-- hx-get="{% url 'attendance_logs' user_id=request.user.id %}"                                                 
+                                    </div>
+                                </div>
+
+                                <section id="clock-section">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <button id="clockInButton" class="btn btn-success w-100 mb-2"
+                                            hx-post="{% url 'clock-in' %}" hx-target=".response-message"
+                                            hx-swap="innerHTML" hx-confirm="Are you sure you want to clock in?"
+                                            hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+                                            Clock In
+                                        </button>
+                                        <button id="clockOutButton" class="btn btn-success w-100 mb-2"
+                                            hx-post="{% url 'clock-out' %}" hx-target=".response-message"
+                                            hx-swap="innerHTML" hx-confirm="Are you sure you want to clock out?"
+                                            hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+                                            Clock Out
+                                        </button>
+                                    </div>
+                                    <div class="response-message"></div>
+                                </section>
+                                <span class="profile-icons">
+                                    <a href="{% url 'htmx_view' %}"><img title="Notes"
+                                            src="{% static 'images/sticky-notes.png' %}" alt=""></a>
+                                    <a href="{% url 'htmx_view' %}"><img title="Current Task" href="#"
+                                            src="{% static 'images/task.png' %}" alt=""></a>
+                                    <a href="#" id="view-attendance-popup">
+                                        <!-- hx-get="{% url 'attendance_logs' user_id=request.user.id %}"                                                 
                                                  hx-trigger="click" 
                                                  hx-target="#view-attendance-container"
                                                  hx-swap="innerHTML">                                                                                   -->
-                                                <img title="Attendance" src="{% static 'images/attendance.png' %}"
-                                                    alt="">
-                                            </a>
-                                        </span>
+                                        <img title="Attendance" src="{% static 'images/attendance.png' %}" alt="">
+                                    </a>
+                                </span>
 
-                                    </div>
-                                </div>
-                                <section id="announcements">
-                                    <h2>Announcements</h2>
-                                    {% for announcement in announcements %}
-                                    <div class="alert alert-info" role="alert">
-                                        {{ announcement.title}}
-                                    </div>
-                                    <div>{{ announcement.content}}</div>
-                                    {% endfor %}
-                                </section>
                             </div>
+                        </section>
+                        <section id="announcement-section">
 
-                            <div class="col-sm-12 col-md-6 col-lg-9 event-container mb-3" id="event-list-view">
-                                <!-- <div class="card event_card">
-                                    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <!-- Your announcement scrollable content here -->
+                            <h2>Announcements</h2>
+                            {% for announcement in announcements %}
+                            <div class="alert alert-info" role="alert">
+                                {{ announcement.title}}
+                            </div>
+                            <div class="mb-4">{{ announcement.content}}</div>
+                            {% endfor %}
+
+
+                        </section>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-9 event-container mb-3" id="event-panel">
+                        <!-- <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             {% for event in events %}
                                             <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -136,78 +129,81 @@
                                             </div>
                                             {% endfor %}
                                         </div>
-                                    </div>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                                    </div> -->
+                        <!-- <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div> -->
+                                    </button> -->
 
-                                <div class="container">
-                                    <div class="row" data-masonry='{"percentPosition": true }'>
-                                        {% for event in events %}
-                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-4 mt-3">
-                                            <div class="card h-100 shadow">
-                                               <a href="{% url 'event_details' event.id %}">
-                                            <!-- <div class="card h-100 shadow" hx-get="{% url 'event_details' event.id %}"
-                                                hx-target="#main-container" hx-trigger="click" style="cursor: pointer;"> -->
-                                                <img src="{{ event.image1.url }}" class="card-img-top"
-                                                    alt="{{ event.title }}"></a>
-                                                <div class="card-body">
-                                                    <h6 class="text-uppercase">
-                                                        <span class="upcoming-text">Upcoming |</span>
-                                                        <span class="event-date text-muted">{{ event.date }}</span>
-                                                    </h6>
-                                                    <h5 class="card-title font-weight-bold text-dark">{{ event.title }}
-                                                    </h5>
-                                                    <p class="card-text">{{ event.description|truncatewords:20 }}</p>
-                                                </div>
-                                            </div>
+
+                        <section class="container" id="event-section">
+                            <div class="row" data-masonry='{"percentPosition": true }'>
+                                {% for event in events %}
+                                <div class="col-sm-12 col-md-6 col-lg-4 mb-4 mt-3">
+                                    <div class="card h-100 shadow">
+                                        <a href="{% url 'event_details' event.id %}">
+                                            <img src="{{ event.image1.url }}" class="card-img-top"
+                                                alt="{{ event.title }}">
+                                        </a>
+                                        <div class="card-body">
+                                            {% if event in upcoming_events %}
+                                            <h6 class="text-uppercase">
+                                                <span class="upcoming-text">Upcoming |</span>
+                                                <span class="event-date text-muted">{{ event.first_schedule_date }}</span>
+                                            </h6>
+                                            {% elif event in past_events %}
+                                            <h6 class="text-uppercase">
+                                                <span class="past-text">Past |</span>
+                                                <span class="event-date text-muted">{{ event.first_schedule_date }}</span>
+                                            </h6>
+                                            {% endif %}
+                                            <h5 class="card-title font-weight-bold text-dark">{{ event.title }}
+                                            </h5>
+                                            <p class="card-text">{{ event.description|truncatewords:20 }}</p>
                                         </div>
-                                        {% endfor %}
                                     </div>
                                 </div>
-
-                                <div class="container pagination-wrapper">
-                                    <nav aria-label="Page navigation">
-                                        <ul class="pagination">
-                                            {% if events.has_previous %}
-                                            <li class="page-item">
-                                                <a class="page-link" href="?page={{ events.previous_page_number }}"
-                                                    aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
-                                                </a>
-                                            </li>
-                                            {% endif %}
-
-                                            {% for num in events.paginator.page_range %}
-                                            {% if events.number == num %}
-                                            <li class="page-item active"><span class="page-link">{{ num }}</span></li>
-                                            {% elif num > events.number|add:'-3' and num < events.number|add:'3' %} <li
-                                                class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                                                </li>
-                                                {% endif %}
-                                                {% endfor %}
-
-                                                {% if events.has_next %}
-                                                <li class="page-item">
-                                                    <a class="page-link" href="?page={{ events.next_page_number }}"
-                                                        aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
-                                                    </a>
-                                                </li>
-                                                {% endif %}
-                                        </ul>
-                                    </nav>
-                                </div>
-
+                                {% endfor %}
                             </div>
+                        </section>
+
+                        <div class="container pagination-wrapper">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    {% if events.has_previous %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ events.previous_page_number }}"
+                                            aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    {% endif %}
+                                    {% for num in events.paginator.page_range %}
+                                    {% if events.number == num %}
+                                    <li class="page-item active"><span class="page-link">{{ num }}</span></li>
+                                    {% elif num > events.number|add:'-3' and num < events.number|add:'3' %} <li
+                                        class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                                        </li>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% if events.has_next %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ events.next_page_number }}"
+                                                aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                        {% endif %}
+                                </ul>
+                            </nav>
                         </div>
-                    </section>
+
+                    </div>
+                </div>
 
 
-                    <!-- Hiring Opportunities Section -->
-                    <!-- <section id="careers" class="mb-4">
+                <!-- Hiring Opportunities Section -->
+                <!-- <section id="careers" class="mb-4">
                         <h2>Hiring Opportunities</h2>
                         <div class="list-group">
                             <a href="#" class="list-group-item list-group-item-action">
@@ -231,41 +227,45 @@
 
 
 
-                </div>
             </div>
-            <script>
-                document.getElementById('view-attendance-popup').addEventListener('click', function () {
-
-                    var popupUrl = "{% url 'attendance_logs' user_id=request.user.id %}";
-
-                    // Open a new window
-                    var popupWindow = window.open(popupUrl, "popupWindow", "width=1000,height=600,scrollbars=yes");
-
-                    // Use HTMX to load the content
-                    htmx.ajax('GET', popupUrl, {
-                        target: popupWindow.document.body,
-                        swap: 'innerHTML'
-                    });
-                });
-            </script>
+        </div>
+    </body>
+       
 
 
-
-
-
-        </body>
-    </div>
+    
 </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script> -->
-    <script src="{% static 'js/htmx.min.js' %}"></script>
-    <script src="{% static 'js/clocker_buttons.js' %}"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script>
-    </script>
+
+<script>
+    document.getElementById('view-attendance-popup').addEventListener('click', function () {
+
+        var popupUrl = "{% url 'attendance_logs' user_id=request.user.id %}";
+
+        // Open a new window
+        var popupWindow = window.open(popupUrl, "popupWindow", "width=1000,height=600,scrollbars=yes");
+
+        // Use HTMX to load the content
+        htmx.ajax('GET', popupUrl, {
+            target: popupWindow.document.body,
+            swap: 'innerHTML'
+        });
+    });
+</script>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script> -->
+<script src="{% static 'js/htmx.min.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="{% static 'js/clocker_buttons.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+<!-- 
 <script>
     document.addEventListener("htmx:beforeRequest", (event) => {
       if (event.detail.parameters['confirm'] === undefined) {
@@ -295,78 +295,6 @@
       }
     });
     </script> -->
-    <script>
-        $(document).ready(function () {
-            function handleClockAction(buttonSelector, url, redirectUrl) {
-                $(buttonSelector).click(function (e) {
-                    e.preventDefault();
-                    $.ajax({
-                        url: url,
-                        type: "POST",
-                        headers: {
-                            'X-CSRFToken': '{{ csrf_token }}'
-                        },
-                        success: function (response) {
-                            if (response.status === 'confirm') {
-                                if (confirm(response.message)) {
-                                    $.ajax({
-                                        url: url,
-                                        type: "POST",
-                                        data: { confirm: 'yes' },
-                                        headers: {
-                                            'X-CSRFToken': '{{ csrf_token }}'
-                                        },
-                                        success: function (response) {
-                                            if (response.status === 'success') {
-                                                alert(response.message);
-                                                window.location.href = redirectUrl;
-                                            } else if (response.status === 'failure') {
-                                                alert(response.message);
-                                            } else if (response.status === 'warning') {
-                                                alert(response.message);
-                                            }
-                                        },
-                                        error: function (xhr, status, error) {
-                                            console.error('Error:', error);
-                                        }
-                                    });
-                                } else {
-                                    window.location.href = redirectUrl;
-                                }
-                            } else if (response.status === 'success') {
-                                alert(response.message);
-                                window.location.href = redirectUrl;
-                            } else if (response.status === 'failure') {
-                                alert(response.message);
-                            } else if (response.status === 'warning') {
-                                alert(response.message);
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error('Error:', error);
-                        }
-                    });
-                });
-            }
-
-            // Ensure the button selector is correct
-            handleClockAction("#clockOutButton", "{% url 'clock-out' %}", "{% url 'index' %}");
-        });
-    </script>
-
-    <script>
-        document.addEventListener("htmx:beforeSwap", function (event) {
-            var xhr = event.detail.xhr;
-
-            // Check if the response is JSON
-            if (xhr.getResponseHeader("Content-Type").includes("application/json")) {
-                // Prevent HTMX from swapping the JSON response
-                event.preventDefault();
-                console.log("JSON response ignored.");
-            }
-        });
-    </script>
-
 
 
 </html>

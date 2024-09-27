@@ -1,0 +1,70 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+
+{% block after_field_sets %}
+{{ block.super }}
+<h2>Event Dates</h2>
+
+<div id="event-dates-container">
+    <div class="event-date-entry">
+        <input type="text" class="date-picker" name="date[]" placeholder="Select Date">
+        <input type="text" class="time-picker" name="time[]" placeholder="Select Time">
+        <input type="text" name="event_dates[]" placeholder="Description">
+        <button type="button" class="remove-date">Remove</button>
+    </div>
+</div>
+<button type="button" id="add-date-button">Add Another Date</button><br><br><hr>
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize date picker
+        flatpickr('.date-picker', {
+            dateFormat: 'Y-m-d',
+        });
+
+        // Initialize time picker (using flatpickr's time picker feature)
+        flatpickr('.time-picker', {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: 'h:i K', // Format for AM/PM
+            time_24hr: false,
+        });
+
+        // Add new date entry
+        document.getElementById('add-date-button').addEventListener('click', function () {
+            const newEntry = document.createElement('div');
+            newEntry.classList.add('event-date-entry');
+            newEntry.innerHTML = `
+        <input type="text" class="date-picker" name="date[]" placeholder="Select Date">
+        <input type="text" class="time-picker" name="time[]" placeholder="Select Time">
+        <input type="text" name="event_dates[]" placeholder="Description">
+        <button type="button" class="remove-date">Remove</button>
+    `;
+            document.getElementById('event-dates-container').appendChild(newEntry);
+
+            // Reinitialize date and time pickers
+            flatpickr(newEntry.querySelector('.date-picker'), {
+                dateFormat: 'Y-m-d',
+            });
+            flatpickr(newEntry.querySelector('.time-picker'), {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: 'h:i K',
+                time_24hr: false,
+            });
+        });
+
+        // Remove date entry
+        document.getElementById('event-dates-container').addEventListener('click', function (e) {
+            if (e.target.classList.contains('remove-date')) {
+                e.target.parentElement.remove();
+            }
+        });
+    });
+</script>
+{% endblock %}

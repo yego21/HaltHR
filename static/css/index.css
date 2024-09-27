@@ -108,7 +108,7 @@ h3 {
  
 }
 
-#clocker_div{
+#clocker-section{
   border: 2px ridge  #b69a41; 
   margin: 10px;
 }
@@ -134,13 +134,11 @@ h3 {
   object-fit: contain; 
 }
 
-
-
-#announcements {
-  max-height: 450px; /* Set this to the desired height */
+#announcement-section {
   overflow-y: auto;  /* Enable vertical scrolling if content exceeds max-height */
   padding: 15px;     /* Optional: Add some padding for better spacing */
   border-top: 1px solid #ddd; /* Optional: Add a border to distinguish it from other sections */
+  
 }
 
 .event-title-overlay {
@@ -156,6 +154,11 @@ h3 {
 .upcoming-text {
   font-size: 0.85rem; /* Smaller font size */
   color: #caab46; /* Gold color for the 'UPCOMING | {event date}' part */
+}
+
+.past-text {
+  font-size: 0.85rem; /* Smaller font size */
+  color: #5e2a0c; /* Gold color for the 'UPCOMING | {event date}' part */
 }
  .event-date {
   font-size: 0.85rem;
