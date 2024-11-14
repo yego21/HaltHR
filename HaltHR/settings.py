@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False") == "True"
-ALLOWED_HOSTS = ['127.0.0.1', 'https://halthr.onrender.com', 'halthr.onrender.com']
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split(",")
 DATABASES = {
     'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
 }
