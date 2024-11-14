@@ -21,12 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#3&q@eyd4qt2wk_8n2whd3e=w@n!kt7qp2ko-1fsaefm^k)q6y'
+# SECRET_KEY = 'django-insecure-#3&q@eyd4qt2wk_8n2whd3e=w@n!kt7qp2ko-1fsaefm^k)q6y'
+#
+# # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = True
+#
+# ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG", "False") == "True"
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+DATABASES = {
+    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+}
 
 
 # Application definition
@@ -54,6 +61,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -99,18 +107,18 @@ WSGI_APPLICATION = 'HaltHR.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'TestDB',
-        'USER': 'postgres',
-        'PASSWORD': 'yeah',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-DATABASES["default"] = dj_database_url.parse("postgresql://halthrdb_user:uO9RdOJ9PpQa9gBrOMkgh3MSn2gaoSeF@dpg-csq4a852ng1s7399ggug-a.singapore-postgres.render.com/halthrdb")
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'TestDB',
+#         'USER': 'postgres',
+#         'PASSWORD': 'yeah',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+#
+# DATABASES["default"] = dj_database_url.parse("postgresql://halthrdb_user:uO9RdOJ9PpQa9gBrOMkgh3MSn2gaoSeF@dpg-csq4a852ng1s7399ggug-a.singapore-postgres.render.com/halthrdb")
 
 
 # Password validation
@@ -149,6 +157,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
