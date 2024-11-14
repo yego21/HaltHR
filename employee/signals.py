@@ -21,6 +21,20 @@ def manage_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.userprofile.save()
 
+
+
+# To disable signals
+def disable_signals():
+    """Temporarily disable signal handlers"""
+    post_save.disconnect(manage_user_profile, sender=User)
+    post_save.disconnect(save_user_profile, sender=User)
+
+# To enable signals
+def enable_signals():
+    """Reconnect signal handlers after data is loaded"""
+    post_save.connect(manage_user_profile, sender=User)
+    post_save.disconnect(save_user_profile, sender=User)
+
 # @receiver(post_save, sender=UserProfile)
 # def update_user_staff_status(sender, instance, **kwargs):
 #     print(f'Handling staff status for User: {instance}', file=sys.stdout, flush=True)

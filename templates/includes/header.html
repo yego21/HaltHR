@@ -1,97 +1,97 @@
 <!-- templates/header.html -->
- {% load static %}
- <link rel="stylesheet" href="{% static 'css/header.css' %}">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
 
 <nav class="navbar navbar-expand-lg header-nav"  style="padding-left: 20px;" >
-    <!-- <a class="navbar-brand" href="#">HaltHR</a> -->
-    <div class="navbar-brand">
-      <a href="{% url 'index' %}"><img src="{% static 'images/temp.png' %}" alt="Logo"></a>
-  </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Careers</a>
-        </li>
-        <li class="nav-item">
-            <span class="nav-separator">|</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-            <span class="nav-separator">|</span>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-        </li>
-    </ul>
-         
-    {% if user.is_authenticated %}
-    <div id="user-tools">
-      <ul class="navbar-nav">
-        <div class="navbar-admin">
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'admin:index' %}"><img src="{% static 'images/admin.png' %}" alt="adminzone"></a>
-      </li></div>
-      <li class="nav-item">
-        <span class="nav-separator">|</span>
-    </li>
-        <li class="nav-item">
-          <a class="nav-link" id="welcome">Hi, {{ user.first_name }}</a>
-      </li>           
-         
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}" alt="Profile Photo"  class="profile-photo" >
-          </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
-                <li><a class="dropdown-item" href="{% url 'userprofile' %}">Profile</a></li>
-                <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin Zone</a></li>
-                <li><a class="dropdown-item" 
-                  hx-post="{% url 'logout' %}" 
-                  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'                      
-                  hx-confirm="Are you sure you want to log out?"
-                  hx-trigger="click"
-                  hx-target="body"  
-                  hx-swap="outerHTML"
-                  style="cursor: pointer;">
-                   Logout
-               </a></li>
-            </ul>
-        </li>
-         
-      </ul>
-    </div>
-    {% endif %}
-    </div>
-  
+   <!-- <a class="navbar-brand" href="#">HaltHR</a> -->
+   <div class="navbar-brand">
+     <a href="{% url 'index' %}"><img src="{% static 'images/temp.png' %}" alt="Logo"></a>
+ </div>
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav">
+       <li class="nav-item active">
+           <a class="nav-link" href="{% url 'careers' %}">Careers</a>
+       </li>
+       <li class="nav-item">
+           <span class="nav-separator">|</span>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link" href="#">Contact</a>
+       </li>
+       <li class="nav-item">
+           <span class="nav-separator">|</span>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link" href="#">About</a>
+       </li>
+   </ul>
+        
+   {% if user.is_authenticated %}
+   <div id="user-tools">
+     <ul class="navbar-nav">
+       <div class="navbar-admin">
+       <li class="nav-item active">
+         <a class="nav-link" href="{% url 'admin:index' %}"><img src="{% static 'images/admin.png' %}" alt="adminzone"></a>
+     </li></div>
+     <li class="nav-item">
+       <span class="nav-separator">|</span>
+   </li>
+       <li class="nav-item">
+         <a class="nav-link" id="welcome">Hi, {{ user.first_name }}</a>
+     </li>           
+        
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <img src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}" alt="Profile Photo"  class="profile-photo" >
+         </a>
+           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+               <li><a class="dropdown-item" href="{% url 'userprofile' %}">Profile</a></li>
+               <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin Zone</a></li>
+               <li><a class="dropdown-item" 
+                 hx-post="{% url 'logout' %}" 
+                 hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'                      
+                 hx-confirm="Are you sure you want to log out?"
+                 hx-trigger="click"
+                 hx-target="body"  
+                 hx-swap="outerHTML"
+                 style="cursor: pointer;">
+                  Logout
+              </a></li>
+           </ul>
+       </li>
+        
+     </ul>
+   </div>
+   {% endif %}
+   </div>
+ 
 </nav>
-    
-      <!-- JavaScript for Logout Form Submission (optional) -->
-      <script>
-        // Listen to HTMX's afterOnLoad event on the document body
-        document.body.addEventListener('htmx:afterOnLoad', function(evt) {
-            // Extract the response and ensure it's properly handled
-            try {
-                // Parse the JSON response if possible
-                var xhr = evt.detail.xhr;
-                var response = JSON.parse(xhr.responseText);
-    
-                // Check if the response indicates a redirect
-                if (response.redirect) {
-                    // Redirect the user to the specified URL
-                    window.location.href = response.redirect_url;
-                }
-            } catch (e) {
-                // Handle any errors in the response or JSON parsing
-                console.error("Error handling HTMX response:", e);
-            }
-        });
-    </script>    
-    <script src="{% static 'js/htmx.min.js' %}"></script>  
-  
+   
+     <!-- JavaScript for Logout Form Submission (optional) -->
+     <script>
+       // Listen to HTMX's afterOnLoad event on the document body
+       document.body.addEventListener('htmx:afterOnLoad', function(evt) {
+           // Extract the response and ensure it's properly handled
+           try {
+               // Parse the JSON response if possible
+               var xhr = evt.detail.xhr;
+               var response = JSON.parse(xhr.responseText);
+   
+               // Check if the response indicates a redirect
+               if (response.redirect) {
+                   // Redirect the user to the specified URL
+                   window.location.href = response.redirect_url;
+               }
+           } catch (e) {
+               // Handle any errors in the response or JSON parsing
+               console.error("Error handling HTMX response:", e);
+           }
+       });
+   </script>    
+   <script src="{% static 'js/htmx.min.js' %}"></script>  
+ 
 
-  
+ 

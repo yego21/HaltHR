@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 from django.urls import path
-from .models import Company, Department, Event, Announcement, Event_Media, Event_Schedule
+from .models import Company, Department, Event, Announcement, Event_Media, Event_Schedule, Career
 from django.utils.html import format_html
 from django.contrib import admin
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
@@ -151,7 +151,8 @@ admin.site.register(Announcement)
 # admin.site.unregister(Department)
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(Event_Media)
-
+admin.site.register(Event_Schedule)
+admin.site.register(Career)
 
 
 admin.site.register(Company)

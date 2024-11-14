@@ -1,7 +1,9 @@
 # views.py
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from .models import Event, Event_Media, Event_Schedule
+from .models import Event, Event_Media, Event_Schedule, Career
+from django.views.generic import ListView
+
 
 
 @login_required
@@ -43,3 +45,9 @@ def load_media(request, media_id):
     }
 
     return render(request, 'company/event/event_media_viewer.html', context)
+
+class CareerListView(ListView):
+    model = Career
+    template_name = 'company/career/careers.html'  # Define the template path
+    context_object_name = 'careers'  # Optional: To rename the default 'object_list'
+    paginate_by = 10  # Optional: Add pagination (10 jobs per page)

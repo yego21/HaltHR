@@ -10,36 +10,40 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <style>
         /* Ensure the body and html take up the full height of the viewport */
-        html,
-        body {
-            height: 100%;
+        html, body {
+            height: 100%; /* Make sure body and html take up full height */
             margin: 0;
+            padding: 0;
+        }
+
+        .page-wrapper {
             display: flex;
             flex-direction: column;
+            min-height: 100vh; /* Ensure the page wrapper takes at least the full height of the viewport */
         }
 
         /* Make the main content flex-grow to fill available space */
-        .container {
+        .content {
             flex: 1;
         }
     </style>
 </head>
-
 <body>
-    <!-- Include the header template -->
-    {% include 'includes/header.html' %}
+    <div class="page-wrapper">
+        <!-- Include the header -->
+        {% include 'includes/header.html' %}
 
-    <!-- Block for page-specific content -->
+        <!-- Block for page-specific content -->
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
 
-    {% block content %}
-    {% endblock %}
+        <!-- Include the footer -->
 
-
-    <!-- Include the footer template -->
-    {% include 'includes/footer.html' %}
-
-    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/htmx.min.js' %}"></script>
+        {% include 'includes/footer.html' %}
+    </div>
 </body>
-
 </html>
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/htmx.min.js' %}"></script>

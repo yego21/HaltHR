@@ -26,7 +26,7 @@ def capture_previous_department_head(sender, instance, **kwargs):
 @receiver(post_save, sender=Department)
 def update_user_staff_status(sender, instance, **kwargs):
     global previous_department_head
-    print(f'Handling staff status for User: {instance}', file=sys.stdout, flush=True)
+    print(f'Handling staff status for {instance} department head', file=sys.stdout, flush=True)
     department_heads_group, created = Group.objects.get_or_create(name='Department Heads')
 
     if previous_department_head:

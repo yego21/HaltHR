@@ -25,6 +25,13 @@ def hero_directory_path(instance, filename):
     filename = f'{hero_image_name}{original_extension}'  # Use the original extension
     return os.path.join(settings.MEDIA_ROOT, 'hero', hero_image_name, filename)
 
+def about_directory_path(instance, filename):
+    about_image_name = instance.name
+    # Extract the original file extension
+    original_extension = os.path.splitext(filename)[1]  # Get the file extension (e.g., .jpg, .jpeg, .png)
+    filename = f'{about_image_name}{original_extension}'  # Use the original extension
+    return os.path.join(settings.MEDIA_ROOT, 'about', about_image_name, filename)
+
 def event_directory_path(instance, filename):
     event_name = instance.title
     filename = f'{event_name}.jpg'
@@ -81,9 +88,11 @@ class Company(models.Model):
         obj, created = cls.objects.get_or_create(id=1)  # Assuming ID 1 is your singleton
         return obj
     name = models.CharField(max_length=255)
+    description = models.TextField(null=True, blank=True)
     address = models.TextField()
     email = models.EmailField()
     phone = models.CharField(max_length=15)
+    about_image = models.ImageField(upload_to=about_directory_path, null=True, blank=True)
     hero_image1 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
     hero_image2 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
     hero_image3 = models.ImageField(upload_to=hero_directory_path, null=True, blank=True)
@@ -93,6 +102,36 @@ class Company(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Career(models.Model):
+
+    JOB_TYPES = [
+        ('FT', 'Full-Time'),
+        ('PT', 'Part-Time'),
+        ('CON', 'Contract'),
+        ('INT', 'Internship'),
+    ]
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, null=True, blank=True, )
+    job_title = models.CharField(max_length=255)
+    job_type = models.CharField(max_length=3, choices=JOB_TYPES)
+    salary_min = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    salary_max = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    experience_required = models.CharField(max_length=255)
+    qualifications = models.TextField()
+    responsibilities = models.TextField()
+    application_deadline = models.DateField()
+    posting_date = models.DateField(auto_now_add=True, null=True, blank=True)
+    application_link = models.URLField(null=True, blank=True)
+    application_email = models.EmailField(null=True, blank=True)
+    employment_status = models.BooleanField(default=True)  # True = Open, False = Closed
+    work_hours = models.CharField(max_length=50, null=True, blank=True)
+    benefits = models.TextField(null=True, blank=True)
+    application_instructions = models.TextField(null=True, blank=True)
+    remote_option = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.job_title
 
 
 class Department(models.Model):

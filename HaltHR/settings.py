@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,19 +32,24 @@ ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 # Application definition
 
 INSTALLED_APPS = [
-    'company',
-    'clocker',
-    'employee',
-    'exporter',
-    'debug_toolbar',
-    'imagekit',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'multiselectfield',
+    # Django core apps (these are foundational and should be listed first)
+    'django.contrib.admin',       # Django admin
+    'django.contrib.auth',        # Authentication and user management
+    'django.contrib.contenttypes', # Content types
+    'django.contrib.sessions',    # Session management
+    'django.contrib.messages',    # Messaging framework
+    'django.contrib.staticfiles', # Static file handling
+
+    # Your custom apps
+    'employee',                   # Employee-related models
+    'company',                    # Company-related models
+    'clocker',                    # Clocking in/out models
+    'exporter',                   # Export functionality
+    'multiselectfield',           # Third-party field for multiselect
+
+    # Third-party apps
+    'debug_toolbar',              # Debug toolbar for development
+    'imagekit',                   # Image processing library
 ]
 
 MIDDLEWARE = [
@@ -97,13 +102,15 @@ WSGI_APPLICATION = 'HaltHR.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'HaltHR',
+        'NAME': 'TestDB',
         'USER': 'postgres',
         'PASSWORD': 'yeah',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
+DATABASES["default"] = dj_database_url.parse("postgresql://halthrdb_user:uO9RdOJ9PpQa9gBrOMkgh3MSn2gaoSeF@dpg-csq4a852ng1s7399ggug-a.singapore-postgres.render.com/halthrdb")
 
 
 # Password validation
