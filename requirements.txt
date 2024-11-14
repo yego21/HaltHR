@@ -4,6 +4,7 @@ charset-normalizer==3.3.2
 clocker==0.1
 colorama==0.4.6
 decorator==4.4.2
+dj-database-url==2.3.0
 Django==5.0.7
 django-appconf==1.0.6
 django-ckeditor5==0.0.4
@@ -12,12 +13,14 @@ django-imagekit==5.0.0
 django-js-asset==2.2.0
 django-multiselectfield==0.1.13
 et-xmlfile==1.1.0
+gunicorn==23.0.0
 idna==3.7
 imageio==2.35.1
 imageio-ffmpeg==0.5.1
 moviepy==1.0.3
 numpy==2.0.1
 openpyxl==3.1.5
+packaging==24.2
 pandas==2.2.2
 pilkit==3.0
 pillow==10.4.0
@@ -30,5 +33,7 @@ setuptools==72.2.0
 six==1.16.0
 sqlparse==0.5.1
 tqdm==4.66.5
+typing_extensions==4.12.2
 tzdata==2024.1
 urllib3==2.2.2
+whitenoise==6.8.2
