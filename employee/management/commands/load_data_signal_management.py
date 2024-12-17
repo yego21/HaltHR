@@ -10,7 +10,7 @@ class Command(BaseCommand):
         disable_signals()
 
         # Load the data (you can load your User, Company, and other models here)
-        call_command('loaddata', 'testdump.json')  # Modify as necessary
+        call_command('loaddata', 'db_dump.json')  # Modify as necessary
 
 
         # Re-enable signals after loading

@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #
 # # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-#
+
 # ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -70,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'HaltHR.urls'
 
@@ -118,7 +119,8 @@ WSGI_APPLICATION = 'HaltHR.wsgi.application'
 #     }
 # }
 #
-# DATABASES["default"] = dj_database_url.parse("postgresql://halthrdb_user:uO9RdOJ9PpQa9gBrOMkgh3MSn2gaoSeF@dpg-csq4a852ng1s7399ggug-a.singapore-postgres.render.com/halthrdb")
+# DATABASES["default"] = dj_database_url.parse("postgresql://halthr_db_user:E67in5WrVeI7tFq7E1FVU71gAuBuUDKU@dpg-ctgdp3ilqhvc739j6mt0-a.singapore-postgres.render.com/halthr_db")
+
 
 
 # Password validation
@@ -163,6 +165,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -177,3 +180,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dgee7iare',
+    'API_KEY': '663622885671187',
+    'API_SECRET': 'K8dRpvBHgWdzqhTH1i8uq9pOLNE',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
