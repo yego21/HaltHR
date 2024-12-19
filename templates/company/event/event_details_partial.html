@@ -98,34 +98,37 @@
       <h5 class="mt-4">Gallery</h5>
       <div class="media-gallery d-flex flex-wrap p-4 mb-4">
           {% for media in media %}   
-              {% if media.media_type == 'photo' %}       
-                  <div class="media-item">
-                      <a id="view_event_media" data-media-id="{{ media.id }}"
-                         href="#"
-                         hx-get="{% url 'load_media' media.id %}" 
-                         hx-trigger="click" 
-                         hx-target="#event-media-view"  
-                         data-bs-toggle="modal"
-                         data-bs-target="#event-media-modal"> 
-                          <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}">
-                      </a>
+          {% if media.media_type == 'photo' %}       
+          <div class="media-item">
+              <a id="view_event_media" data-media-id="{{ media.id }}"
+                 href="#"
+                 hx-get="{% url 'load_media' media.id %}" 
+                 hx-trigger="click" 
+                 hx-target="#event-media-view"  
+                 data-bs-toggle="modal"
+                 data-bs-target="#event-media-modal"> 
+                 <!-- Below for Cloudinary settings -->
+                 <img src="{{ media.get_thumbnail_url }}" class="img-thumbnail" alt="{{ media.caption }}">
+                 <!--Below for local settings-->
+                  <!-- <img src="{{ media.media_thumbnail.url }}" class="img-thumbnail" alt="{{ media.caption }}"> -->
+              </a>
+          </div>
+      {% elif media.media_type == 'video' %}      
+          <div class="vid-thumbnail-container">
+              <a id="view_event_mediaa"
+                 href="#"
+                 hx-get="{% url 'load_media' media.id %}" 
+                 hx-trigger="click" 
+                 hx-target="#event-media-view"
+                 data-bs-toggle="modal"
+                 data-bs-target="#event-media-modal"> 
+                  <img class="vid-thumbnail" src="/{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
+                  <div class="play-icon">
+                      <i class="fa fa-play"></i>  <!-- Font Awesome play icon -->
                   </div>
-              {% elif media.media_type == 'video' %}      
-                  <div class="vid-thumbnail-container">
-                      <a id="view_event_mediaa"
-                         href="#"
-                         hx-get="{% url 'load_media' media.id %}" 
-                         hx-trigger="click" 
-                         hx-target="#event-media-view"
-                         data-bs-toggle="modal"
-                         data-bs-target="#event-media-modal"> 
-                          <img class="vid-thumbnail" src="/{{ media.video_media_thumbnail }}" alt="{{ media.caption }}">
-                          <div class="play-icon">
-                              <i class="fa fa-play"></i>  <!-- Font Awesome play icon -->
-                          </div>
-                      </a>            
-                  </div>
-              {% endif %}      
+              </a>            
+          </div>
+      {% endif %}      
           {% endfor %}    
       </div>
       

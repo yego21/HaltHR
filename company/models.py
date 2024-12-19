@@ -12,6 +12,8 @@ from django.conf import settings
 from django.db.models import JSONField
 from django.utils import timezone
 from cloudinary.models import CloudinaryField
+from cloudinary.uploader import destroy
+from cloudinary.utils import cloudinary_url
 
 
 class Thumbnail(ImageSpec):
@@ -106,14 +108,15 @@ def event_directory_path(instance, filename):
 # Create your models here.
 def event_files_directory_path(instance):
     event_name = instance.event
-    get_ext = instance.file.name.split('.')
-    if instance.caption:
-        filename = f'{instance.caption}.{get_ext[-1]}'
-    else:
-        filename = instance.file.name
+    filename = instance.caption
+    # get_ext = instance.file.name.split('.')
+    # if instance.caption:
+    #     filename = f'{instance.caption}.{get_ext[-1]}'
+    # else:
+    #     filename = instance.file.name
 
     if instance.media_type == 'photo':
-        return f'events_media/{event_name}/images/{filename}'
+        return f'events_media/{event_name}/images/{filename}.png'
     elif instance.media_type == 'video':
         return f'events_media/{event_name}/videos/{filename}'
 
@@ -281,9 +284,12 @@ class Event_Media(models.Model):
 
     media_type = models.CharField(max_length=10, choices=MEDIA_TYPE_CHOICES)
     # file = models.FileField(upload_to=event_files_directory_path)  # Set a generic path
-    file = CloudinaryField('media', folder=event_files_directory_path)
-    media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(80, 70)], format='JPEG',
-                                     options={'quality': 60})
+    file = CloudinaryField('media', folder=event_files_directory_path,  blank=True, null=True, default='events/event_1.jpg')
+
+    def get_thumbnail_url(self, height=150, width=150):
+        return self.file.build_url(height=height, width=width, crop='fill')
+    # media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(80, 70)], format='JPEG',
+    #                                  options={'quality': 60})
     # Call the function to get the path for the thumbnail
 
     # Pass the generated path to a field or directly use it in the template
@@ -292,13 +298,29 @@ class Event_Media(models.Model):
 
     caption = models.CharField(max_length=255, blank=True, null=True)
 
+
+
+
+
     def delete(self, *args, **kwargs):
-        # Delete the file from the filesystem
+        # Check if the file exists
         if self.file:
-            if os.path.isfile(self.file.path):
-                os.remove(self.file.path)
+            # Extract the public_id from the file field
+            public_id = self.file.public_id
+            if public_id:
+                # Use Cloudinary's API to delete the file
+                destroy(public_id)
+
         # Call the superclass's delete method
         super().delete(*args, **kwargs)
+
+    # def delete(self, *args, **kwargs):
+    #     # Delete the file from the filesystem
+    #     if self.file:
+    #         if os.path.isfile(self.file.path):
+    #             os.remove(self.file.path)
+    #     # Call the superclass's delete method
+    #     super().delete(*args, **kwargs)
 
     def __str__(self):
         return f"{self.media_type.capitalize()} {self.id}"

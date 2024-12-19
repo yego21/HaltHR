@@ -41,7 +41,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     user_shift = models.ForeignKey(Shift, on_delete=models.SET_NULL, null=True, blank=True)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True)
-    photo = CloudinaryField('image', folder=user_directory_path)
+    photo = CloudinaryField('image', folder=user_directory_path, default='https://res.cloudinary.com/dgee7iare/image/upload/v1731983114/photos/User_Four/123.png/tuochfczg3forerqgke5.jpg')
     # photo = models.ImageField(upload_to=user_directory_path, null=True)
     address = models.TextField(blank=True, null=True)
     contact = models.CharField(max_length=20, blank=True, null=True)
