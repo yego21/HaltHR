@@ -21,19 +21,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#3&q@eyd4qt2wk_8n2whd3e=w@n!kt7qp2ko-1fsaefm^k)q6y'
+# SECRET_KEY = 'django-insecure-#3&q@eyd4qt2wk_8n2whd3e=w@n!kt7qp2ko-1fsaefm^k)q6y'
 #
 # # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+#
+# ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 
-ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG", "False") == "True"
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split(",")
+DATABASES = {
+    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
+}
 
-# SECRET_KEY = os.getenv("SECRET_KEY")
-# DEBUG = os.getenv("DEBUG", "False") == "True"
-# ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split(",")
-# DATABASES = {
-#     'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
-# }
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
 
 
 # Application definition
@@ -108,16 +114,16 @@ WSGI_APPLICATION = 'HaltHR.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'TestDB',
-        'USER': 'postgres',
-        'PASSWORD': 'yeah',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'TestDB',
+#         'USER': 'postgres',
+#         'PASSWORD': 'yeah',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # DATABASES["default"] = dj_database_url.parse("postgresql://halthr_db_user:E67in5WrVeI7tFq7E1FVU71gAuBuUDKU@dpg-ctgdp3ilqhvc739j6mt0-a.singapore-postgres.render.com/halthr_db")
 
@@ -181,10 +187,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dgee7iare',
-    'API_KEY': '663622885671187',
-    'API_SECRET': 'K8dRpvBHgWdzqhTH1i8uq9pOLNE',
-}
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
