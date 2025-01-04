@@ -7,50 +7,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile</title>
+  <title>Search Employee</title>
   <link rel="stylesheet" href="{% static 'css/userprofile.css' %}">
   <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-</head>
+  <style>
+    .main-body {
+    min-height: 75vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
+  </style>
+</head>
 <body>
+<section id="search_section">
+<!-- <form method="get" action="{% url 'search_userprofile' %}">
+  <input 
+      type="text" 
+      name="q" 
+      placeholder="Search by username" 
+      value="{{ query }}" 
+      class="form-control"       
+      hx-trigger="keyup changed delay:300ms" 
+      hx-target="#suggestions"
+      hx-swap="innerHTML"
+      autocomplete="off"
+  > 
+  <button type="submit" class="btn btn-primary">Search</button>
+</form> -->
+<div class="d-flex justify-content-start mb-4 mt-2">
+  {% csrf_token %}
+  <input type="text"
+      hx-post="{% url 'search_suggestions' %}" 
+      hx-target='#results'
+      hx-trigger="keyup changed delay:500ms"
+      name="q"
+      class="form-control-sm mr-2"     
+      placeholder="Search Employee..."
+      autocomplete="off"
+      hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' />
+  </form>
+</div>
+<div id="results">
+</div>
+</section>
+
+
+
+<section id="view_section">
   <div class="container">
     <div class="main-body">
 
-      <!-- Breadcrumb -->
-      <nav aria-label="breadcrumb" class="main-breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">User Profile</li>
-          <li>
-          <form method="get">
-            <input type="text" name="user_id" placeholder="Enter User ID" value="{{ request.GET.user_id }}">
-            <button type="submit">Search</button>
-        </form>
-      </li>
-        </ol>
-      </nav>
-      <!-- /Breadcrumb -->
-
+      {% if userprofile %}
       <div class="row gutters-sm">
         <div class="col-md-4 mb-3">
           <div class="card">
-
+           
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
-                <form action="{% url 'userprofile_edit' userprofile.pk  %}" method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
+                
                   <label for="change-photo-input" class="position-relative">
-
-
-                    <img
-                      src="{% if user.userprofile.photo and user.userprofile.photo.url %}{{ user.userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"
+                    <form action="{% url 'userprofile_edit' userprofile.pk  %}?origin=search" method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <label for="change-photo-input" class="position-relative">
+    
+    
+                        <img
+                      src="{% if userprofile.photo and userprofile.photo.url %}{{ userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"
                       alt="Profile Photo" class="rounded-circle" width="150" style="cursor:pointer;">
+    
+                      </label>
+                      <input type="file" id="change-photo-input" name="photo" accept="image/*" style="display:none;"
+                        onchange="this.form.submit();">
+                    </form>
+
+                    
 
                   </label>
-                  <input type="file" id="change-photo-input" name="photo" accept="image/*" style="display:none;"
-                    onchange="this.form.submit();">
-                </form>
-
+                 
+                
                 <div class="mt-3">
                   <h4>{{userprofile.full_name}}</h4>
                   <p class="text-muted font-size-sm">{{userprofile.position}}</p>
@@ -93,6 +129,7 @@
                 </div>
               </div>
             </div>
+           
           </div>
           <!-- <div class="card mt-3">
                     <ul class="list-group list-group-flush">
@@ -136,7 +173,7 @@
                   <h6 class="mb-0">Email</h6>
                 </div>
                 <div class="col-sm-9 text-secondary">
-                  {{user.email}}
+                  {{userprofile.user.email}}
                 </div>
               </div>
               <hr>
@@ -144,8 +181,11 @@
                 <div class="col-sm-3">
                   <h6 class="mb-0">Employment Type</h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
-                  {{userprofile.employment_type}}
+                <div class="col-sm-9 text-secondary" id="employment-type">
+                  {{ userprofile.employment_type }}
+                </div>
+                <div class="col-sm-9">
+                  <input type="text" id="edit-employment-type" value="{{ userprofile.employment_type }}" style="display: none;" class="form-control">
                 </div>
               </div>
               <hr>
@@ -153,8 +193,11 @@
                 <div class="col-sm-3">
                   <h6 class="mb-0">Department</h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
-                  {{userprofile.department}}
+                <div class="col-sm-9 text-secondary" id="department">
+                  {{ userprofile.department }}
+                </div>
+                <div class="col-sm-9">
+                  <input type="text" id="edit-department" value="{{ userprofile.department }}" style="display: none;" class="form-control">
                 </div>
               </div>
               <hr>
@@ -204,14 +247,18 @@
                 </div>
               </div>
               <hr>
-              <div class="row">
-                <div class="col-sm-12">
-                  <a class="btn btn-info " target="__blank"
-                    href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                </div>
-              </div>
+
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" id="edit-btn">Edit</button>
+                <button type="submit" class="btn btn-success d-none" id="save-btn">Save</button>
+                <button type="button" class="btn btn-secondary d-none" id="cancel-btn">Cancel</button>
+            </div>
+              
             </div>
           </div>
+          {% elif query %}
+          <p>No user found for "{{ query }}".</p>
+      {% endif %}
 
           <!-- <div class="row gutters-sm">
                     <div class="col-sm-6 mb-3">
@@ -277,9 +324,28 @@
 
     </div>
   </div>
+</section>
+
+</body>
+
+
+<script>
+  document.getElementById('edit-btn').addEventListener('click', function() {
+    const fields = document.querySelectorAll('.form-control');
+    const textFields = document.querySelectorAll('.text-secondary');
+    
+    // Toggle visibility of inputs and text fields
+    fields.forEach(field => field.style.display = field.style.display === 'none' ? '' : 'none');
+    textFields.forEach(field => field.style.display = field.style.display === 'none' ? '' : 'none');
+  });
+  </script>
+ 
   <script src="{% static 'js/htmx.min.js' %}"></script>
   <script src="{% static 'bootstrap/js/bootstrap.bundle.js.map' %}"></script>
-</body>
+
+
+
+
 
 </html>
 
