@@ -32,13 +32,13 @@
    {% if user.is_authenticated %}
    <div id="user-tools">
      <ul class="navbar-nav">
-      <div class="navbar-search">
+      <div class="navbar-icons">
         <li class="nav-item active">
-          <a class="nav-link" href="{% url 'search_userprofile' %}">Search</a>
+          <a class="nav-link" href="{% url 'search_userprofile' %}"><img title="Search Employee" src="{% static 'images/search.png' %}" alt="search_employee"></a>
       </li></div>
-       <div class="navbar-admin">
+       <div class="navbar-icons">
        <li class="nav-item active">
-         <a class="nav-link" href="{% url 'admin:index' %}"><img src="{% static 'images/admin.png' %}" alt="adminzone"></a>
+         <a class="nav-link" href="{% url 'admin:index' %}"><img title="Admin Zone" src="{% static 'images/admin.png' %}" alt="adminzone"></a>
      </li></div>
      <li class="nav-item">
        <span class="nav-separator">|</span>

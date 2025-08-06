@@ -10,4 +10,7 @@ urlpatterns = [
     path('search/', views.search_userprofile, name='search_userprofile'),
     path('search/<int:pk>/', views.search_userprofile, name='search_userprofile_with_pk'),
     path('search-suggestions/', views.search_suggestions, name='search_suggestions'),
+
+
+
 ]

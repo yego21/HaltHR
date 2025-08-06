@@ -2,7 +2,7 @@
   {% for suggestion in suggestions %}
       <li>
           <a href="{% url 'search_userprofile_with_pk' suggestion.pk %}" class="dropdown-item">
-              {{ suggestion }}
+            {{ suggestion }} ({{ suggestion.department }})
           </a>
       </li>
   {% empty %}

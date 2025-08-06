@@ -12,6 +12,8 @@ from django.contrib.auth.models import User
 from company.models import Company
 from .models import UserProfile
 from django.urls import reverse
+from django.db.models import Q
+from django.contrib.admin.views.decorators import staff_member_required
 
 def login_view(request):
     if request.method == 'POST':
@@ -77,31 +79,36 @@ class UserProfileView(DetailView):
 
 def search_userprofile(request, pk=None):
     query = request.GET.get('q')  # Fetch the query from the input
-    suggestions = None
     userprofile = None
-
-    if query:
-        # Fetch suggestions for the dropdown
-        suggestions = UserProfile.objects.filter(user__username__icontains=query)
 
     if pk:
         # If a pk is provided, fetch the UserProfile instance
         userprofile = get_object_or_404(UserProfile, pk=pk)
 
     return render(request, 'employee/search_userprofile.html', {
-        'suggestions': suggestions,
         'userprofile': userprofile,
         'query': query,
     })
 
 
 def search_suggestions(request):
-    search_text = request.POST.get('q')
+    # Get the search text from the POST request
+    search_text = request.POST.get('q', '').strip()  # Default to an empty string if 'q' is missing
 
-    # look up all films that contain the text
-    # exclude user films
+    # If search text is empty, return an empty context or JSON response
+    if not search_text:
+        context = {"suggestions": []}
+        return render(request, 'employee/search_suggestions.html', context)
 
-    suggestions = UserProfile.objects.filter(user__username__icontains=search_text)
+    # Filter UserProfile objects based on the search text
+    suggestions = UserProfile.objects.filter(
+        Q(user__username__icontains=search_text) |
+        Q(user__first_name__icontains=search_text) |
+        Q(user__last_name__icontains=search_text) |
+        Q(employee_number__icontains=search_text)  # Assuming 'employee_number' exists in the model
+    )[:10]  # Limit to the first 10 results
+
+    # Pass suggestions to the context for rendering in the template
     context = {"suggestions": suggestions}
     return render(request, 'employee/search_suggestions.html', context)
 
@@ -167,3 +174,5 @@ class UserPasswordChangeView(PasswordChangeView):
 
 # def clocker_view(request):
 #     if request.method == 'GET':
+
+

@@ -63,30 +63,20 @@
       <div class="row gutters-sm">
         <div class="col-md-4 mb-3">
           <div class="card">
-           
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
-                
                   <label for="change-photo-input" class="position-relative">
                     <form action="{% url 'userprofile_edit' userprofile.pk  %}?origin=search" method="post" enctype="multipart/form-data">
                       {% csrf_token %}
-                      <label for="change-photo-input" class="position-relative">
-    
-    
+                      <label for="change-photo-input" class="position-relative">      
                         <img
-                      src="{% if userprofile.photo and userprofile.photo.url %}{{ userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"
-                      alt="Profile Photo" class="rounded-circle" width="150" style="cursor:pointer;">
+                      src="{% if userprofile.photo and userprofile.photo.url %}{{ userprofile.photo.url }}{% else %}{% static 'images/default_photo.png' %}{% endif %}"                      alt="Profile Photo" class="rounded-circle" width="150" style="cursor:pointer;">
     
                       </label>
                       <input type="file" id="change-photo-input" name="photo" accept="image/*" style="display:none;"
                         onchange="this.form.submit();">
-                    </form>
-
-                    
-
-                  </label>
-                 
-                
+                    </form>             
+                  </label>                
                 <div class="mt-3">
                   <h4>{{userprofile.full_name}}</h4>
                   <p class="text-muted font-size-sm">{{userprofile.position}}</p>
@@ -247,9 +237,16 @@
                 </div>
               </div>
               <hr>
-
-              <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-primary" id="edit-btn">Edit</button>
+             <div class="d-flex justify-content-end">
+                
+                 
+             
+                <button
+    onclick="window.open('{% url 'admin:employee_userprofile_change' userprofile.pk %}', '_blank')"
+    class="btn btn-primary"
+>
+                Edit
+            </button>
                 <button type="submit" class="btn btn-success d-none" id="save-btn">Save</button>
                 <button type="button" class="btn btn-secondary d-none" id="cancel-btn">Cancel</button>
             </div>
@@ -325,6 +322,9 @@
     </div>
   </div>
 </section>
+
+
+
 
 </body>
 

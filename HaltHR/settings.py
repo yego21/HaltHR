@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 
+
 # SECRET_KEY = os.getenv("SECRET_KEY")
 # DEBUG = os.getenv("DEBUG", "False") == "True"
 # ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1").split(",")
@@ -41,14 +43,22 @@ ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 #     'API_SECRET': os.getenv("CLOUDINARY_API_SECRET"),
 # }
 
+
+# CLOUDINARY_URL = "cloudinary://663622885671187:K8dRpvBHgWdzqhTH1i8uq9pOLNE"
+
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': "dgee7iare",
-    'API_KEY': "663622885671187",
-    'API_SECRET': "K8dRpvBHgWdzqhTH1i8uq9pOLNE",
+    'CLOUD_NAME': 'dgee7iare',
+    'API_KEY': '663622885671187',
+    'API_SECRET': 'K8dRpvBHgWdzqhTH1i8uq9pOLNE',
 }
 
+CLOUDINARY = {
+    'cloud_name': 'dgee7iare',
+    'api_key': '663622885671187',
+    'api_secret': 'K8dRpvBHgWdzqhTH1i8uq9pOLNE',
+}
 
-
+cloudinary.config(**CLOUDINARY)
 # Application definition
 
 INSTALLED_APPS = [
@@ -60,6 +70,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',    # Messaging framework
     'django.contrib.staticfiles', # Static file handling
 
+
+    'cloudinary_storage',
+    'cloudinary',
     # Your custom apps
     'employee',                   # Employee-related models
     'company',                    # Company-related models
@@ -71,6 +84,8 @@ INSTALLED_APPS = [
     'debug_toolbar',              # Debug toolbar for development
     'imagekit',                   # Image processing library
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -102,6 +117,7 @@ TEMPLATES = [
         },
     },
 ]
+print("CLOUDINARY_STORAGE:", TEMPLATES)
 
 MANAGEMENT_APPS = [
     'HaltHR.record_attendance',  # Adjust this to your actual path
@@ -132,7 +148,7 @@ DATABASES = {
     }
 }
 
-# DATABASES["default"] = dj_database_url.parse("postgresql://halthr_db_user:E67in5WrVeI7tFq7E1FVU71gAuBuUDKU@dpg-ctgdp3ilqhvc739j6mt0-a.singapore-postgres.render.com/halthr_db")
+DATABASES["default"] = dj_database_url.parse("postgresql://yego_db_user:EYQLbk71uYgmSFKU9zGkUxu67Qobe6Wn@dpg-d28m3veuk2gs73fgnfkg-a.singapore-postgres.render.com/yego_db")
 
 
 
@@ -172,7 +188,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -194,4 +212,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

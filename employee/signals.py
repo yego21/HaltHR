@@ -8,14 +8,15 @@ import sys
 
 @receiver(post_save, sender=User)
 def manage_user_profile(sender, instance, created, **kwargs):
-    print(f'Creating userprofile for User: {instance}', file=sys.stdout, flush=True)
-    if created:
-        # Create UserProfile if it doesn't already exist
-        UserProfile.objects.get_or_create(user=instance)
-    else:
-        # Ensure UserProfile is saved if it already exists
-        if hasattr(instance, 'userprofile'):
-            instance.userprofile.save()
+    def manage_user_profile(sender, instance, created, **kwargs):
+        print(f'Creating userprofile for User: {instance}', file=sys.stdout, flush=True)
+        if created:
+            # Create UserProfile if it doesn't already exist
+            UserProfile.objects.get_or_create(user=instance)
+        else:
+            # Ensure UserProfile is saved if it already exists
+            if hasattr(instance, 'userprofile'):
+                instance.userprofile.save()
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):

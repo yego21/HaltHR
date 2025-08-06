@@ -6,9 +6,15 @@ document.addEventListener('htmx:afterSwap', function(event) {
         // Hide the response message after 5 seconds
         setTimeout(() => {
             responseMessage.classList.remove('show');
-        }, 3000); // 5000ms = 5 seconds
+        }, 10000); // 5000ms = 5 seconds
     }
 });
+
+
+
+
+ 
+
 
 
 

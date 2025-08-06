@@ -11,4 +11,26 @@ Render Build
 -Run dumpdata management command to control signals
 	python manage.py load_data_signal_management
 
+
+Full database backup/migration
+pg_dump -U postgres -h old_db_host -F c -b -v -f "backup_file.dump" old_database
+
+pg_restore -U postgres -h new_db_host -d new_database -v "backup_file.dump"
+
+
+
+git checkout -b testing
+git push -u origin testing
+
+git checkout testing
+# make changes
+git add .
+git commit -m "Testing: change settings"
+git push origin testing
+
+When testing is done and merged:
+
+git branch -D testing
+git checkout -b testing
+git push -f origin testing
 	

@@ -30,13 +30,13 @@
     text-decoration: none;
 }
 
-.navbar-admin {   
+.navbar-icons {   
     display: flex;
     align-items: right;
-    padding: 0.5rem 1rem;    
+    padding: 0.5rem 0rem;    
 }
 
-.navbar-admin img {    
+.navbar-icons img {    
     max-height: 30px; /* Adjust this size as needed */
     max-width: 100%;
     height: auto;

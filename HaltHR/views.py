@@ -21,7 +21,7 @@ from django.utils import timezone
 #         events = Event.objects.order_by('-date')
 #         return events
 #     data ='yeayea'
-#     events = get_events()
+#     events = get_events()dir
 #
 #         # return render(request, 'index.html', {'events': events, 'data': data})
 #
