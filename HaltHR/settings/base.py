@@ -10,9 +10,12 @@ env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 env_name = os.environ.get("DJANGO_ENV", "dev")  # default to dev if not set
-print(f"🔵 Django is running with settings: {env_name.upper()}")
+
 
 SECRET_KEY = env('SECRET_KEY')
+
+
+
 
 INSTALLED_APPS = [
     # Django core

@@ -70,6 +70,7 @@ INSTALLED_APPS = [
     'multiselectfield',           # Third-party field for multiselect
 
     # Third-party apps
+
     'debug_toolbar',              # Debug toolbar for development
     'imagekit',                   # Image processing library
 ]

@@ -267,6 +267,9 @@ class Event_Media(models.Model):
             format='JPEG',
             options={'quality': 60}
         )
+        video_media_thumbnail = create_video_thumbnail
+        media_url = str(video_media_thumbnail)
+
 
     caption = models.CharField(max_length=255, blank=True, null=True)
 
@@ -283,13 +286,12 @@ class Event_Media(models.Model):
     #
     # def get_thumbnail_url(self, height=150, width=150):
     #     return self.file.build_url(height=height, width=width, crop='fill')
-    media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(80, 70)], format='JPEG',
-                                     options={'quality': 60})
+
+
     # # Call the function to get the path for the thumbnail
     #
     # # Pass the generated path to a field or directly use it in the template
-    video_media_thumbnail = create_video_thumbnail
-    media_url = str(video_media_thumbnail)
+
     #
     # caption = models.CharField(max_length=255, blank=True, null=True)
 
