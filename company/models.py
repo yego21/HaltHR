@@ -21,104 +21,63 @@ class Thumbnail(ImageSpec):
     format = 'JPEG'
     options = {'quality': 60}
 
-#FOR LOCAL SAVING SETTINGS ENABLE THIS
-# def hero_directory_path(instance, filename):
-#     hero_image_name = instance.name
-#     # Extract the original file extension
-#     original_extension = os.path.splitext(filename)[1]  # Get the file extension (e.g., .jpg, .jpeg, .png)
-#     filename = f'{hero_image_name}{original_extension}'  # Use the original extension
-#     return os.path.join(settings.MEDIA_ROOT, 'hero', hero_image_name, filename)
-#
-# def about_directory_path(instance, filename):
-#     about_image_name = instance.name
-#     # Extract the original file extension
-#     original_extension = os.path.splitext(filename)[1]  # Get the file extension (e.g., .jpg, .jpeg, .png)
-#     filename = f'{about_image_name}{original_extension}'  # Use the original extension
-#     return os.path.join(settings.MEDIA_ROOT, 'about', about_image_name, filename)
-#
-# def event_directory_path(instance, filename):
-#     event_name = instance.title
-#     filename = f'{event_name}.jpg'
-#     return os.path.join(settings.MEDIA_ROOT, 'events',  f'{event_name}', filename)
-#
-#
-# # Create your models here.
-# def event_files_directory_path(instance, filename):
-#     event_name = instance.event
-#     get_ext = instance.file.name.split('.')
-#     if instance.caption:
-#         filename = f'{instance.caption}.{get_ext[-1]}'
-#     else:
-#         filename = instance.file.name
-#
-#     if instance.media_type == 'photo':
-#         return os.path.join(settings.MEDIA_ROOT, 'events_media', f'{event_name}', 'images', filename)
-#     elif instance.media_type == 'video':
-#         return os.path.join(settings.MEDIA_ROOT, 'events_media',  f'{event_name}', 'videos', filename)
-#
-# def snap_thumbnail(video_path, thumbnail_path, time_frame=5):
-#     with VideoFileClip(video_path) as video:
-#         frame = video.get_frame(time_frame)
-#         thumbnail = video.save_frame(thumbnail_path, t=time_frame)
-#     return thumbnail
-#
-# def create_video_thumbnail(instance):
-#     if instance.media_type == 'video':
-#         video_path = instance.file.path
-#         thumbnail_path = os.path.join('media/CACHE/', f'{instance.id}_thumbnail.jpg')
-#         snap_thumbnail(video_path, thumbnail_path)
-#
-#         with open(thumbnail_path, 'rb') as f:
-#             source_file = File(f)
-#             image_generator = Thumbnail(source=source_file)
-#             result = image_generator.generate()
-#
-#             # Save the result to a new path
-#             thumbnail_dir = os.path.join('media/CACHE/thumbnails/')
-#             final_thumbnail_path = os.path.join('media/CACHE/thumbnails/', f'{instance.id}_thumbnail.jpg')
-#             os.makedirs(thumbnail_dir, exist_ok=True)
-#             with open(final_thumbnail_path, 'wb') as dest:
-#                 dest.write(result.read())
-#
-#         return final_thumbnail_path
-
-
-
-#FOR CLOUDINARY SETTINGS ENABLE THIS
 def hero_directory_path(instance, filename):
     hero_image_name = instance.name
-    # Extract the original file extension
-    original_extension = os.path.splitext(filename)[1]  # Get the file extension (e.g., .jpg, .jpeg, .png)
-    filename = f'hero/{hero_image_name}{original_extension}'  # Use the original extension
-    return filename
+    ext = os.path.splitext(filename)[1]  # keep original extension
+
+    if settings.USE_CLOUDINARY:
+        # Cloudinary-style path
+        return f'hero/{hero_image_name}{ext}'
+    else:
+        # Local path inside MEDIA_ROOT
+        return os.path.join('hero', hero_image_name, f'{hero_image_name}{ext}')
+
 
 def about_directory_path(instance, filename):
     about_image_name = instance.name
-    # Extract the original file extension
-    original_extension = os.path.splitext(filename)[1]  # Get the file extension (e.g., .jpg, .jpeg, .png)
-    filename = f'about/{about_image_name}{original_extension}'  # Use the original extension
-    return filename
+    ext = os.path.splitext(filename)[1]
+
+    if settings.USE_CLOUDINARY:
+        return f'about/{about_image_name}{ext}'
+    else:
+        return os.path.join('about', about_image_name, f'{about_image_name}{ext}')
+
 
 def event_directory_path(instance, filename):
     event_name = instance.title
-    filename = f'events/{event_name}/{event_name}.jpg'
-    return filename
+    ext = os.path.splitext(filename)[1] or '.jpg'
+
+    if settings.USE_CLOUDINARY:
+        return f'events/{event_name}/{event_name}{ext}'
+    else:
+        return os.path.join('events', event_name, f'{event_name}{ext}')
 
 
-# Create your models here.
-def event_files_directory_path(instance):
+# === LOCAL UPLOAD PATH ===
+def event_files_directory_path(instance, filename):
     event_name = instance.event
-    filename = instance.caption
-    # get_ext = instance.file.name.split('.')
-    # if instance.caption:
-    #     filename = f'{instance.caption}.{get_ext[-1]}'
-    # else:
-    #     filename = instance.file.name
+    get_ext = filename.split('.')[-1]
+    if instance.caption:
+        filename = f"{instance.caption}.{get_ext}"
+    else:
+        filename = filename
 
     if instance.media_type == 'photo':
-        return f'events_media/{event_name}/images/{filename}.png'
+        return os.path.join('events_media', str(event_name), 'images', filename)
     elif instance.media_type == 'video':
-        return f'events_media/{event_name}/videos/{filename}'
+        return os.path.join('events_media', str(event_name), 'videos', filename)
+
+
+# === CLOUDINARY UPLOAD PATH (for public_id) ===
+def event_files_directory_path_cloudinary(instance):
+    event_name = instance.event
+    ext = '.png' if instance.media_type == 'photo' else ''
+
+    if instance.media_type == 'photo':
+        return f"events_media/{event_name}/images/{instance.caption or 'untitled'}{ext}"
+    elif instance.media_type == 'video':
+        return f"events_media/{event_name}/videos/{instance.caption or 'untitled'}"
+
 
 def snap_thumbnail(video_path, thumbnail_path, time_frame=5):
     with VideoFileClip(video_path) as video:
@@ -126,10 +85,11 @@ def snap_thumbnail(video_path, thumbnail_path, time_frame=5):
         thumbnail = video.save_frame(thumbnail_path, t=time_frame)
     return thumbnail
 
+
 def create_video_thumbnail(instance):
     if instance.media_type == 'video':
         video_path = instance.file.path
-        thumbnail_path = f'media/CACHE/{instance.id}_thumbnail.jpg'
+        thumbnail_path = os.path.join('media', 'CACHE', f'{instance.id}_thumbnail.jpg')
         snap_thumbnail(video_path, thumbnail_path)
 
         with open(thumbnail_path, 'rb') as f:
@@ -137,9 +97,9 @@ def create_video_thumbnail(instance):
             image_generator = Thumbnail(source=source_file)
             result = image_generator.generate()
 
-            # Save the result to a new path
-            thumbnail_dir = f'/CACHE/thumbnails/'
-            final_thumbnail_path = f'/CACHE/thumbnails/{instance.id}_thumbnail.jpg'
+            # Save final thumbnail
+            thumbnail_dir = os.path.join('media', 'CACHE', 'thumbnails')
+            final_thumbnail_path = os.path.join(thumbnail_dir, f'{instance.id}_thumbnail.jpg')
             os.makedirs(thumbnail_dir, exist_ok=True)
             with open(final_thumbnail_path, 'wb') as dest:
                 dest.write(result.read())
@@ -283,20 +243,55 @@ class Event_Media(models.Model):
     ]
 
     media_type = models.CharField(max_length=10, choices=MEDIA_TYPE_CHOICES)
-    # file = models.FileField(upload_to=event_files_directory_path)  # Set a generic path
-    file = CloudinaryField('media', folder=event_files_directory_path,  blank=True, null=True, default='events/event_1.jpg')
 
-    def get_thumbnail_url(self, height=150, width=150):
-        return self.file.build_url(height=height, width=width, crop='fill')
-    # media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(80, 70)], format='JPEG',
-    #                                  options={'quality': 60})
-    # Call the function to get the path for the thumbnail
-
-    # Pass the generated path to a field or directly use it in the template
-    video_media_thumbnail = create_video_thumbnail
-    media_url = str(video_media_thumbnail)
+    # Auto-switch field type
+    if settings.USE_CLOUDINARY:
+        file = CloudinaryField(
+            'media',
+            folder=event_files_directory_path_cloudinary,
+            blank=True,
+            null=True,
+            default='events/event_1.jpg'
+        )
+    else:
+        file = models.FileField(
+            upload_to=event_files_directory_path,
+            blank=True,
+            null=True,
+            default='events/event_1.jpg'
+        )
+        # Local only: generate thumbnail from local file
+        media_thumbnail = ImageSpecField(
+            source='file',
+            processors=[ResizeToFill(80, 70)],
+            format='JPEG',
+            options={'quality': 60}
+        )
 
     caption = models.CharField(max_length=255, blank=True, null=True)
+
+    def get_thumbnail_url(self, height=150, width=150):
+        """Returns a thumbnail URL depending on environment."""
+        if settings.USE_CLOUDINARY and self.file:
+            # Cloudinary transforms image on the fly
+            return self.file.build_url(height=height, width=width, crop='fill')
+        elif not settings.USE_CLOUDINARY and hasattr(self, 'media_thumbnail') and self.media_thumbnail:
+            # Local imagekit-generated thumbnail
+            return self.media_thumbnail.url
+        return None
+
+    #
+    # def get_thumbnail_url(self, height=150, width=150):
+    #     return self.file.build_url(height=height, width=width, crop='fill')
+    media_thumbnail = ImageSpecField(source='file', processors=[ResizeToFill(80, 70)], format='JPEG',
+                                     options={'quality': 60})
+    # # Call the function to get the path for the thumbnail
+    #
+    # # Pass the generated path to a field or directly use it in the template
+    video_media_thumbnail = create_video_thumbnail
+    media_url = str(video_media_thumbnail)
+    #
+    # caption = models.CharField(max_length=255, blank=True, null=True)
 
 
 

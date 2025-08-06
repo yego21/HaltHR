@@ -46,19 +46,8 @@ ALLOWED_HOSTS = ['127.0.0.1', '112.112.112.122']
 
 # CLOUDINARY_URL = "cloudinary://663622885671187:K8dRpvBHgWdzqhTH1i8uq9pOLNE"
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dgee7iare',
-    'API_KEY': '663622885671187',
-    'API_SECRET': 'K8dRpvBHgWdzqhTH1i8uq9pOLNE',
-}
 
-CLOUDINARY = {
-    'cloud_name': 'dgee7iare',
-    'api_key': '663622885671187',
-    'api_secret': 'K8dRpvBHgWdzqhTH1i8uq9pOLNE',
-}
 
-cloudinary.config(**CLOUDINARY)
 # Application definition
 
 INSTALLED_APPS = [
