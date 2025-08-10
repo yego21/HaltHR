@@ -50,14 +50,15 @@ class UserProfile(models.Model):
             folder=user_directory_path_cloudinary,
             blank=True,
             null=True,
-            default='https://res.cloudinary.com/dgee7iare/image/upload/v1731983114/photos/User_Four/123.png/tuochfczg3forerqgke5.jpg'
+            # default='images/default_photo.png',
+
         )
     else:
         photo = models.ImageField(
             upload_to=user_directory_path,
             blank=True,
             null=True,
-            default='events/event_1.jpg'
+            # default='images/default_photo.png'
         )
         # Local only: generate thumbnail from local file
 

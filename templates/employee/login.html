@@ -13,49 +13,89 @@
         .carousel-item {
             background-size: cover;
             height: 100vh;
-            /* Full viewport height */
             position: absolute;
-            /* Make it absolute to overlap correctly */
             width: 100%;
-            /* Ensure it takes full width */
         }
 
         .carousel-item.active {
             position: relative;
-            /* The active item will be in normal flow */
             z-index: 1;
-            /* Bring it to the front */
         }
 
         .carousel-item:not(.active) {
             z-index: 0;
-            /* Other items are behind */
         }
 
+        .hero {
+            position: relative;
+            height: 100vh;
+        }
 
-        /* Dark overlay for login form */
+        /* Login form responsive positioning */
         .login-form {
             background-color: rgba(0, 0, 0, 0.7);
-            /* Transparent background */
             padding: 2rem;
             border-radius: 10px;
             color: #fff;
             width: 100%;
             max-width: 350px;
-            position: absolute;
-            right: 20rem;
-            /* Align to the right */
-            top: 50%;
-            /* Center vertically */
-            transform: translateY(-50%);
             z-index: 2;
-            /* Higher z-index to ensure it's on top */
+        }
+
+        /* Container for form positioning */
+        .form-container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+
+        /* Desktop positioning - right aligned */
+        @media (min-width: 768px) {
+            .form-container {
+                right: 20rem;
+                width: auto;
+                padding: 0;
+            }
+
+            .login-form {
+                max-width: 437px; /* 125% of 350px */
+                transform: scale(1.25);
+                transform-origin: center;
+            }
+        }
+
+        /* Mobile positioning - centered */
+        @media (max-width: 767px) {
+            .form-container {
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                padding: 0 1rem;
+            }
+
+            .login-form {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+        }
+
+        /* Small mobile adjustments */
+        @media (max-width: 480px) {
+            .login-form {
+                padding: 1rem;
+            }
+
+            .hero {
+                min-height: 100vh;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Hero section with carousel background -->
     <!-- Hero section with carousel background -->
     <div class="hero">
         <div id="backgroundCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -89,25 +129,23 @@
             </button>
         </div>
 
-        <!-- Centered login form -->
-        <div class="container">
-            <div class="d-flex justify-content-end">
-                <form class="login-form" method="post">
-                    {% csrf_token %}
-                    <h2 class="text-center">Login</h2>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username"
-                            placeholder="Enter your username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password"
-                            placeholder="Enter your password">
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                </form>
-            </div>
+        <!-- Responsive login form container -->
+        <div class="form-container">
+            <form class="login-form mx-auto" method="post">
+                {% csrf_token %}
+                <h2 class="text-center">Login</h2>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username"
+                        placeholder="Enter your username">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
         </div>
     </div>
 
