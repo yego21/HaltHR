@@ -1,0 +1,230 @@
+[
+    {
+        "model": "employee.userprofile",
+        "pk": 22,
+        "fields": {
+            "user": [
+                "admin"
+            ],
+            "user_shift": null,
+            "department": 1,
+            "photo": "photos/admin_ko/22_k0LhhJZ.png",
+            "address": null,
+            "contact": null,
+            "position": "Member",
+            "hire_date": "1970-01-01"
+        }
+    },
+    {
+        "model": "employee.userprofile",
+        "pk": 23,
+        "fields": {
+            "user": [
+                "user1"
+            ],
+            "user_shift": 2,
+            "department": 1,
+            "photo": "photos/default_photo.png",
+            "address": null,
+            "contact": null,
+            "position": "Member",
+            "hire_date": "1970-01-01"
+        }
+    },
+    {
+        "model": "employee.userprofile",
+        "pk": 24,
+        "fields": {
+            "user": [
+                "user2"
+            ],
+            "user_shift": 2,
+            "department": 1,
+            "photo": "photos/User_Two/24.png",
+            "address": "",
+            "contact": null,
+            "position": "Developer",
+            "hire_date": "1970-01-01"
+        }
+    },
+    {
+        "model": "employee.userprofile",
+        "pk": 25,
+        "fields": {
+            "user": [
+                "user3"
+            ],
+            "user_shift": 2,
+            "department": 2,
+            "photo": "photos/default_photo.png",
+            "address": "",
+            "contact": null,
+            "position": "Developer",
+            "hire_date": "1970-01-01"
+        }
+    },
+    {
+        "model": "employee.userprofile",
+        "pk": 26,
+        "fields": {
+            "user": [
+                "user4"
+            ],
+            "user_shift": null,
+            "department": 2,
+            "photo": "photos/User_Four/26_x3Kycnb.png",
+            "address": "",
+            "contact": null,
+            "position": "Team Leader",
+            "hire_date": "1970-01-01"
+        }
+    },   
+{
+    "model": "company.company",
+    "pk": 1,
+    "fields": {
+        "name": "MacroHard",
+        "address": "gfdgdg",
+        "email": "gfdgdfgdfg@email.com",
+        "phone": "324242342"
+    }
+},
+{
+    "model": "company.department",
+    "pk": 1,
+    "fields": {
+        "name": "IT",
+        "company": 1,
+        "department_head": 23
+    }
+},
+{
+    "model": "company.department",
+    "pk": 2,
+    "fields": {
+        "name": "HR",
+        "company": 1,
+        "department_head": 26
+    }
+},
+{
+    "model": "company.event",
+    "pk": 4,
+    "fields": {
+        "title": "Sample Event",
+        "description": "Description of the sample event",
+        "date": "2024-08-22",
+        "time": "14:00:00",
+        "location": "Sample Location",
+        "company": 1,
+        "image1": "events/08/23/2024/twyEMz0.jpeg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 5,
+    "fields": {
+        "title": "Event 3",
+        "description": "Event 3 details.",
+        "date": "2024-08-17",
+        "time": "14:02:43",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Event 3/Event_3.jpg",
+        "image2": "events/08/23/2024/183-square.png-500h.png"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 8,
+    "fields": {
+        "title": "event 4",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-26",
+        "time": "10:47:55",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event 4/event_4.jpg",
+        "image2": "events/event 4/event_4_fWfFSOX.jpg"
+    }
+},
+{
+    "model": "company.event",
+    "pk": 9,
+    "fields": {
+        "title": "Christmas Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-28",
+        "time": "09:49:37",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Christmas Party/Christmas_Party.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 10,
+    "fields": {
+        "title": "Halloween Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:49:55",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/event_1.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 11,
+    "fields": {
+        "title": "New Year Party",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:50:26",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/New Year Party/New_Year_Party.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.event",
+    "pk": 12,
+    "fields": {
+        "title": "Super Event",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date": "2024-08-27",
+        "time": "09:50:57",
+        "location": "Cebu",
+        "company": 1,
+        "image1": "events/Super Event/Super_Event.jpg",
+        "image2": ""
+    }
+},
+{
+    "model": "company.announcement",
+    "pk": 1,
+    "fields": {
+        "title": "New Policies",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date_posted": "2024-08-23",
+        "company": 1
+    }
+},
+{
+    "model": "company.announcement",
+    "pk": 2,
+    "fields": {
+        "title": "New Schedules",
+        "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "date_posted": "2024-08-23",
+        "company": 1
+    }
+}
+
+
+]
